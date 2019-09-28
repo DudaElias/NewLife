@@ -16,57 +16,75 @@
         android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/logo" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="70dp"
+        android:paddingTop="30dp"
+        android:paddingRight="70dp"
+        android:layout_marginBottom="100dp">
     <EditText
         android:id="@+id/edNome"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+
         android:background="@drawable/edittextdesign"
-        android:ems="20"
         android:gravity="center"
-        android:hint="Nome Usuário"
-        android:shadowColor="@color/colorAccent"
-        android:shadowDx="4"
-        android:shadowDy="50"
-        android:shadowRadius="4" />
+        android:hint="Nome Usuário" />
 
     <EditText
         android:id="@+id/edSenha"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:ems="20"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         android:background="@drawable/edittextdesign"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
         android:hint="Senha"
         android:inputType="textPassword" />
-
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:paddingTop="40dp"
         app:srcCompat="@drawable/entrar"
         />
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="500dp"
-        android:layout_height="80dp"
-        android:layout_marginLeft="-25dp"
-        android:translationZ="50dp"
-        app:srcCompat="@drawable/partebaixo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="-70dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/partebaixo"
+            />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-65dp"
+
+        android:layout_marginTop="-60dp"
         android:text="CRIAR UMA NOVA CONTA"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="28dp"
         android:translationZ="100dp" />
+    </LinearLayout>
 
 </LinearLayout>
