@@ -78,7 +78,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/edittextdesign"
                 android:gravity="center"
-                android:hint="Senha Novamente"
+                android:hint="Repita a senha"
                 android:inputType="textPassword"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
