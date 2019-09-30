@@ -54,3 +54,16 @@ create table Dieta
 	alimentos ntext,
 	constraint fk_CodPerfil foreign key(codPerfil) references Perfil(id)
 )
+
+create table Quiz
+(
+	codQuiz int primary key not null,
+	pergunta ntext not null,
+	alternativa varchar(40) not null
+)
+
+create table Possibilidade
+(
+	codPossibilidade int primary key not null,
+	possibilidade varchar(50) not null
+)	
