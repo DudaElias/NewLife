@@ -891,7 +891,472 @@ insert into Alimento values(0,0,0,0)/*414*/
 
 /*Hambruguer*/
 
+insert into Alimento values(0,0,0,0)/*415*/
 
+insert into Alimento values(0,0,0,0)/*416*/
+
+insert into Alimento values(0,0,0,0)/*417*/
+
+
+/*Linguiça*/
+
+insert into Alimento values(0,0,0,0)/*418*/
+
+insert into Alimento values(0,0,0,0)/*419*/
+
+insert into Alimento values(0,0,0,0)/*420*/
+
+insert into Alimento values(0,0,0,0)/*421*/
+
+insert into Alimento values(0,0,0,0)/*422*/
+
+insert into Alimento values(0,0,0,0)/*423*/
+
+/*Embutidos*/
+
+insert into Alimento values(2,2,0,0)/*424*/
+
+/*Peru*/
+
+insert into Alimento values(0,0,0,0)/*425*/
+
+insert into Alimento values(0,0,0,0)/*426*/
+
+/*Porco*/
+
+insert into Alimento values(0,0,0,0)/*427*/
+
+insert into Alimento values(0,0,0,0)/*428*/
+
+insert into Alimento values(0,0,0,0)/*429*/
+
+insert into Alimento values(0,0,0,0)/*430*/
+
+insert into Alimento values(0,0,0,0)/*431*/
+
+insert into Alimento values(0,0,0,0)/*432*/
+
+insert into Alimento values(0,0,0,0)/*433*/
+
+insert into Alimento values(0,0,0,0)/*434*/
+
+insert into Alimento values(0,0,0,0)/*435*/
+
+insert into Alimento values(0,0,0,0)/*436*/
+
+insert into Alimento values(0,0,0,0)/*437*/
+
+/*Presunto*/
+
+insert into Alimento values(2,2,0,0)/*438*/
+
+insert into Alimento values(2,2,0,0)/*439*/
+
+
+/*Quibe*/
+insert into Alimento values(2,0,0,0)/*440*/
+
+insert into Alimento values(2,0,0,0)/*441*/
+
+insert into Alimento values(2,0,0,0)/*442*/
+
+/*Salame*/
+
+insert into Alimento values(2,2,0,0)/*443*/
+
+insert into Alimento values(2,2,0,0)/*444*/
+
+/*Toucinho*/
+
+insert into Alimento values(0,0,0,0)/*445*/
+
+insert into Alimento values(0,0,0,0)/*446*/
+
+/*Bebidas lácteas*/
+
+insert into Alimento values(0,0,0,0)/*447*/
+
+/*Creme de leite*/
+
+insert into Alimento values(0,0,0,0)/*448*/
+
+/*Iogurte*/
+
+insert into Alimento values(0,0,2,0)/*449*/
+
+insert into Alimento values(0,0,2,0)/*450*/
+
+insert into Alimento values(0,0,2,0)/*451*/
+
+insert into Alimento values(0,0,2,0)/*452*/
+
+/*Leite condensado*/
+
+insert into Alimento values(0,0,2,0)/*453*/
+
+/*Leites*/
+
+insert into Alimento values(0,0,2,0)/*454 cabra*/
+
+
+insert into Alimento values(0,0,2,0)/*455 achocolatado*/
+
+insert into Alimento values(0,0,0,0)/*456 desnatado em pó*/
+
+insert into Alimento values(0,0,0,0)/*457 desnatado*/
+
+insert into Alimento values(0,0,0,0)/*458 integral*/
+
+insert into Alimento values(0,0,0,0)/*459 integral em pó*/
+
+insert into Alimento values(0,0,0,0)/*460 fermentado*/
+
+
+/*Queijo*/
+
+insert into Alimento values(0,0,0,0)/*461*/
+
+insert into Alimento values(0,0,0,0)/*462*/
+
+insert into Alimento values(0,0,0,0)/*463*/
+
+insert into Alimento values(0,0,0,0)/*464*/
+
+insert into Alimento values(0,0,0,0)/*465*/
+
+insert into Alimento values(0,0,0,0)/*466*/
+
+insert into Alimento values(0,0,0,0)/*467*/
+
+
+/*Doce*/
+
+insert into Alimento values(0,0,0,0)/*468*/
+
+/*Queijo*/
+
+insert into Alimento values(0,0,0,0)/*469*/
+
+
+
+/*Bebidas*/
+
+
+insert into Alimento values(0,0,0,0)/*470*/
+
+insert into Alimento values(0,0,0,0)/*471*/
+
+insert into Alimento values(0,0,0,0)/*472*/
+
+insert into Alimento values(0,0,0,0)/*473*/
+
+insert into Alimento values(0,0,0,0)/*474*/
+
+insert into Alimento values(0,0,0,0)/*475*/
+
+insert into Alimento values(0,0,0,0)/*476*/
+
+insert into Alimento values(0,0,0,0)/*477*/
+
+insert into Alimento values(0,0,0,0)/*478*/
+
+insert into Alimento values(0,0,0,0)/*479*/
+
+insert into Alimento values(0,0,0,0)/*480*/
+
+insert into Alimento values(0,0,0,0)/*481*/
+
+insert into Alimento values(0,0,0,0)/*482*/
+
+insert into Alimento values(0,0,0,0)/*483*/
+
+
+/*Ovo*/
+
+insert into Alimento values(0,0,0,0)/*484*/
+
+insert into Alimento values(0,0,0,0)/*485*/
+
+insert into Alimento values(0,0,0,0)/*486*/
+
+insert into Alimento values(0,0,0,0)/*487*/
+
+insert into Alimento values(0,0,0,0)/*488*/
+
+insert into Alimento values(0,0,0,0)/*489*/
+
+insert into Alimento values(0,0,0,0)/*490*/
+
+/*N sei*/
+
+insert into Alimento values(0,0,0,0)/*491*/
+
+/*Açúcar*/
+
+insert into Alimento values(0,0,0,0)/*492*/
+
+insert into Alimento values(0,0,0,0)/*493*/
+
+insert into Alimento values(0,0,0,0)/*494*/
+
+insert into Alimento values(0,0,0,0)/*495*/
+
+/*Chocolate*/
+
+insert into Alimento values(0,0,0,0)/*496*/
+
+insert into Alimento values(0,0,0,0)/*497*/
+
+
+insert into Alimento values(0,0,0,0)/*498*/
+
+
+/*Doces*/
+
+insert into Alimento values(0,0,0,0)/*499*/
+
+insert into Alimento values(0,0,0,0)/*500*/
+
+insert into Alimento values(0,0,0,0)/*501*/
+
+insert into Alimento values(0,0,0,0)/*502*/
+
+insert into Alimento values(0,0,0,0)/*503*/
+
+insert into Alimento values(0,0,0,0)/*504*/
+
+insert into Alimento values(0,0,0,0)/*505*/
+
+insert into Alimento values(0,0,0,0)/*506*/
+
+insert into Alimento values(0,0,0,0)/*507*/
+
+insert into Alimento values(0,0,0,0)/*508*/
+
+insert into Alimento values(0,0,0,0)/*509*/
+
+insert into Alimento values(0,0,0,0)/*510*/
+
+
+/*Café*/
+
+insert into Alimento values(0,0,0,0)/*511*/
+
+insert into Alimento values(0,0,0,0)/*512*/
+
+
+/*Fermento*/
+
+insert into Alimento values(0,0,0,0)/*513*/
+
+insert into Alimento values(0,0,0,0)/*514*/
+
+/*Gelatina*/
+
+insert into Alimento values(0,0,0,0)/*515*/
+
+/*Coisas com sal*/
+
+insert into Alimento values(0,0,0,0)/*516*/
+
+insert into Alimento values(0,0,0,0)/*517*/
+
+insert into Alimento values(0,0,0,0)/*518*/
+
+insert into Alimento values(0,0,0,0)/*519*/
+
+/*Azeitona*/
+
+insert into Alimento values(0,0,0,0)/*520*/
+
+insert into Alimento values(0,0,0,0)/*521*/
+
+/*Chantilly*/
+
+insert into Alimento values(0,0,0,0)/*522*/
+
+
+/*Temperos*/
+insert into Alimento values(0,0,0,0)/*523*/
+
+insert into Alimento values(0,0,0,0)/*524*/
+
+/*Pratos*/
+
+insert into Alimento values(0,0,0,0)/*525*/
+
+insert into Alimento values(0,0,0,0)/*526*/
+
+insert into Alimento values(0,0,0,0)/*527*/
+
+insert into Alimento values(0,0,0,0)/*528*/
+
+insert into Alimento values(0,0,0,0)/*529*/
+
+insert into Alimento values(0,0,0,0)/*530*/
+
+insert into Alimento values(0,0,0,0)/*531*/
+
+insert into Alimento values(0,0,0,0)/*532*/
+
+insert into Alimento values(0,0,0,0)/*533*/
+
+insert into Alimento values(0,0,0,0)/*534*/
+
+insert into Alimento values(0,0,0,0)/*535*/
+
+insert into Alimento values(0,0,0,0)/*536*/
+
+insert into Alimento values(0,0,0,0)/*537*/
+
+insert into Alimento values(0,0,0,0)/*538*/
+
+insert into Alimento values(0,0,0,0)/*539*/
+
+insert into Alimento values(0,0,0,0)/*540*/
+
+insert into Alimento values(0,0,0,0)/*541*/
+
+insert into Alimento values(0,0,0,0)/*542*/
+
+insert into Alimento values(0,0,0,0)/*543*/
+
+insert into Alimento values(0,0,0,0)/*544*/
+
+insert into Alimento values(0,0,0,0)/*545*/
+
+insert into Alimento values(0,0,0,0)/*546*/
+
+insert into Alimento values(0,0,0,0)/*547*/
+
+insert into Alimento values(0,0,0,0)/*548*/
+
+insert into Alimento values(0,0,0,0)/*549*/
+
+insert into Alimento values(0,0,0,0)/*550*/
+
+insert into Alimento values(0,0,0,0)/*551*/
+
+insert into Alimento values(0,0,0,0)/*552*/
+
+insert into Alimento values(0,0,0,0)/*553*/
+
+insert into Alimento values(0,0,0,0)/*554*/
+
+insert into Alimento values(0,0,0,0)/*555*/
+
+insert into Alimento values(0,0,0,0)/*556*/
+
+
+/*Amendoim*/
+
+insert into Alimento values(0,0,0,0)/*557*/
+
+insert into Alimento values(0,0,0,0)/*558*/
+
+
+/*Leguminosas*/
+
+insert into Alimento values(0,0,0,0)/*559*/
+
+insert into Alimento values(0,0,0,0)/*560*/
+
+insert into Alimento values(0,0,0,0)/*561*/
+
+insert into Alimento values(0,0,0,0)/*562*/
+
+insert into Alimento values(0,0,0,0)/*563*/
+
+insert into Alimento values(0,0,0,0)/*564*/
+
+insert into Alimento values(0,0,0,0)/*565*/
+
+insert into Alimento values(0,0,0,0)/*566*/
+
+insert into Alimento values(0,0,0,0)/*567*/
+
+insert into Alimento values(0,0,0,0)/*568*/
+
+insert into Alimento values(0,0,0,0)/*569*/
+
+insert into Alimento values(0,0,0,0)/*570*/
+
+insert into Alimento values(0,0,0,0)/*571*/
+
+insert into Alimento values(0,0,0,0)/*572*/
+
+insert into Alimento values(0,0,0,0)/*573*/
+
+insert into Alimento values(0,0,0,0)/*574*/
+
+insert into Alimento values(0,0,0,0)/*575*/
+
+insert into Alimento values(0,0,0,0)/*576*/
+
+insert into Alimento values(0,0,0,0)/*577*/
+
+insert into Alimento values(0,0,0,0)/*578*/
+
+
+/*Derivados de amendoim*/
+
+insert into Alimento values(0,0,0,0)/*579*/
+
+insert into Alimento values(0,0,0,0)/*580*/
+
+/*Soja*/
+
+insert into Alimento values(0,0,0,0)/*581*/
+
+insert into Alimento values(0,0,0,0)/*582*/
+
+insert into Alimento values(0,0,0,0)/*583*/
+
+insert into Alimento values(0,0,0,0)/*584*/
+
+
+/*Tremoço*/
+
+insert into Alimento values(0,0,0,0)/*585*/
+
+insert into Alimento values(0,0,0,0)/*586*/
+
+
+/*Amendoa*/
+
+insert into Alimento values(0,0,0,0)/*587*/
+
+insert into Alimento values(0,0,0,0)/*588*/
+
+insert into Alimento values(0,0,0,0)/*589*/
+
+
+/*Coco*/
+
+insert into Alimento values(0,0,0,0)/*590*/
+
+insert into Alimento values(0,0,0,0)/*591*/
+
+/*Farinha*/
+
+insert into Alimento values(0,0,0,0)/*592*/
+
+insert into Alimento values(0,0,0,0)/*593*/
+
+insert into Alimento values(0,0,0,0)/*594*/
+
+
+/*Pinhão*/
+
+insert into Alimento values(0,0,0,0)/*595*/
+
+/*Pupunha*/
+
+insert into Alimento values(0,0,0,0)/*596*/
+
+
+/*Noz*/
+insert into Alimento values(0,0,0,0)/*597*/
 
 
 
