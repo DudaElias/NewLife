@@ -210,15 +210,15 @@ insert into Alimento values(2,0,1,2)/*63*/
 
 insert into Alimento values(0,1,0,0)/*64*/
 
-insert into Alimento values(0,1,0,0)/*65*/
+insert into Alimento values(0,0,0,0)/*65*/
 
-insert into Alimento values(2,1,2,0)/*66*/
+insert into Alimento values(0,0,0,0)/*66*/
 
-insert into Alimento values(0,1,0,0)/*67*/
+insert into Alimento values(0,0,0,0)/*67*/
 
-insert into Alimento values(0,1,0,0)/*68*/
+insert into Alimento values(0,0,0,0)/*68*/
 
-insert into Alimento values(0,1,0,0)/*69*/
+insert into Alimento values(0,0,0,0)/*69*/
 
 insert into Alimento values(0,0,0,0)/*70*/
 
@@ -230,35 +230,35 @@ insert into Alimento values(0,0,0,0)/*73*/
 
 insert into Alimento values(0,0,0,0)/*74*/
 
-insert into Alimento values(0,1,0,0)/*75*/
+insert into Alimento values(0,0,0,0)/*75*/
 
-insert into Alimento values(0,1,0,0)/*76*/
+insert into Alimento values(0,0,0,0)/*76*/
 
-insert into Alimento values(0,2,0,0)/*77*/
+insert into Alimento values(0,0,0,0)/*77*/
 
-insert into Alimento values(0,2,0,0)/*78*/
+insert into Alimento values(0,0,0,0)/*78*/
 
-insert into Alimento values(0,2,0,0)/*79*/
+insert into Alimento values(0,0,0,0)/*79*/
 
-insert into Alimento values(0,2,0,0)/*80*/
+insert into Alimento values(0,0,0,0)/*80*/
 
-insert into Alimento values(0,2,0,0)/*81*/
+insert into Alimento values(0,0,0,0)/*81*/
 
-insert into Alimento values(0,1,0,0)/*82*/
+insert into Alimento values(0,0,0,0)/*82*/
 
-insert into Alimento values(0,1,0,0)/*83*/
+insert into Alimento values(0,0,0,0)/*83*/
 
-insert into Alimento values(0,2,0,0)/*84*/
+insert into Alimento values(0,0,0,0)/*84*/
 
-insert into Alimento values(0,2,0,0)/*85*/
+insert into Alimento values(0,0,0,0)/*85*/
 
-insert into Alimento values(0,1,0,0)/*86*/
+insert into Alimento values(0,0,0,0)/*86*/
 
-insert into Alimento values(0,1,0,0)/*87*/
+insert into Alimento values(0,0,0,0)/*87*/
 
-insert into Alimento values(0,1,0,0)/*88*/
+insert into Alimento values(0,0,0,0)/*88*/
 
-insert into Alimento values(0,2,0,0)/*89*/
+insert into Alimento values(0,0,0,0)/*89*/
 
 
 /*Salgadinho*/
@@ -268,21 +268,21 @@ insert into Alimento values(2,2,0,0)/*90*/
 
 /*Vegetais*/
 
-insert into Alimento values(0,1,0,0)/*91*/
+insert into Alimento values(0,0,0,0)/*91*/
 
-insert into Alimento values(0,1,0,0)/*92*/
+insert into Alimento values(0,0,0,0)/*92*/
 
-insert into Alimento values(0,1,0,0)/*93*/
+insert into Alimento values(0,0,0,0)/*93*/
 
-insert into Alimento values(0,1,0,0)/*94*/
+insert into Alimento values(0,0,0,0)/*94*/
 
-insert into Alimento values(0,1,0,0)/*95*/
+insert into Alimento values(0,0,0,0)/*95*/
 
-insert into Alimento values(0,1,0,0)/*96*/
+insert into Alimento values(0,0,0,0)/*96*/
 
-insert into Alimento values(0,1,0,0)/*97*/
+insert into Alimento values(0,0,0,0)/*97*/
 
-insert into Alimento values(0,1,0,0)/*98*/
+insert into Alimento values(0,0,0,0)/*98*/
 
 
 /*Biscoito de polvilho*/
@@ -291,47 +291,47 @@ insert into Alimento values(0,1,0,1)/*99*/
 
 /*Vegetais*/
 
-insert into Alimento values(0,1,0,0)/*100*/
+insert into Alimento values(0,0,0,0)/*100*/
 
-insert into Alimento values(0,1,0,0)/*101*/
+insert into Alimento values(0,0,0,0)/*101*/
 
 insert into Alimento values(0,0,0,0)/*102*/
 
 insert into Alimento values(0,0,0,0)/*103*/
 
-insert into Alimento values(0,1,0,0)/*104*/
+insert into Alimento values(0,0,0,0)/*104*/
 
-insert into Alimento values(0,1,0,0)/*105*/
+insert into Alimento values(0,0,0,0)/*105*/
 
-insert into Alimento values(0,1,0,0)/*106*/
+insert into Alimento values(0,0,0,0)/*106*/
 
-insert into Alimento values(0,1,0,0)/*107*/
+insert into Alimento values(0,0,0,0)/*107*/
 
-insert into Alimento values(0,1,0,0)/*108*/
+insert into Alimento values(0,0,0,0)/*108*/
 
-insert into Alimento values(0,1,0,0)/*109*/
+insert into Alimento values(0,0,0,0)/*109*/
 
-insert into Alimento values(0,1,0,0)/*110*/
+insert into Alimento values(0,0,0,0)/*110*/
 
-insert into Alimento values(0,1,0,0)/*111*/
+insert into Alimento values(0,0,0,0)/*111*/
 
-insert into Alimento values(0,1,0,0)/*112*/
+insert into Alimento values(0,0,0,0)/*112*/
 
-insert into Alimento values(0,1,0,0)/*113*/
+insert into Alimento values(0,0,0,0)/*113*/
 
-insert into Alimento values(0,1,0,0)/*114*/
+insert into Alimento values(0,0,0,0)/*114*/
 
-insert into Alimento values(0,1,0,0)/*115*/
+insert into Alimento values(0,0,0,0)/*115*/
 
-insert into Alimento values(0,1,0,0)/*116*/
+insert into Alimento values(0,0,0,0)/*116*/
 
-insert into Alimento values(0,1,0,0)/*117*/
+insert into Alimento values(0,0,0,0)/*117*/
 
-insert into Alimento values(0,1,0,0)/*118*/
+insert into Alimento values(0,0,0,0)/*118*/
 
-insert into Alimento values(0,1,0,0)/*119*/
+insert into Alimento values(0,0,0,0)/*119*/
 
-insert into Alimento values(0,1,0,0)/*120*/
+insert into Alimento values(0,0,0,0)/*120*/
 
 /*Farinha*/
 
@@ -346,35 +346,35 @@ insert into Alimento values(0,1,0,0)/*124*/
 
 /*Vegetais*/
 
-insert into Alimento values(0,1,0,0)/*125*/
+insert into Alimento values(0,0,0,0)/*125*/
 
-insert into Alimento values(0,1,0,0)/*126*/
+insert into Alimento values(0,0,0,0)/*126*/
 
-insert into Alimento values(0,1,0,0)/*127*/
+insert into Alimento values(0,0,0,0)/*127*/
 
-insert into Alimento values(0,1,0,0)/*128*/
+insert into Alimento values(0,0,0,0)/*128*/
 
-insert into Alimento values(0,1,0,0)/*129*/
+insert into Alimento values(0,0,0,0)/*129*/
 
-insert into Alimento values(0,1,0,0)/*130*/
+insert into Alimento values(0,0,0,0)/*130*/
 
-insert into Alimento values(0,1,0,0)/*131*/
+insert into Alimento values(0,0,0,0)/*131*/
 
-insert into Alimento values(0,1,0,0)/*132*/
+insert into Alimento values(0,0,0,0)/*132*/
 
-insert into Alimento values(0,1,0,0)/*133*/
+insert into Alimento values(0,0,0,0)/*133*/
 
-insert into Alimento values(0,1,0,0)/*134*/
+insert into Alimento values(0,0,0,0)/*134*/
 
-insert into Alimento values(0,1,0,0)/*135 mostarda??*/
+insert into Alimento values(0,0,0,0)/*135 mostarda??*/
 
-insert into Alimento values(1,0,2,0)/*136*/
+insert into Alimento values(0,0,0,0)/*136*/
 
-insert into Alimento values(0,1,0,0)/*137*/
+insert into Alimento values(0,0,0,0)/*137*/
 
-insert into Alimento values(0,1,0,0)/*138*/
+insert into Alimento values(0,0,0,0)/*138*/
 
-insert into Alimento values(0,1,0,0)/*139*/
+insert into Alimento values(0,0,0,0)/*139*/
 
 /*Pão de queijo*/
 
@@ -385,13 +385,13 @@ insert into Alimento values(0,1,0,0)/*141*/
 
 /*Vegetais*/
 
-insert into Alimento values(0,1,0,0)/*142*/
+insert into Alimento values(0,0,0,0)/*142*/
 
-insert into Alimento values(0,1,0,0)/*143*/
+insert into Alimento values(0,0,0,0)/*143*/
 
-insert into Alimento values(0,1,0,0)/*144*/
+insert into Alimento values(0,0,0,0)/*144*/
 
-insert into Alimento values(0,1,0,0)/*145*/
+insert into Alimento values(0,0,0,0)/*145*/
 
 /*Polvilho*/
 
@@ -399,236 +399,234 @@ insert into Alimento values(0,1,0,0)/*146*/
 
 /*Vegetais*/
 
-insert into Alimento values(0,1,0,0)/*147*/
+insert into Alimento values(0,0,0,0)/*147*/
 
-insert into Alimento values(0,1,0,0)/*148*/
+insert into Alimento values(0,0,0,0)/*148*/
 
-insert into Alimento values(0,1,0,0)/*149*/
+insert into Alimento values(0,0,0,0)/*149*/
 
-insert into Alimento values(0,1,0,0)/*150*/
+insert into Alimento values(0,0,0,0)/*150*/
 
-insert into Alimento values(0,1,0,0)/*151*/
+insert into Alimento values(0,0,0,0)/*151*/
 
-insert into Alimento values(0,1,0,0)/*152*/
+insert into Alimento values(0,0,0,0)/*152*/
 
-insert into Alimento values(0,1,0,0)/*153*/
+insert into Alimento values(0,0,0,0)/*153*/
 
-insert into Alimento values(0,1,0,0)/*154*/
+insert into Alimento values(0,0,0,0)/*154*/
 
-insert into Alimento values(0,1,0,0)/*155*/
+insert into Alimento values(0,0,0,0)/*155*/
 
-insert into Alimento values(0,1,0,0)/*156*/
+insert into Alimento values(0,0,0,0)/*156*/
 
-insert into Alimento values(0,1,0,0)/*157*/
+insert into Alimento values(0,0,0,0)/*157*/
 
-insert into Alimento values(0,1,0,0)/*158*/
+insert into Alimento values(0,0,0,0)/*158*/
 
-insert into Alimento values(0,2,0,0)/*159*/
+insert into Alimento values(0,0,0,0)/*159*/
 
-insert into Alimento values(0,1,0,0)/*160*/
+insert into Alimento values(0,0,0,0)/*160*/
 
-insert into Alimento values(0,1,0,0)/*161*/
+insert into Alimento values(0,0,0,0)/*161*/
 
-insert into Alimento values(0,1,0,0)/*162*/
+insert into Alimento values(0,0,0,0)/*162*/
 
 
 /*Frutas*/
 
-insert into Alimento values(0,1,0,0)/*163*/
+insert into Alimento values(0,0,0,0)/*163*/
 
-insert into Alimento values(0,1,0,0)/*164*/
+insert into Alimento values(0,0,0,0)/*164*/
 
-insert into Alimento values(0,1,0,0)/*165*/
+insert into Alimento values(0,0,0,0)/*165*/
 
-insert into Alimento values(0,1,0,0)/*166*/
+insert into Alimento values(0,0,0,0)/*166*/
 
-insert into Alimento values(0,1,0,0)/*167*/
+insert into Alimento values(0,0,0,0)/*167*/
 
-insert into Alimento values(0,1,0,0)/*168*/
+insert into Alimento values(0,0,0,0)/*168*/
 
-insert into Alimento values(0,1,0,0)/*169*/
+insert into Alimento values(0,0,0,0)/*169*/
 
-insert into Alimento values(0,1,0,0)/*170*/
+insert into Alimento values(0,0,0,0)/*170*/
 
-insert into Alimento values(0,1,0,0)/*171*/
+insert into Alimento values(0,0,0,0)/*171*/
 
-insert into Alimento values(0,1,0,0)/*172*/
+insert into Alimento values(0,0,0,0)/*172*/
 
-insert into Alimento values(0,1,0,0)/*173*/
+insert into Alimento values(0,0,0,0)/*173*/
 
-insert into Alimento values(0,1,0,0)/*174*/
+insert into Alimento values(0,0,0,0)/*174*/
 
-insert into Alimento values(0,1,0,0)/*175*/
+insert into Alimento values(0,0,0,0)/*175*/
 
-insert into Alimento values(0,1,2,0)/*176*/
+insert into Alimento values(0,0,0,0)/*176*/
 
-insert into Alimento values(0,1,0,0)/*177*/
+insert into Alimento values(0,0,0,0)/*177*/
 
-insert into Alimento values(0,1,0,0)/*178*/
+insert into Alimento values(0,0,0,0)/*178*/
 
-insert into Alimento values(0,1,0,0)/*179*/
+insert into Alimento values(0,0,0,0)/*179*/
 
-insert into Alimento values(0,1,0,0)/*180*/
+insert into Alimento values(0,0,0,0)/*180*/
 
-insert into Alimento values(0,1,0,0)/*181*/
+insert into Alimento values(0,0,0,0)/*181*/
 
-insert into Alimento values(0,1,0,0)/*182*/
+insert into Alimento values(0,0,0,0)/*182*/
 
-insert into Alimento values(0,1,0,0)/*183*/
+insert into Alimento values(0,0,0,0)/*183*/
 
-insert into Alimento values(0,1,0,0)/*184*/
+insert into Alimento values(0,0,0,0)/*184*/
 
-insert into Alimento values(0,1,0,0)/*185*/
+insert into Alimento values(0,0,0,0)/*185*/
 
-insert into Alimento values(0,1,0,0)/*186*/
+insert into Alimento values(0,0,0,0)/*186*/
 
-insert into Alimento values(0,1,0,0)/*187*/
+insert into Alimento values(0,0,0,0)/*187*/
 
-insert into Alimento values(0,1,0,0)/*188*/
+insert into Alimento values(0,0,0,0)/*188*/
 
-insert into Alimento values(0,1,0,0)/*189*/
+insert into Alimento values(0,0,0,0)/*189*/
 
-insert into Alimento values(0,1,0,0)/*190*/
+insert into Alimento values(0,0,0,0)/*190*/
 
-insert into Alimento values(0,1,0,0)/*191*/
+insert into Alimento values(0,0,0,0)/*191*/
 
-insert into Alimento values(0,1,0,0)/*192*/
+insert into Alimento values(0,0,0,0)/*192*/
 
-insert into Alimento values(0,1,0,0)/*193*/
+insert into Alimento values(0,0,0,0)/*193*/
 
-insert into Alimento values(0,1,0,0)/*194*/
+insert into Alimento values(0,0,0,0)/*194*/
 
-insert into Alimento values(0,1,0,0)/*195*/
+insert into Alimento values(0,0,0,0)/*195*/
 
-insert into Alimento values(0,1,0,0)/*196*/
+insert into Alimento values(0,0,0,0)/*196*/
 
-insert into Alimento values(0,1,0,0)/*197*/
+insert into Alimento values(0,0,0,0)/*197*/
 
-insert into Alimento values(0,1,2,0)/*198*/
+insert into Alimento values(0,0,0,0)/*198*/
 
-insert into Alimento values(0,1,2,0)/*199*/
+insert into Alimento values(0,0,0,0)/*199*/
 
-insert into Alimento values(0,1,0,0)/*200*/
+insert into Alimento values(0,0,0,0)/*200*/
 
-insert into Alimento values(0,1,0,0)/*201*/
+insert into Alimento values(0,0,0,0)/*201*/
 
-insert into Alimento values(0,1,0,0)/*202*/
+insert into Alimento values(0,0,0,0)/*202*/
 
-insert into Alimento values(0,1,0,0)/*203*/
+insert into Alimento values(0,0,0,0)/*203*/
 
-insert into Alimento values(0,1,0,0)/*204*/
+insert into Alimento values(0,0,0,0)/*204*/
 
-insert into Alimento values(0,1,0,0)/*205*/
+insert into Alimento values(0,0,0,0)/*205*/
 
-insert into Alimento values(0,1,0,0)/*206*/
+insert into Alimento values(0,0,0,0)/*206*/
 
-insert into Alimento values(0,1,0,0)/*207*/
+insert into Alimento values(0,0,0,0)/*207*/
 
-insert into Alimento values(0,1,0,0)/*208*/
+insert into Alimento values(0,0,0,0)/*208*/
 
-insert into Alimento values(0,1,0,0)/*209*/
+insert into Alimento values(0,0,0,0)/*209*/
 
-insert into Alimento values(0,1,0,0)/*210*/
+insert into Alimento values(0,0,0,0)/*210*/
 
-insert into Alimento values(0,1,0,0)/*211*/
+insert into Alimento values(0,0,0,0)/*211*/
 
-insert into Alimento values(0,1,0,0)/*212*/
+insert into Alimento values(0,0,0,0)/*212*/
 
-insert into Alimento values(0,1,0,0)/*213*/
+insert into Alimento values(0,0,0,0)/*213*/
 
-insert into Alimento values(0,1,0,0)/*214*/
+insert into Alimento values(0,0,0,0)/*214*/
 
-insert into Alimento values(0,1,0,0)/*215*/
+insert into Alimento values(0,0,0,0)/*215*/
 
-insert into Alimento values(0,1,0,0)/*216*/
+insert into Alimento values(0,0,0,0)/*216*/
 
-insert into Alimento values(0,1,0,0)/*217*/
+insert into Alimento values(0,0,0,0)/*217*/
 
-insert into Alimento values(0,1,0,0)/*218*/
+insert into Alimento values(0,0,0,0)/*218*/
 
-insert into Alimento values(0,1,0,0)/*219*/
+insert into Alimento values(0,0,0,0)/*219*/
 
-insert into Alimento values(0,1,0,0)/*220*/
+insert into Alimento values(0,0,0,0)/*220*/
 
-insert into Alimento values(0,1,0,0)/*221*/
+insert into Alimento values(0,0,0,0)/*221*/
 
-insert into Alimento values(0,1,0,0)/*222*/
+insert into Alimento values(0,0,0,0)/*222*/
 
-insert into Alimento values(0,1,0,0)/*223*/
+insert into Alimento values(0,0,0,0)/*223*/
 
-insert into Alimento values(0,1,0,0)/*224*/
+insert into Alimento values(0,0,0,0)/*224*/
 
-insert into Alimento values(0,1,0,0)/*225*/
+insert into Alimento values(0,0,0,0)/*225*/
 
-insert into Alimento values(0,1,0,0)/*226*/
+insert into Alimento values(0,0,0,0)/*226*/
 
-insert into Alimento values(0,1,0,0)/*227*/
+insert into Alimento values(0,0,0,0)/*227*/
 
-insert into Alimento values(0,1,0,0)/*228*/
+insert into Alimento values(0,0,0,0)/*228*/
 
-insert into Alimento values(0,1,0,0)/*229*/
+insert into Alimento values(0,0,0,0)/*229*/
 
-insert into Alimento values(0,1,0,0)/*230*/
+insert into Alimento values(0,0,0,0)/*230*/
 
-insert into Alimento values(0,1,0,0)/*231*/
+insert into Alimento values(0,0,0,0)/*231*/
 
-insert into Alimento values(0,1,0,0)/*232*/
+insert into Alimento values(0,0,0,0)/*232*/
 
-insert into Alimento values(0,1,0,0)/*233*/
+insert into Alimento values(0,0,0,0)/*233*/
 
-insert into Alimento values(0,1,0,0)/*234*/
+insert into Alimento values(0,0,0,0)/*234*/
 
-insert into Alimento values(0,1,0,0)/*235*/
+insert into Alimento values(0,0,0,0)/*235*/
 
-insert into Alimento values(0,1,0,0)/*236*/
+insert into Alimento values(0,0,0,0)/*236*/
 
-insert into Alimento values(0,1,0,0)/*237*/
+insert into Alimento values(0,0,0,0)/*237*/
 
-insert into Alimento values(0,1,0,0)/*238*/
+insert into Alimento values(0,0,0,0)/*238*/
 
-insert into Alimento values(0,1,0,0)/*239*/
+insert into Alimento values(0,0,0,0)/*239*/
 
-insert into Alimento values(0,1,0,0)/*240*/
+insert into Alimento values(0,0,0,0)/*240*/
 
-insert into Alimento values(0,1,0,0)/*241*/
+insert into Alimento values(0,0,0,0)/*241*/
 
-insert into Alimento values(0,1,0,0)/*242*/
+insert into Alimento values(0,0,0,0)/*242*/
 
-insert into Alimento values(0,1,0,0)/*243*/
+insert into Alimento values(0,0,0,0)/*243*/
 
-insert into Alimento values(0,1,0,0)/*244*/
+insert into Alimento values(0,0,0,0)/*244*/
 
-insert into Alimento values(0,1,0,0)/*245*/
+insert into Alimento values(0,0,0,0)/*245*/
 
-insert into Alimento values(0,1,0,0)/*246*/
+insert into Alimento values(0,0,0,0)/*246*/
 
-insert into Alimento values(0,1,0,0)/*247*/
+insert into Alimento values(0,0,0,0)/*247*/
 
-insert into Alimento values(0,1,0,0)/*248*/
+insert into Alimento values(0,0,0,0)/*248*/
 
-insert into Alimento values(0,1,0,0)/*249*/
+insert into Alimento values(0,0,0,0)/*249*/
 
-insert into Alimento values(0,1,0,0)/*250*/
+insert into Alimento values(0,0,0,0)/*250*/
 
-insert into Alimento values(0,1,0,0)/*251*/
+insert into Alimento values(0,0,0,0)/*251*/
 
-insert into Alimento values(0,1,0,0)/*252*/
+insert into Alimento values(0,0,0,0)/*252*/
 
-insert into Alimento values(0,1,0,0)/*253*/
+insert into Alimento values(0,0,0,0)/*253*/
 
-insert into Alimento values(0,1,0,0)/*254*/
+insert into Alimento values(0,0,0,0)/*254*/
 
-insert into Alimento values(0,1,0,0)/*255*/
+insert into Alimento values(0,0,0,0)/*255*/
 
-insert into Alimento values(0,1,0,0)/*256*/
+insert into Alimento values(0,0,0,0)/*256*/
 
-insert into Alimento values(0,1,0,0)/*257*/
+insert into Alimento values(0,0,0,0)/*257*/
 
-insert into Alimento values(0,1,0,0)/*258*/
+insert into Alimento values(0,0,0,0)/*258*/
 
 
-
-/*DUDA MORREU A PARTIR DESSE PONTO, REVISAR TUDO*/
 
 /*Azeites, oleos e manteiga*/
 
@@ -649,7 +647,6 @@ insert into Alimento values(0,0,2,0)/*265*/
 
 insert into Alimento values(0,0,2,0)/*266*/
 
-
 insert into Alimento values(0,0,0,0)/*267*/
 
 insert into Alimento values(0,2,0,0)/*268*/
@@ -661,6 +658,8 @@ insert into Alimento values(0,2,0,0)/*270*/
 insert into Alimento values(0,1,0,0)/*271  ??*/
 
 insert into Alimento values(0,2,0,0)/*272*/
+
+
 
 /*Peixes*/
 
@@ -716,6 +715,10 @@ insert into Alimento values(0,0,0,0)/*297*/
 
 insert into Alimento values(0,0,0,0)/*298*/
 
+
+
+
+/*DUDA MORREU A PARTIR DESSE PONTO, REVISAR TUDO*/
 
 /*SALISAI AQUI*/
 
