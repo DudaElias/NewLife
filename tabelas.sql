@@ -31,7 +31,7 @@ create table Alimento
 
 
 
-
+/*Arroz*/
 
 
 insert into Alimento values(0,0,0,0)/*1*/
@@ -46,8 +46,13 @@ insert into Alimento values(0,0,0,0)/*5*/
 
 insert into Alimento values(0,0,0,0)/*6*/
 
+
+/*Aveia*/
+
 insert into Alimento values(2,2,0,0)/*7*/
 
+
+/*Biscoito*/
 
 insert into Alimento values(2,1,1,1)/*8*/
 
@@ -61,19 +66,26 @@ insert into Alimento values(2,2,1,0)/*12*/
 
 insert into Alimento values(2,1,1,0)/*13*/
 
-insert into Alimento values(2,2,1,1)/*14*/
+/*Bolo, mistura*/
 
-insert into Alimento values(2,2,1,1)/*15*/
+insert into Alimento values(2,2,2,2)/*14*/
 
-insert into Alimento values(2,2,1,1)/*16*/
+insert into Alimento values(2,2,2,2)/*15*/
 
-insert into Alimento values(2,2,1,1)/*17*/
+insert into Alimento values(2,2,2,2)/*16*/
 
-insert into Alimento values(2,2,1,1)/*18*/
+insert into Alimento values(2,2,2,2)/*17*/
+
+insert into Alimento values(2,2,2,2)/*18*/
+
+
+/*Canjica*/
 
 insert into Alimento values(0,2,0,0)/*19*/
 
 insert into Alimento values(0,2,2,0)/*20*/
+
+/*Cereais*/
 
 insert into Alimento values(2,2,0,0)/*21*/
 
@@ -87,19 +99,25 @@ insert into Alimento values(2,1,2,0)/*25*/
 
 insert into Alimento values(2,1,2,0)/*26*/
 
+/*Creme em pó*/
+
 insert into Alimento values(0,0,0,0)/*27*/
 
-insert into Alimento values(0,1,0,0)/*28*/
+insert into Alimento values(0,2,0,0)/*28*/
 
-insert into Alimento values(1,2,2,0)/*29*/
+/*Curau*/
 
-insert into Alimento values(1,2,0,0)/*30*/
+insert into Alimento values(2,2,2,0)/*29*/
+
+insert into Alimento values(2,2,0,0)/*30*/
+
+/*Farinha*/
 
 insert into Alimento values(0,0,0,0)/*31*/
 
 insert into Alimento values(2,0,0,0)/*32*/
 
-insert into Alimento values(0,1,0,0)/*33*/
+insert into Alimento values(0,2,0,0)/*33*/
 
 insert into Alimento values(2,0,0,0)/*34*/
 
@@ -107,41 +125,60 @@ insert into Alimento values(2,0,0,0)/*35*/
 
 insert into Alimento values(2,1,2,0)/*36*/
 
-insert into Alimento values(2,1,2,2)/*37*/
 
-insert into Alimento values(2,1,2,2)/*38*/
+/*Massa*/
 
-insert into Alimento values(2,1,2,2)/*39*/
+insert into Alimento values(2,1,0,2)/*37*/
 
-insert into Alimento values(2,1,2,0)/*40*/
+insert into Alimento values(2,1,0,2)/*38*/
 
-insert into Alimento values(2,1,2,2)/*41*/
+insert into Alimento values(2,1,0,2)/*39*/
+
+insert into Alimento values(2,1,0,0)/*40*/
+
+insert into Alimento values(2,1,0,2)/*41*/
+
+/*Amido*/
 
 insert into Alimento values(2,2,0,0)/*42*/
 
 insert into Alimento values(0,2,0,0)/*43*/
 
-insert into Alimento values(0,1,0,0)/*44*/
+
+/*Milho*/
+
+insert into Alimento values(0,2,0,0)/*44*/
 
 insert into Alimento values(0,2,0,0)/*45*/
 
-insert into Alimento values(2,1,0,0)/*46*/
 
-insert into Alimento values(1,2,2,0)/*47*/
+/*Mingau*/
 
-insert into Alimento values(2,1,2,0)/*48*/
+insert into Alimento values(2,2,0,0)/*46*/
 
-insert into Alimento values(0,2,0,0)/*49*/
+
+
+/*Pamonha*/
+
+insert into Alimento values(2,2,2,0)/*47*/
+
+/*Pão*/
+insert into Alimento values(2,2,2,0)/*48*/
+
+insert into Alimento values(0,2,2,0)/*49*/
 
 insert into Alimento values(2,1,2,0)/*50*/
 
-insert into Alimento values(2,1,1,2)/*51*/
+insert into Alimento values(0,2,2,2)/*51*/
 
 insert into Alimento values(2,1,2,0)/*52*/
 
 insert into Alimento values(2,1,2,0)/*53*/
 
 insert into Alimento values(2,1,2,0)/*54*/
+
+
+/*Pastel*/
 
 insert into Alimento values(2,0,1,2)/*55*/
 
@@ -155,11 +192,21 @@ insert into Alimento values(2,0,1,2)/*59*/
 
 insert into Alimento values(2,0,1,2)/*60*/
 
+
+/*Pipoca*/
+
 insert into Alimento values(0,2,0,0)/*61*/
+
+/*Polenta*/
 
 insert into Alimento values(1,2,2,0)/*62*/
 
-insert into Alimento values(1,0,1,2)/*63*/
+/*Torrada*/
+
+insert into Alimento values(2,0,1,2)/*63*/
+
+
+/*Vegetais/hortaliças*/
 
 insert into Alimento values(0,1,0,0)/*64*/
 
@@ -213,7 +260,13 @@ insert into Alimento values(0,1,0,0)/*88*/
 
 insert into Alimento values(0,2,0,0)/*89*/
 
-insert into Alimento values(2,1,0,0)/*90*/
+
+/*Salgadinho*/
+
+
+insert into Alimento values(2,2,0,0)/*90*/
+
+/*Vegetais*/
 
 insert into Alimento values(0,1,0,0)/*91*/
 
@@ -231,7 +284,12 @@ insert into Alimento values(0,1,0,0)/*97*/
 
 insert into Alimento values(0,1,0,0)/*98*/
 
+
+/*Biscoito de polvilho*/
+
 insert into Alimento values(0,1,0,1)/*99*/
+
+/*Vegetais*/
 
 insert into Alimento values(0,1,0,0)/*100*/
 
@@ -275,7 +333,7 @@ insert into Alimento values(0,1,0,0)/*119*/
 
 insert into Alimento values(0,1,0,0)/*120*/
 
-
+/*Farinha*/
 
 insert into Alimento values(0,1,0,0)/*121*/
 
@@ -284,6 +342,9 @@ insert into Alimento values(0,1,0,0)/*122*/
 insert into Alimento values(0,1,0,0)/*123*/
 
 insert into Alimento values(0,1,0,0)/*124*/
+
+
+/*Vegetais*/
 
 insert into Alimento values(0,1,0,0)/*125*/
 
@@ -315,9 +376,14 @@ insert into Alimento values(0,1,0,0)/*138*/
 
 insert into Alimento values(0,1,0,0)/*139*/
 
+/*Pão de queijo*/
+
+
 insert into Alimento values(0,1,0,0)/*140*/
 
 insert into Alimento values(0,1,0,0)/*141*/
+
+/*Vegetais*/
 
 insert into Alimento values(0,1,0,0)/*142*/
 
@@ -327,7 +393,11 @@ insert into Alimento values(0,1,0,0)/*144*/
 
 insert into Alimento values(0,1,0,0)/*145*/
 
+/*Polvilho*/
+
 insert into Alimento values(0,1,0,0)/*146*/
+
+/*Vegetais*/
 
 insert into Alimento values(0,1,0,0)/*147*/
 
@@ -360,6 +430,9 @@ insert into Alimento values(0,1,0,0)/*160*/
 insert into Alimento values(0,1,0,0)/*161*/
 
 insert into Alimento values(0,1,0,0)/*162*/
+
+
+/*Frutas*/
 
 insert into Alimento values(0,1,0,0)/*163*/
 
@@ -394,8 +467,6 @@ insert into Alimento values(0,1,0,0)/*177*/
 insert into Alimento values(0,1,0,0)/*178*/
 
 insert into Alimento values(0,1,0,0)/*179*/
-
-
 
 insert into Alimento values(0,1,0,0)/*180*/
 
@@ -557,22 +628,27 @@ insert into Alimento values(0,1,0,0)/*258*/
 
 
 
+/*DUDA MORREU A PARTIR DESSE PONTO, REVISAR TUDO*/
+
+/*Azeites, oleos e manteiga*/
+
 
 insert into Alimento values(0,1,0,0)/*259*/
 
 insert into Alimento values(0,0,0,0)/*260*/
 
-insert into Alimento values(0,0,1,0)/*261*/
+insert into Alimento values(0,0,2,0)/*261*/
 
 insert into Alimento values(0,0,1,0)/*262*/
 
-insert into Alimento values(0,0,1,0)/*263*/
+insert into Alimento values(0,0,2,0)/*263*/
 
-insert into Alimento values(0,0,1,0)/*264*/
+insert into Alimento values(0,0,2,0)/*264*/
 
-insert into Alimento values(0,0,1,0)/*265*/
+insert into Alimento values(0,0,2,0)/*265*/
 
-insert into Alimento values(0,0,1,0)/*266*/
+insert into Alimento values(0,0,2,0)/*266*/
+
 
 insert into Alimento values(0,0,0,0)/*267*/
 
@@ -582,9 +658,11 @@ insert into Alimento values(0,2,0,0)/*269*/
 
 insert into Alimento values(0,2,0,0)/*270*/
 
-insert into Alimento values(0,1,0,0)/*271*/
+insert into Alimento values(0,1,0,0)/*271  ??*/
 
-insert into Alimento values(0,1,0,0)/*272*/
+insert into Alimento values(0,2,0,0)/*272*/
+
+/*Peixes*/
 
 insert into Alimento values(0,0,0,0)/*273*/
 
@@ -598,7 +676,6 @@ insert into Alimento values(0,0,0,0)/*277*/
 
 insert into Alimento values(0,0,0,0)/*278*/
 
-
 insert into Alimento values(0,0,0,0)/*279*/
 
 insert into Alimento values(0,0,0,0)/*280*/
@@ -611,9 +688,9 @@ insert into Alimento values(0,0,0,0)/*283*/
 
 insert into Alimento values(0,0,0,0)/*284*/
 
-insert into Alimento values(0,1,0,0)/*285*/
+insert into Alimento values(0,0,0,0)/*285*/
 
-insert into Alimento values(0,1,0,0)/*286*/
+insert into Alimento values(0,0,0,0)/*286*/
 
 insert into Alimento values(0,0,0,0)/*287*/
 
@@ -639,6 +716,8 @@ insert into Alimento values(0,0,0,0)/*297*/
 
 insert into Alimento values(0,0,0,0)/*298*/
 
+
+/*SALISAI AQUI*/
 
 insert into Alimento values(2,0,0,0)/*299*/
 
@@ -689,7 +768,7 @@ insert into Alimento values(0,0,0,0)/*321*/
 insert into Alimento values(0,0,0,0)/*322*/
 
 
-
+/*Presunto*/
 insert into Alimento values(2,2,0,0)/*323 presunto é transgênico?*/
 
 
