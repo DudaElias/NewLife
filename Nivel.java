@@ -17,7 +17,7 @@ public class Nivel
 	{
 		nivel = null;
 		exercicios = null;
-		instensidade0Exercicio = null;
+		instensidadeExercicio = null;
 		junkFood = null;
 	}
 
