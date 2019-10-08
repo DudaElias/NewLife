@@ -3,12 +3,11 @@ public class Nivel
 
 	protected int nivel;
 	protected int exercicios;
-	protected String intensidadeExercicio;
+	protected int intensidadeExercicio;
 	protected int junkFood;
 
-	public Nivel(String[] r, int e; String i; int j)
+	public Nivel(int e; int i; int j)
 	{
-		restricoes = r;
 		exercicios = e;
 		intensidadeExercicio = i;
 		junkFood = j;
@@ -17,7 +16,6 @@ public class Nivel
 	public Nivel()
 	{
 		nivel = null;
-		restricoes = null;
 		exercicios = null;
 		instensidade0Exercicio = null;
 		junkFood = null;
@@ -25,13 +23,45 @@ public class Nivel
 
 	public int DeterminarNivel()
 	{
-		if(intensidadeExercicio == "Ausência" && junkFood > 10 && exercicios = 0)
-			return nivel = 1;
-		if(intensidadeExercicio == "Intenso" && junkFood <= 1 && exercicios > 5)
-			return nivel = 10;
-		if(intensidadeExercicio == "Moderado" && junkFood > 5 && (exercicios == 2 || exercicios == 3))
-			return nivel = 2;
-		if(intensidadeExercicio == "Moderado" && junkFood <= 5 && (exercicios == 2 || exercicios == 3))
-			return nivel = 3;
+		if(intensidadeExercicio == 0 && exercicios = 0 && junkFood > 10) // nível 1
+			return 1;
+		if(intensidadeExercicio == 1 && (exercicios == 2 || exercicios == 3) && junkFood > 10) //nível 2
+			return 2;
+		if(intensidadeExercicio == 1 && exercicios >=4 && junkFood > 10)
+			return 2;
+		if(intensidadeExercicio == 2 && (exercicios == 2 || exercicios == 3) && junkFood > 10)
+			return 2;
+		if(intensidadeExercicio == 2 && exercicios >=4 && junkFood > 10)
+			return 2;
+		if(intensidadeExercicio == 0 && exercicios = 0 && junkFood >= 5)
+			return 3;
+		if(intensidadeExercicio == 1 && (exercicios == 2 || exercicios == 3) && junkFood >= 5)
+			return 3;
+		if(intensidadeExercicio == 2 && (exercicios == 2 || exercicios == 3) && junkFood >= 5)
+			return 3;
+		if(intensidadeExercicio == 0 && exercicios = 0 && junkFood < 5)
+			return 4;
+		if(intensidadeExercicio == 1 && exercicios >=4 && junkFood >=5)
+			return 4;
+		if(intensidadeExercicio == 2 && exercicios >=4 && junkFood >=5)
+			return 4;
+		if(intensidadeExercicio == 0 && exercicios = 0 && junkFood <=1)
+			return 5;
+		if(intensidadeExercicio == 1 && (exercicios == 2 || exercicios == 3) && junkFood < 5)
+			return 5;
+		if(intensidadeExercicio == 1 && exercicios >=4 && junkFood < 5)
+			return 6;
+		if(intensidadeExercicio == 2 && (exercicios == 2 || exercicios == 3) && junkFood < 5)
+			return 7;
+		if(intensidadeExercicio == 2 && exercicios >=4 && junkFood < 5)
+			return 8;
+		if(intensidadeExercicio == 0 && (exercicios == 2 || exercicios == 3) && junkFood <=1)
+			return 9;
+		if(intensidadeExercicio == 0 && (exercicios == 2 || exercicios == 3) && junkFood <=1)
+			return 9;
+		if(intensidadeExercicio == 0 && exercicios >=4 && junkFood <=1)
+			return 10;
+		if(intensidadeExercicio == 0 && exercicios >=4 && junkFood <=1)
+			return 10;
 	}
 }
