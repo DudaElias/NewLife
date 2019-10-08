@@ -720,8 +720,6 @@ insert into Alimento values(0,0,0,0)/*298*/
 
 /*DUDA MORREU A PARTIR DESSE PONTO, REVISAR TUDO*/
 
-/*SALISAI AQUI*/
-
 insert into Alimento values(2,0,0,0)/*299*/
 
 insert into Alimento values(0,0,0,0)/*300*/
