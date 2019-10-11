@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="100dp"
         android:text="Login"
         android:textColor="#404040"
         android:textSize="28dp"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="175dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="100dp"
         android:text="Criar Conta"
         android:textColor="#404040"
         android:textSize="28dp"
@@ -82,7 +82,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginLeft="40dp">
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="-80dp">
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -128,7 +129,7 @@
                 android:layout_marginTop="56dp"
                 android:background="@drawable/botao"
                 android:ems="7"
-                android:text="LOGIN"
+                android:text="CRIAR"
                 android:textColor="#FFFFFF"
                 android:textSize="20dp"
                 app:layout_constraintStart_toStartOf="parent"
