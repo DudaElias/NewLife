@@ -17,8 +17,9 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(MainActivity.this, TelaLogin.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
             }
-        }, 5000);
+        }, 1000);
 
     }
 }
