@@ -65,7 +65,7 @@
                 android:textSize="25dp" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnLogar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="65dp"
@@ -133,6 +133,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20dp"
                 app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/btnCadastrar"
                 app:layout_constraintTop_toBottomOf="@+id/editText2" />
         </LinearLayout>
     </ViewFlipper>
