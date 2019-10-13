@@ -10,7 +10,7 @@ public class Questao {
     {
         qual = w;
         tipo = x;
-        if(tipo == "dissertativa")
+        if(tipo == "Dissertativa")
             respostas = null;
         else
             respostas = z;

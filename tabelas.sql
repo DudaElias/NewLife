@@ -1467,15 +1467,28 @@ create table Dieta
 	constraint fk_CodPerfil foreign key(codPerfil) references Perfil(id)
 )
 
-create table Quiz
-(
-	codQuiz int primary key not null,
-	pergunta ntext not null,
-	alternativa varchar(40) not null
-)
 
-create table Possibilidade
+create table Questao
 (
-	codPossibilidade int primary key not null,
-	possibilidade varchar(50) not null
+	codQuestao int primary key not null,
+	codQuiz int not null,
+	pergunta ntext not null,
+	tipo varchar(30) not null,
+	respostas ntext
 )	
+
+
+/*Quiz base*/
+insert into Questao values(1,1,'Quanto come fora de casa?','Alternativa1','Raramente , 1x por semana , 2/3x por semana , Quase sempre')
+insert into Questao values(2,1,'Faz atividade física?','Alternativa1','Raramente , 1x por semana , 2/3x por semana , +5 por semana')
+insert into Questao values(3,1,'Possui diabetes?','Alternativa1','Sim(Tipo 1) , Sim(Tipo 2) , Não(Pré-diabético) , Não')
+insert into Questao values(4,1,'Possui hipertensão?','Alternativa1','Sim(Preocupante) , Sim , Não(Normal) , Não(Pressão baixa)')
+insert into Questao values(5,1,'Problemas de estresse e/ou ansiedade?','Alternativa1','Sim(Diariamente) , Sim(Muitas vezes) , Sim(Algumas vezes) , Raramente')
+insert into Questao values(6,1,'Quanto dorme por noite?','Alternativa1','8h ou + , Entre 6 e 8h , Entre 4 e 5h , Menos que 4h')
+insert into Questao values(7,1,'Quanto de água bebe por dia?','Alternativa1','-1L , 1/2L , 3/5L , +5L')
+
+insert into Questao values(8,1,'Qual sua altura? (em cm)','Dissertativa', null)
+insert into Questao values(9,1,'Qual o seu peso?(em Kg)','Dissertativa', null)
+insert into Questao values(10,1,'Qual sua idade?','Dissertativa', null)
+insert into Questao values(11,1,'Quantos anos você tem?','Dissertativa', null)
+insert into Questao values(12,1,'Se fez um exame, qual seu indice glicêmico no mesmo?','Dissertativa', null)
