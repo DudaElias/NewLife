@@ -46,9 +46,9 @@ public class QuizBase extends AppCompatActivity {
         btnV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* if(flipper.getDisplayedChild() == 0)
+               if(flipper.getDisplayedChild() == 0)
                     return;
-               /* flipper.setInAnimation(QuizBase.this, R.animator.slideinleft);
+                /*flipper.setInAnimation(QuizBase.this, R.animator.slideinleft);
                 flipper.setOutAnimation(QuizBase.this,R.animator.slideoutright);*/
                 flipper.showPrevious();
             }
@@ -56,9 +56,10 @@ public class QuizBase extends AppCompatActivity {
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*if(flipper.getDisplayedChild() == 1)
+                if(flipper.getDisplayedChild() == 6)
                     return;
                 /*flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
+                flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
                 flipper.setOutAnimation(QuizBase.this,R.animator.slideoutleft);*/
                 flipper.showNext();
             }
