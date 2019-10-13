@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:background="@drawable/fundo_quiz1">
     <ImageView
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -27,14 +27,16 @@
             android:layout_marginLeft="43dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></TextView>
+
         <TextView
-            android:layout_marginLeft="-330dp"
             android:id="@+id/tvQuantas"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-345dp"
+            android:fontFamily="@font/comfortaa"
             android:text=""
-            android:textSize="30dp"
             android:textColor="#d9d9d9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></TextView>
+            android:textSize="30dp"></TextView>
     </LinearLayout>
 
     <LinearLayout
@@ -47,23 +49,26 @@
             android:id="@+id/tvPergunta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
             android:layout_marginStart="90dp"
+            android:fontFamily="@font/comfortaa"
             android:text=""
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="28dp" />
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:textAlignment="center">
+
             <Button
-                android:textColor="#FFFFFF"
                 android:id="@+id/btn1"
                 android:layout_width="170dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="75dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/botao_quiz1"></Button>
+                android:layout_marginTop="75dp"
+                android:background="@drawable/botao_quiz1"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#FFFFFF"></Button>
             <!--<TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,14 +80,14 @@
                 android:layout_marginTop="90dp"></TextView>-->
             <Button
                 android:id="@+id/btn2"
-                android:textColor="#FFFFFF"
-
                 android:layout_width="170dp"
-                android:layout_marginTop="75dp"
+
                 android:layout_height="70dp"
                 android:layout_marginLeft="210dp"
+                android:layout_marginTop="75dp"
                 android:background="@drawable/botao_quiz1"
-                ></Button>
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#FFFFFF"></Button>
             <!--<TextView
 
                 android:id="@+id/btn2"
@@ -95,13 +100,14 @@
                 android:layout_marginTop="90dp"></TextView>-->
             <Button
                 android:id="@+id/btn3"
-                android:textColor="#FFFFFF"
-
                 android:layout_width="170dp"
+
                 android:layout_height="70dp"
-                android:layout_marginTop="175dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/botao_quiz1"></Button>
+                android:layout_marginTop="175dp"
+                android:background="@drawable/botao_quiz1"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#FFFFFF"></Button>
             <!--<TextView
 
                 android:id="@+id/btn3"
@@ -114,12 +120,13 @@
                 android:layout_marginTop="190dp"></TextView>-->
             <Button
                 android:id="@+id/btn4"
-                android:textColor="#FFFFFF"
                 android:layout_width="170dp"
-                android:layout_marginTop="175dp"
                 android:layout_height="70dp"
                 android:layout_marginLeft="210dp"
-                android:background="@drawable/botao_quiz1"></Button>
+                android:layout_marginTop="175dp"
+                android:background="@drawable/botao_quiz1"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#FFFFFF"></Button>
            <!-- <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
