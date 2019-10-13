@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -46,13 +47,13 @@ public class MeuAdapterViewFlipper  extends BaseAdapter {
                 convertView = LayoutInflater.from(mContext).inflate(R.layout.quiz_alternativa, parent, false);
                 TextView qual = convertView.findViewById(R.id.tvQual);
                 qual.setText(version.qual+"");
-                TextView tv1 = convertView.findViewById(R.id.btn1);
+                Button tv1 = convertView.findViewById(R.id.btn1);
                 tv1.setText(version.respostas[0]);
-                TextView tv2 = convertView.findViewById(R.id.btn2);
+                Button tv2 = convertView.findViewById(R.id.btn2);
                 tv2.setText(version.respostas[1]);
-                TextView tv3 = convertView.findViewById(R.id.btn3);
+                Button tv3 = convertView.findViewById(R.id.btn3);
                 tv3.setText(version.respostas[2]);
-                TextView tv4 = convertView.findViewById(R.id.btn4);
+                Button tv4 = convertView.findViewById(R.id.btn4);
                 tv4.setText(version.respostas[3]);
                 TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
                 tvPergunta.setText(version.pergunta);
