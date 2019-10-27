@@ -22,15 +22,248 @@ create table Restricao
 
 create table Alimento
 (
-	codAlimento int primary key identity(1,1) not null,
+	id int primary key identity(1,1) not null,
+	nome varchar(100) not null,
+	carboidratos float not null,
+	gorduras float not null,
+	proteinas float not null,
 	gluten int not null,
 	transgenico int not null,
-	lactose int not null,
-	ovo int not null,
+	laticinios int not null,
+	fibras float not null,
+	B int not null,
+	C int not null,
+	D int not null,
+	sodio int not null,
+	antioxidante int not null,
+	omega3 int not null,
+	magnesio int not null,
+	zinco float not null,
+	ferro float not null,
+	potassio float not null,
+	colesterol float
 )
 
 
+/*	FRUTAS	*/
 
+
+
+insert into Alimento values('Figo',13,0.5,1.1,0,2,0,1.8,0,2,0,0,2,2,0,0,2,2, null)/*1*/
+
+insert into Alimento values('Tâmara',70,2.5,2,0,1,0,10,0,2,0,0,2,0,2,0,2,2, null)/*2*/
+
+insert into Alimento values('Uva',15,1,1,0,1,0,0.7,0,2,0,0,2,0,0,0,0,2, null)/*3*/
+
+insert into Alimento values('Romã',17,0.5,0.6,0,1,0,3.2,0,2,0,0,2,0,0,0,0,2, null)/*4*/
+
+insert into Alimento values('Laranja',9,0.5,0.8,0,1,0,1.4,0,2,0,0,2,0,2,0,0,2, null)/*5*/
+
+insert into Alimento values('Limão',9.5,0.5,0.8,0,1,0,1,0,2,0,0,2,0,0,0,0,2, null)/*6*/
+
+insert into Alimento values('Tangerina',13,0.3,0.8,0,0,0,0.9,0,2,0,0,2,0,0,0,0,2, null)/*7*/
+
+insert into Alimento values('Caqui',25,0.7,0.7,0,0,0,6.5,0,0,0,0,0,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Macadâmia',14,1.4,0.7,0,0,0,8.5,0,2,0,0,0,0,2,0,2,2, null)/*1*/
+
+insert into Alimento values('Lichia',14,0.4,0.9,0,1,0,0.3,0,2,0,0,0,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Maracujá',18,1.5,2.1,0,1,0,6,0,2,0,0,0,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Abacate',7,12,2,0,0,0,5,0,0,0,0,0,0,0,2,0,2, null)/*1*/
+
+insert into Alimento values('Abacaxi',12.4,0.3,0.6,0,1,0,1.1,0,0,0,0,0,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Açaí',12.4,40,0.6,0,1,0,1.1,0,2,0,2,2,0,2,2,2,2, null)/*1*/
+
+insert into Alimento values('Ameixa',11.4,0.3,0.7,0,1,0,1.4,0,0,0,0,0,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Cacau',14.5,0.7,3.5,0,1,0,4.4,0,2,0,0,2,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Caju',10,0.3,1,0,0,0,1.7,0,2,0,0,2,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Coco',5.5,0.05,3.7,0,0,0,0,0,2,0,0,2,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Damasco',17,0.1,0.8,0,0,0,2.8,0,0,0,0,0,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Framboesa',12,0.8,0.8,0,1,0,6.5,0,2,0,0,2,0,2,2,0,2, null)/*1*/
+
+insert into Alimento values('Goiaba',15,1.6,1.1,0,2,0,8,0,2,0,0,2,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Jabuticaba',13,0.1,0.8,0,0,0,0.3,0,0,0,0,0,0,2,0,0,0, null)/*1*/
+
+insert into Alimento values('Manga',15,0.25,0.7,0,1,0,2,0,2,0,0,0,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Maçã',15,0.2,0.25,0,2,0,1.9,0,2,0,0,2,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Mamão',11,0.05,0.75,0,2,0,1.5,0,2,0,0,2,0,0,2,0,2, null)/*1*/
+
+insert into Alimento values('Melão',14,0.3,1.2,0,2,0,0.5,0,2,0,0,2,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Pêra',14.6,0.25,0.5,0,2,0,2.7,0,2,0,0,2,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Pitanga',10,0.3,0.9,0,0,0,2.2,0,0,0,0,0,0,0,0,0,0, null)/*1*/
+
+insert into Alimento values('Kiwi',14.7,0.5,1.1,0,0,0,3,0,2,0,0,2,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Melancia',7.3,0.1,0.7,0,1,0,0.3,0,0,0,0,0,0,2,0,2,2, null)/*1*/
+
+insert into Alimento values('Morango',6.7,0.3,0.9,0,2,0,1.7,0,2,0,0,2,0,2,0,2,2, null)/*1*/
+
+insert into Alimento values('Banana',123.8,0.3,1.04,0,1,0,2.6,0,0,0,0,2,0,2,0,0,2, null)/*1*/
+
+
+/*	HORTALIÇAS	*/
+
+
+insert into Alimento values('Abóbora',13.8,0.3,0.7,0,0,0,2.9,0,1,0,0,0,0,2,2,0,2, null)/*1*/
+
+insert into Alimento values('Almeirão',3.3,0,1.8,0,0,0,2.6,0,1,0,0,0,0,2,2,0,2, null)/*2*/
+
+insert into Alimento values('Brócolis',4,0.4,3.6,0,1,0,0.7,0,2,0,0,2,0,2,2,0,2, null)/*3*/
+
+insert into Alimento values('Chicória',4.7,0.3,1.7,0,0,0,4,0,2,0,0,2,0,2,2,0,2, null)/*4*/
+
+insert into Alimento values('Escarola',5.6,9.5,1.5,0,0,0,1.7,0,2,0,0,2,0,2,2,0,2, null)/*5*/
+
+insert into Alimento values('Jiló',4.5,0.2,1.9,0,0,0,2.5,0,2,0,0,2,0,0,0,0,2, null)/*6*/
+
+insert into Alimento values('Nabo',18,0.3,1.2,0,0,0,4.9,0,2,0,0,2,0,1,1,0,2, null)/*7*/
+
+insert into Alimento values('Repolho',7.4,0.2,1.4,0,0,0,2.1,0,2,0,0,2,0,1,1,1,2, null)/*1*/
+
+insert into Alimento values('Vagem',7.9,0.3,1.9,0,0,0,3.2,0,2,0,0,0,0,2,0,2,2, null)/*1*/
+
+insert into Alimento values('Acelga',4.1,0.1,1.9,0,0,0,2.1,0,2,0,0,2,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Aspargo',4.1,0.2,2.4,0,0,0,2.1,0,1,0,0,0,0,0,2,0,2, null)/*1*/
+
+insert into Alimento values('Chuchu',4.5,0.5,0.6,0,0,0,2.8,0,1,0,0,0,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Espinafre',3.8,0.3,3,0,0,0,2.4,0,1,0,0,0,0,2,2,2,2, null)/*1*/
+
+insert into Alimento values('Lentilha',19.5,0.4,9,0,0,0,7.9,0,0,0,0,0,0,2,2,0,2, null)/*1*/
+
+insert into Alimento values('Palmito',3.8,0.3,3,0,0,0,2.4,0,1,0,0,0,0,2,2,2,2, null)/*1*/
+
+insert into Alimento values('Rúcula',3.6,0.7,2.6,0,0,0,1.6,0,1,0,0,1,0,2,2,0,2, null)/*1*/
+
+insert into Alimento values('Agrião',1.3,0.1,1.9,0,0,0,0.5,0,2,0,0,2,0,2,2,0,2, null)/*1*/
+
+insert into Alimento values('Batata',20.1,0.1,1.9,0,0,0,0,2,0,0,0,0,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Couve',5.6,0.4,1.9,0,0,0,2,0,2,0,0,2,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Mandioca',38.1,0.3,1.4,0,0,0,1.8,0,2,0,0,2,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Pepino',3.6,0.1,0.7,0,0,0,0.5,0,1,0,0,0,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Salsa',6.3,0.8,3,0,0,0,3.3,0,2,0,0,2,0,2,2,2,2, null)/*1*/
+
+insert into Alimento values('Alcachofra',11.9,0.3,2.9,0,0,0,8.6,0,1,0,0,0,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Berinjela',15,0.2,0.25,0,2,0,1.9,0,2,0,0,2,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Couve Flor',4.1,0.5,1.8,0,0,0,2.3,0,2,0,0,2,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Feijão',21.6,5.2,5.5,0,0,0,5.5,0,1,0,0,0,0,2,2,2,2, null)/*1*/
+
+insert into Alimento values('Quiabo',4.5,0.2,1.9,0,0,0,2.5,0,2,0,0,0,0,2,0,2,2, null)/*1*/
+
+insert into Alimento values('Salsão',1.2,0.1,0.3,0,0,0,1.2,0,1,0,0,0,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Alface',2.9,0.1,1.4,0,0,0,1.3,0,1,0,0,0,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Cebola',9.6,0.2,1.4,0,0,0,1.6,0,1,0,0,0,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Couve de Bruxelas',7.1,0.5,2.5,0,0,0,2.6,0,2,0,0,2,0,2,0,2,2, null)/*1*/
+
+insert into Alimento values('Grão de Bico',27.4,2.6,8.9,0,0,0,7.6,0,1,0,0,0,0,2,2,0,2, null)/*1*/
+
+insert into Alimento values('Milho verde',21,1.5,3.4,0,2,0,2.4,0,1,0,0,0,0,2,2,0,2, null)/*1*/
+
+insert into Alimento values('Rabanete',3.4,0.1,0.7,0,0,0,1.6,0,2,0,0,0,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Alho Poró',14.2,0.3,1.5,0,0,0,1.8,0,2,0,0,0,0,2,0,2,2, null)/*1*/
+
+insert into Alimento values('Beterraba',10,0.2,1.7,0,0,0,2,0,1,0,0,0,0,2,0,0,2, null)/*1*/
+
+insert into Alimento values('Cenoura',9.6,0.2,0.9,0,0,0,2.8,0,1,0,0,0,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Ervilha',15.6,0.2,5.4,0,0,0,5.5,0,2,0,0,0,0,2,2,2,2, null)/*1*/
+
+insert into Alimento values('Mostarda',5.3,4,4.4,0,0,0,3.3,0,1,0,0,0,0,2,2,2,2, null)/*1*/
+
+insert into Alimento values('Tomate',4,0.1,0.9,0,0,0,0.7,0,2,0,0,2,0,0,0,0,2, null)/*1*/
+
+insert into Alimento values('Batata doce',20.7,0.1,2,0,0,0,3.3,1,2,0,0,2,0,2,1,1,2, null)/*1*/
+
+insert into Alimento values('Soja',9.9,9,16.6,0,2,0,6,1,1,0,0,0,0,2,2,2,2, null)/*1*/
+
+
+/*CARNE BOVINA*/
+
+insert into Alimento values('Bife de Filé',0,7.9,28.8,0,1,0,0,2,0,0,0,0,0,0,0,2,2, null)/*1*/
+
+insert into Alimento values('Picanha',0,14.2,27,0,1,0,0,2,0,0,0,0,2,0,2,2,2, 92)/*1*/
+
+insert into Alimento values('Filé Mignon',0,17.1,26.5,0,1,0,0,2,0,0,0,0,0,2,0,0,2, 97)/*1*/
+
+insert into Alimento values('Costela',0,28.5,23,0,1,0,0,2,0,0,0,0,0,0,0,0,2, 85)/*1*/
+
+insert into Alimento values('Maminha',0,7.7,34.3,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 94)/*1*/
+
+insert into Alimento values('Carne moída',0,17.9,25.6,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 88)/*1*/
+
+/*CARNE BOVINA*/
+
+insert into Alimento values('Bife de Filé',0,7.9,28.8,0,1,0,0,2,0,0,0,0,0,0,0,2,2, null)/*this boy*/
+
+insert into Alimento values('Picanha',0,14.2,27,0,1,0,0,2,0,0,0,0,2,0,2,2,2, 92)/*this boy*/
+
+insert into Alimento values('Filé Mignon',0,17.1,26.5,0,1,0,0,2,0,0,0,0,0,2,0,0,2, 97)/*this boy*/
+
+insert into Alimento values('Costela',0,28.5,23,0,1,0,0,2,0,0,0,0,0,0,0,0,2, 85)/*this boy*/
+
+insert into Alimento values('Maminha',0,7.7,34.3,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 94)/*this boy*/
+
+insert into Alimento values('Carne moída',0,17.9,25.6,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 88)/*this boy*/
+
+/*	PEIXE	*/
+
+insert into Alimento values('Tilápia',0,2.6,26.2,0,1,0,0,2,0,0,0,2,2,2,0,2,2, 57)/*1*/
+
+insert into Alimento values('Salmão',0,12.3,22.1,0,1,0,0,2,0,0,0,2,2,2,0,0,2, 63)/*1*/
+
+insert into Alimento values('Atum',0,6.3,29.9,0,1,0,0,2,0,0,0,2,2,2,0,2,2, 49)/*1*/
+
+insert into Alimento values('Bacalhau',0,0.9,22.8,0,1,0,0,2,0,0,2,2,2,2,0,0,2, 55)/*1*/
+
+insert into Alimento values('Pescada',0,6.3,22.5,0,1,0,0,2,0,0,2,2,2,2,0,2,2, 82)/*1*/
+
+insert into Alimento values('Sardinha',0,11.4,24.6,0,1,0,0,2,0,0,2,2,2,2,2,2,2, 142)/*1*/
+
+/*	AVES	*/
+
+insert into Alimento values('Peito de Frango',0,7.8,29.8,0,1,0,0,2,0,0,0,0,2,2,0,2,2, 84)/*1*/
+
+insert into Alimento values('Coxa de Frango',0,10.6,25.3,0,1,0,0,2,0,0,0,0,2,0,2,2,2, 83)/*1*/
+
+insert into Alimento values('Sobrecoxa de Frango',0,14.8,22.6,0,1,0,0,2,0,0,0,0,2,0,0,0,2, 135)/*1*/
+
+insert into Alimento values('Asa de Frango',0,19.5,26.9,0,1,0,0,2,0,0,0,0,2,0,0,2,2, 84)/*1*/
+
+insert into Alimento values('Carne de Frango',0,7.7,34.3,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 88)/*1*/
+
+insert into Alimento values('Peito de Peru',0,17.9,25.6,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 74)/*1*/
+
+insert into Alimento values('Assado de Peru',0,7.8,28.8,0,1,0,0,2,0,0,0,0,0,0,0,2,2, null)/*this boy*/
+
+/*	ANIMAIS		*/
+
+
+select * from Alimento
 /*Arroz*/
 
 
