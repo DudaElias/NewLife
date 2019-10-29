@@ -45,6 +45,7 @@ public class MeuAdapterViewFlipper  extends BaseAdapter {
 
         if (convertView == null) {
                 convertView = LayoutInflater.from(context).inflate(R.layout.quiz_alternativa, null);
+
         }
             if (version.tipo.equals("Alternativa1")) {
                 TextView qual = convertView.findViewById(R.id.tvQual);
@@ -59,7 +60,7 @@ public class MeuAdapterViewFlipper  extends BaseAdapter {
                 Button tv4 = convertView.findViewById(R.id.btn4);
                 tv4.setText(respostas1[3]);
                 TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
-                tvPergunta.setText(version.pergunta.toString());
+                tvPergunta.setText(version.getPergunta());
                 TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
                 tvQuantas.setText("/" + qtd + "");
             }

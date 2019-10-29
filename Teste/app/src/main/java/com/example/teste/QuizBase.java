@@ -67,7 +67,6 @@ public class QuizBase extends AppCompatActivity {
                 final ArrayList<Questao> listaOficial = new ArrayList<Questao>();
 
                 for (Questao q: lista) {
-                    Log.d("batata", q.getPergunta());
                     Questao qe = new Questao();
                     qe.setCodQuestao(q.getCodQuestao());
                     qe.setCodQuiz(q.getCodQuiz());
@@ -77,7 +76,7 @@ public class QuizBase extends AppCompatActivity {
                     listaOficial.add(qe);
                 }
 
-                flipper.setAdapter(new MeuAdapterViewFlipper(QuizBase.this, listaOficial, 10));
+                flipper.setAdapter(new MeuAdapterViewFlipper(QuizBase.this, listaOficial, 7));
 
             }
 
