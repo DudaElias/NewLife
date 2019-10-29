@@ -1,14 +1,14 @@
 package com.example.newlife;
 
-import androidx.appcompat.app.AppCompatActivity;
+import java.util.List;
 
-import android.os.Bundle;
-
-public class Quiz extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
+public class Quiz
+{
+    List<Questao> listaQuestao;
+    int qualQuiz;
+    public Quiz(int i, List<Questao> l)
+    {
+        qualQuiz = i;
+        listaQuestao = l;
     }
 }

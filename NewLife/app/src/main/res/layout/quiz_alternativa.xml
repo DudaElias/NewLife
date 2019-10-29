@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fundo_quiz1">
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/circulo_quiz1">
+    </ImageView>
+    <LinearLayout
+        android:layout_marginTop="-75dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:text=""
+            android:id="@+id/tvQual"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="#d9d9d9"
+            android:layout_marginLeft="43dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/tvQuantas"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-345dp"
+            android:fontFamily="@font/comfortaa"
+            android:text=""
+            android:textColor="#d9d9d9"
+            android:textSize="30dp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="75dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPergunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:fontFamily="@font/comfortaa"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="28dp" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="75dp"
+                android:background="@drawable/botao_quiz1"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#FFFFFF"></Button>
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Não"
+                android:id="@+id/btn1"
+                android:textColor="#FFFFFF"
+                android:textSize="28dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="90dp"></TextView>-->
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="170dp"
+
+                android:layout_height="70dp"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="75dp"
+                android:background="@drawable/botao_quiz1"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#FFFFFF"></Button>
+            <!--<TextView
+
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sim"
+                android:textSize="28dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="90dp"></TextView>-->
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="170dp"
+
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="175dp"
+                android:background="@drawable/botao_quiz1"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#FFFFFF"></Button>
+            <!--<TextView
+
+                android:id="@+id/btn3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Não"
+                android:textColor="#FFFFFF"
+                android:textSize="28dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="190dp"></TextView>-->
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="175dp"
+                android:background="@drawable/botao_quiz1"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#FFFFFF"></Button>
+            <!-- <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Sim"
+                 android:textSize="28dp"
+
+                 android:id="@+id/btn4"
+                 android:textColor="#FFFFFF"
+                 android:layout_marginLeft="270dp"
+                 android:layout_marginTop="190dp"></TextView>-->
+
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

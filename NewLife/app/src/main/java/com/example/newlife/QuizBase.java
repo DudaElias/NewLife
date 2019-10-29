@@ -1,5 +1,4 @@
-package com.example.teste;
-
+package com.example.newlife;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
