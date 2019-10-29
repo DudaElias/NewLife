@@ -59,12 +59,15 @@ public class QuizBase extends AppCompatActivity {
 
         Call<List<Questao>> c = j.getDados();
 
+        final ArrayList<Questao> listaOficial = new ArrayList<Questao>();
+
         c.enqueue(new Callback<List<Questao>>() {
             @Override
             public void onResponse(Call<List<Questao>> call, Response<List<Questao>> response) {
 
+
                 List<Questao> lista = response.body();
-                final ArrayList<Questao> listaOficial = new ArrayList<Questao>();
+
 
                 for (Questao q: lista) {
                     Questao qe = new Questao();
