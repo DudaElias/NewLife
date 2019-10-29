@@ -5,20 +5,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MeuAdapterViewFlipper  extends BaseAdapter {
-    private List<Questao> questoes;
+    private ArrayList<Questao> questoes;
     private int qtd;
-    private Context context;
+    private Context mContext;
 
-    public MeuAdapterViewFlipper(Context context, List<Questao> q, int qtd) {
-        this.context = context;
+    public MeuAdapterViewFlipper(Context context, ArrayList<Questao> q, int qtd) {
+        this.mContext = context;
         this.questoes = q;
         this.qtd = qtd;
     }
@@ -44,29 +42,26 @@ public class MeuAdapterViewFlipper  extends BaseAdapter {
         Questao version = questoes.get(position);
 
         if (convertView == null) {
-                convertView = LayoutInflater.from(context).inflate(R.layout.quiz_alternativa, null);
-
-        }
-
-        /*Button tv1 = convertView.findViewById(R.id.btn1);
-        tv1.setText("batata");
-            if (version.tipo.equals("Alternativa1")) {
+            if(version.tipo.equals("Alternativa1")) {
+                convertView = LayoutInflater.from(mContext).inflate(R.layout.quiz_alternativa, parent, false);
                 TextView qual = convertView.findViewById(R.id.tvQual);
-                qual.setText(version.codQuestao + "");
-                String[] respostas1  = version.getRespostas().split(",");
-                tv1.setText("batata");
-                Button tv2 = convertView.findViewById(R.id.btn2);
+                qual.setText(version.codQuestao+"");
+
+                String[] respostas1 = version.respostas.split(",");
+                TextView tv1 = convertView.findViewById(R.id.btn1);
+                tv1.setText(respostas1[0]);
+                TextView tv2 = convertView.findViewById(R.id.btn2);
                 tv2.setText(respostas1[1]);
-                Button tv3 = convertView.findViewById(R.id.btn3);
+                TextView tv3 = convertView.findViewById(R.id.btn3);
                 tv3.setText(respostas1[2]);
-                Button tv4 = convertView.findViewById(R.id.btn4);
+                TextView tv4 = convertView.findViewById(R.id.btn4);
                 tv4.setText(respostas1[3]);
                 TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
-                tvPergunta.setText(version.getPergunta());
+                tvPergunta.setText(version.pergunta);
                 TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
-                tvQuantas.setText("/" + qtd + "");
-            }*/
-
+                tvQuantas.setText("/"+qtd+"");
+            }
+        }
         return convertView;
     }
 }
