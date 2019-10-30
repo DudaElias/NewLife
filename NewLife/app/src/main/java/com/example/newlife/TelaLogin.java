@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -78,13 +79,13 @@ public class TelaLogin extends AppCompatActivity {
                         .build();
                 JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
                 EditText e = findViewById(R.id.txtLNome);
-                Call<Usuario> c = j.getUsuario(e.getText().toString());
-                c.enqueue(new Callback<Usuario>() {
+                Call<List<Usuario>> c = j.getUsuario(e.getText().toString());
+                c.enqueue(new Callback<List<Usuario>>() {
                     @Override
-                    public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                        Usuario usu = response.body();
+                    public void onResponse(Call<List<Usuario>> call, Response<List<Usuario>> response) {
+                        List<Usuario> usu = response.body();
                         EditText s = findViewById(R.id.txtLSenha);
-                        if(usu.getSenha().equals(s.getText().toString()));
+                        if(usu.get(0).getSenha().equals(s.getText().toString()));
                         {
                             Intent data = new Intent(TelaLogin.this, QuizBase.class);
                             startActivity(data);
@@ -92,8 +93,9 @@ public class TelaLogin extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onFailure(Call<Usuario> call, Throwable t) {
+                    public void onFailure(Call<List<Usuario>> call, Throwable t) {
                         EditText s = findViewById(R.id.txtLNome);
+                        Log.d("potato", t.getMessage());
                         s.setText(t.getMessage());
                     }
                 });
@@ -103,6 +105,8 @@ public class TelaLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent data = new Intent(TelaLogin.this, QuizBase.class);
+
+                Usuario usu = new Us
                 Bundle x = new Bundle();
                 x.putString("nome", nomeC.getText().toString());
                 x.putString("senha",senhaC.getText().toString());

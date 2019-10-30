@@ -1,20 +1,18 @@
 package com.example.newlife;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Usuario {
 
-    int id;
+    Integer id;
 
-    int nivel;
+    Integer nivel;
     String nome,senha,email,restricoes,dieta;
-    float altura,evolucao, peso;
+    Float altura,evolucao, peso;
 
-    public int getId() {
-        return id;
-    }
+    @SerializedName("body")
+    private String text;
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getNivel() {
         return nivel;
