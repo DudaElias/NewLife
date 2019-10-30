@@ -1,6 +1,6 @@
 create table Perfil
 (
-   id int primary key not null,
+   id int primary key identity(1,1) not null,
    nome varchar(30) not null,
    senha varchar(50) not null,
    email varchar(50) not null,
@@ -12,6 +12,9 @@ create table Perfil
    evolucao float
 )
 
+select*from Perfil
+select * from Perfil where nome='Dudao'
+insert into Perfil values('Dudao', 'duda29','dudao@gmail.com', 1, 'Nenhuma', 64, 160, 'blablabla',0)
 create table Restricao
 (
 	codRestricao int primary key not null,

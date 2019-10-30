@@ -47,3 +47,7 @@ rota.get('/questoes/:quiz?', (requisicao, resposta) =>{
   execSQL(`select * from Questao where codQuiz=` + quiz, resposta);
 })
 
+rota.get('/usuario/:nome?', (requisicao, resposta) =>{
+  const nome = requisicao.params.nome;
+  execSQL(`select * from Perfil where nome =` +"'"+ nome+"'", resposta);
+})

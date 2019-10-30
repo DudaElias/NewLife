@@ -48,14 +48,15 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="220dp"
                 android:ems="9"
+                android:id="@+id/txtLNome"
                 android:hint="Nome do Usuário"
                 android:inputType="textPersonName"
                 android:textSize="25dp" />
 
             <EditText
-                android:id="@+id/editText2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/txtLSenha"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="20dp"
                 android:ems="9"

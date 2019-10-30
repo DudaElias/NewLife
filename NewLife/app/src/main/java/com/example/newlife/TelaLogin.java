@@ -10,7 +10,16 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class TelaLogin extends AppCompatActivity {
 
@@ -46,6 +55,7 @@ public class TelaLogin extends AppCompatActivity {
             }
         });
 
+
         criar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +71,32 @@ public class TelaLogin extends AppCompatActivity {
             public void onClick(View view) {
                 /*Intent data = new Intent(TelaLogin.this, QuizBase.class);
                 startActivity(data);*/
+
+                Retrofit r = new Retrofit.Builder()
+                        .baseUrl(JsonPlaceHolder.BASE_URL)
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
+                JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
+                EditText e = findViewById(R.id.txtLNome);
+                Call<Usuario> c = j.getUsuario(e.getText().toString());
+                c.enqueue(new Callback<Usuario>() {
+                    @Override
+                    public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                        Usuario usu = response.body();
+                        EditText s = findViewById(R.id.txtLSenha);
+                        if(usu.getSenha().equals(s.getText().toString()));
+                        {
+                            Intent data = new Intent(TelaLogin.this, QuizBase.class);
+                            startActivity(data);
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Usuario> call, Throwable t) {
+                        EditText s = findViewById(R.id.txtLNome);
+                        s.setText(t.getMessage());
+                    }
+                });
             }
         });
         cadastrar.setOnClickListener(new View.OnClickListener() {
