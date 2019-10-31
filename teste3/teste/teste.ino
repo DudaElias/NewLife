@@ -1,5 +1,5 @@
 
-int sensorPin = 0;
+int sensorPin = 1;
 int period = 200;
 
 int HearHate_porSegundo=0;
@@ -41,4 +41,3 @@ rawValue = analogRead (sensorPin);
   oldValue = rawValue;
   delay(period);
 }
-
