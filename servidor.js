@@ -51,3 +51,19 @@ rota.get('/usuario/:nome?', (requisicao, resposta) =>{
   const nome = requisicao.params.nome;
   execSQL(`select * from Perfil where nome =` +"'"+ nome+"'", resposta);
 })
+
+rota.post('/usuario', (requisicao, resposta) =>{
+  const nome = requisicao.body.nome;
+  const senha = requisicao.body.senha;
+  const email = requisicao.body.email;
+  const restricoes = requisicao.body.restricoes;
+  const dieta = requisicao.body.dieta;
+  const nivel = parseInt(requisicao.body.senha,10);
+  const altura =  parseFloat(requisicao.body.altura);
+  const evolucao =  parseFloat(requisicao.body.evolucao);
+  const peso =  parseFloat(requisicao.body.peso);
+
+  console.log(`INSERT INTO Perfil VALUES('${nome}','${senha}','${email}',${nivel},'${restricoes}',${peso},${altura},'${dieta}',${evolucao})`);
+  execSQL(`INSERT INTO Perfil VALUES('${nome}','${senha}','${email}',${nivel},'${restricoes}',${peso},${altura},'${dieta}',${evolucao})`, resposta);
+  resposta.end(resposta.json({ mensagem: 'Incluído!'}));
+})

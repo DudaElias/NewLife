@@ -105,13 +105,39 @@ public class TelaLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent data = new Intent(TelaLogin.this, QuizBase.class);
+                Retrofit r = new Retrofit.Builder()
+                        .baseUrl(JsonPlaceHolder.BASE_URL)
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
+                JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
+                Usuario usu = new Usuario();
+                //Bundle x = new Bundle();
+               // x.putString("nome", nomeC.getText().toString());
+                //x.putString("senha",senhaC.getText().toString());
+                //x.putString("email",emailC.getText().toString());
+                usu.setNome(nomeC.getText().toString());
+                usu.setEmail(emailC.getText().toString());
+                usu.setSenha(senhaC.getText().toString());
+                usu.setAltura(0);
+                usu.setDieta("");
+                usu.setEvolucao(0);
+                usu.setNivel(0);
+                usu.setPeso(0);
+                usu.setRestricoes("");
+                Call<Usuario> call = j.criarUsuario(usu);
 
-                Usuario usu = new Us
-                Bundle x = new Bundle();
-                x.putString("nome", nomeC.getText().toString());
-                x.putString("senha",senhaC.getText().toString());
-                x.putString("email",emailC.getText().toString());
-                data.putExtras(x);
+                call.enqueue(new Callback<Usuario>() {
+                    @Override
+                    public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                        Log.d("batata", "foi");
+                    }
+
+                    @Override
+                    public void onFailure(Call<Usuario> call, Throwable t) {
+
+                    }
+                });
+                //data.putExtras(x);
                 startActivity(data);
             }
         });
