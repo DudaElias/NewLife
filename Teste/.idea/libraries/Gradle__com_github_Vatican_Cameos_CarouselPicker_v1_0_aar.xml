@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.Vatican-Cameos:CarouselPicker:v1.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e96bdf8d76efae07e05e2185ed49e447/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e96bdf8d76efae07e05e2185ed49e447/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Vatican-Cameos/CarouselPicker/v1.0/9a2ff280fbc228bf954348459eb3a3b09b54fbed/CarouselPicker-v1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
