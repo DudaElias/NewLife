@@ -134,7 +134,6 @@ public class TelaLogin extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<Usuario> call, Throwable t) {
-
                     }
                 });
                 //data.putExtras(x);
