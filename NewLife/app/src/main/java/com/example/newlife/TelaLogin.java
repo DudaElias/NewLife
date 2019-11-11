@@ -104,7 +104,7 @@ public class TelaLogin extends AppCompatActivity {
         cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent data = new Intent(TelaLogin.this, QuizBase.class);
+                final Intent data = new Intent(TelaLogin.this, QuizBase.class);
                 Retrofit r = new Retrofit.Builder()
                         .baseUrl(JsonPlaceHolder.BASE_URL)
                         .addConverterFactory(GsonConverterFactory.create())
@@ -129,7 +129,8 @@ public class TelaLogin extends AppCompatActivity {
                 call.enqueue(new Callback<Usuario>() {
                     @Override
                     public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                        Log.d("batata", "foi");
+
+                        startActivity(data);
                     }
 
                     @Override
@@ -138,7 +139,6 @@ public class TelaLogin extends AppCompatActivity {
                     }
                 });
                 //data.putExtras(x);
-                startActivity(data);
             }
         });
     }
