@@ -5,23 +5,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickListener {
+public class MeuAdapterViewFlipper  extends BaseAdapter {
     private ArrayList<Questao> questoes;
     private int qtd;
     private Context mContext;
-    private int index;
 
     public MeuAdapterViewFlipper(Context context, ArrayList<Questao> q, int qtd) {
         this.mContext = context;
         this.questoes = q;
         this.qtd = qtd;
-        this.index = 0;
     }
 
     @Override
@@ -66,13 +63,5 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
             }
         }
         return convertView;
-    }
-
-    @Override
-    public void onClick(View view) {
-        if(index < qtd)
-        {
-            Button botaoClicado = (Button)view;
-        }
     }
 }

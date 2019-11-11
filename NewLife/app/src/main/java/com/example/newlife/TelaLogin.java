@@ -95,6 +95,8 @@ public class TelaLogin extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<List<Usuario>> call, Throwable t) {
                         EditText s = findViewById(R.id.txtLNome);
+                        Log.d("potato", t.getMessage());
+                        s.setText(t.getMessage());
                     }
                 });
             }
