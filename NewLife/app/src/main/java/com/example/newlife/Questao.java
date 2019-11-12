@@ -70,8 +70,7 @@ public class Questao
             respostas = z;
         pergunta = y;
     }
-    public Questao()
-    {
+    public Questao() {
     }
 
 }

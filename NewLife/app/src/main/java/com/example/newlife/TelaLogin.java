@@ -111,10 +111,6 @@ public class TelaLogin extends AppCompatActivity {
                         .build();
                 JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
                 Usuario usu = new Usuario();
-                //Bundle x = new Bundle();
-               // x.putString("nome", nomeC.getText().toString());
-                //x.putString("senha",senhaC.getText().toString());
-                //x.putString("email",emailC.getText().toString());
                 usu.setNome(nomeC.getText().toString());
                 usu.setEmail(emailC.getText().toString());
                 usu.setSenha(senhaC.getText().toString());
