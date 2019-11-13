@@ -59,15 +59,13 @@
             android:orientation="horizontal"
             android:textAlignment="center">
 
+
             <EditText
                 android:id="@+id/etResposta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="70dp"
-                android:text=""
-                android:layout_marginTop="110dp"
-                android:textColor="#FFFFFF"
-                android:textSize="28dp" />
+                android:ems="10"
+                android:inputType="numberDecimal" />
         </FrameLayout>
     </LinearLayout>
 </LinearLayout>

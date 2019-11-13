@@ -132,10 +132,14 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
             if(respostas[i].equals(clicado.getText().toString())) {
                 if (questoes.get(position).tipo.equals("Alternativa2")) {
                     respostasUsuario[position] += i;
-                } else {
+                } else if(questoes.get(position).tipo.equals("Alternativa1")){
                     respostasUsuario[position] = i;
                 }
             }
+        if(questoes.get(position).tipo.equals("Dissertativa")) {
+            respostasUsuario[position] = Integer.parseInt(clicado.getText().toString());
+
+        }
 
         if(position == qtd-1) {
             for (int i = 0; i < qtd; i++) {
