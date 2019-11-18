@@ -2,6 +2,8 @@ package com.example.newlife;
 
 import android.content.Context;
 import android.sax.TextElementListener;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +19,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickListener, View.OnFocusChangeListener {
+public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickListener {
     private ArrayList<Questao> questoes;
 
     private int qtd;
@@ -48,7 +50,7 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
         Questao version = questoes.get(position);
         this.position = position;
@@ -83,14 +85,30 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 convertView = LayoutInflater.from(mContext).inflate(R.layout.quiz_insercao, parent, false);
                 TextView qual = convertView.findViewById(R.id.tvQual);
                 qual.setText(version.codQuestao+"");
-                EditText resposta = convertView.findViewById(R.id.edResposta);
+                final EditText resposta = convertView.findViewById(R.id.edResposta);
                 TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
                 tvPergunta.setText(version.pergunta);
                 TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
                 tvQuantas.setText("/"+qtd+"");
-                resposta.setOnFocusChangeListener(this);
-                TextView btn = convertView.findViewById(R.id.btn1);
-                btn.setOnClickListener(this);
+                resposta.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)
+                    {
+
+                        respostasUsuario[position] = Integer.parseInt(s.toString());
+                        Log.d("a", respostasUsuario[position]+ "");
+                    }
+                });
 
             }
             else
@@ -137,9 +155,11 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
     @Override
     public void onClick(View v) {
 
+        TextView clicado = (TextView) v;
+
         if(!questoes.get(position).tipo.equals("Dissertativa")) {
             String[] respostas = questoes.get(position).respostas.split(",");
-            TextView clicado = (TextView) v;
+
             for (int i = 0; i < respostas.length; i++) {
                 if (respostas[i].equals(clicado.getText().toString())) {
                     if (questoes.get(position).tipo.equals("Alternativa2")) {
@@ -156,23 +176,11 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 }
             }
         }
-        else
-        {
-            ViewParent view = v.getParent();
-            view.
-        }
 
 
 
 
     }
 
-    @Override
-    public void onFocusChange(View v, boolean hasFocus) {
-        if(!hasFocus) {
-            EditText ed = (EditText)v;
-            respostasUsuario[position] = Integer.parseInt(ed.getText().toString());
-            Log.d("batata: ", respostasUsuario[position] + "");
-        }
-    }
+
 }

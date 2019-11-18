@@ -37,9 +37,9 @@ public class Algoritmo
         }
         else if(idade>18|| diabetes ==0 || diabetes== 1 || ansiedadeStress==0||imc==1 ||hipertensao==0)
             this.carboidratos = 2;
-        else if (){
+        /*else if (){
 
-        }
+        }*/
 
         //magnesio
 
