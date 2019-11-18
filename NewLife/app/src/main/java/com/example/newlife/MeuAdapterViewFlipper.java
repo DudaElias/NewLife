@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -88,6 +89,9 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
                 tvQuantas.setText("/"+qtd+"");
                 resposta.setOnFocusChangeListener(this);
+                TextView btn = convertView.findViewById(R.id.btn1);
+                btn.setOnClickListener(this);
+
             }
             else
             {
@@ -125,27 +129,39 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
         return convertView;
     }
 
+    public View getView(int position, View convertView, ViewGroup parent, boolean p) {
+        convertView = LayoutInflater.from(mContext).inflate(R.layout.quiz_insercao, parent, false);
+        return convertView;
+    }
 
     @Override
     public void onClick(View v) {
 
-        String[] respostas = questoes.get(position).respostas.split(",");
-        TextView clicado = (TextView) v;
-        for(int i=0;i<respostas.length;i++) {
-            if (respostas[i].equals(clicado.getText().toString())) {
-                if (questoes.get(position).tipo.equals("Alternativa2")) {
-                    respostasUsuario[position] += i;
-                } else if (questoes.get(position).tipo.equals("Alternativa1")) {
-                    respostasUsuario[position] = i;
+        if(!questoes.get(position).tipo.equals("Dissertativa")) {
+            String[] respostas = questoes.get(position).respostas.split(",");
+            TextView clicado = (TextView) v;
+            for (int i = 0; i < respostas.length; i++) {
+                if (respostas[i].equals(clicado.getText().toString())) {
+                    if (questoes.get(position).tipo.equals("Alternativa2")) {
+                        respostasUsuario[position] += i;
+                    } else if (questoes.get(position).tipo.equals("Alternativa1")) {
+                        respostasUsuario[position] = i;
+                    }
+                }
+            }
+
+            if (position == qtd - 1) {
+                for (int i = 0; i < qtd; i++) {
+                    Log.d("n sei: ", respostasUsuario[i] + "");
                 }
             }
         }
-
-        if(position == qtd-1) {
-            for (int i = 0; i < qtd; i++) {
-                Log.d("n sei: ", respostasUsuario[i] + "");
-            }
+        else
+        {
+            ViewParent view = v.getParent();
+            view.
         }
+
 
 
 
@@ -156,7 +172,6 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
         if(!hasFocus) {
             EditText ed = (EditText)v;
             respostasUsuario[position] = Integer.parseInt(ed.getText().toString());
-
             Log.d("batata: ", respostasUsuario[position] + "");
         }
     }
