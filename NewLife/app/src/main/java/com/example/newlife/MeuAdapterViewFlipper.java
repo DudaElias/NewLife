@@ -18,10 +18,11 @@ import java.util.ArrayList;
 
 public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickListener, View.OnFocusChangeListener {
     private ArrayList<Questao> questoes;
+
     private int qtd;
     private int position;
     private Context mContext;
-    int[] respostasUsuario ;
+    int[] respostasUsuario;
 
     public MeuAdapterViewFlipper(Context context, ArrayList<Questao> q, int qtd) {
         this.mContext = context;
@@ -65,9 +66,9 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 tv3.setText(respostas1[2]);
                 Button tv4 = convertView.findViewById(R.id.btn4);
                 tv4.setText(respostas1[3]);
-                Button tvPergunta = convertView.findViewById(R.id.tvPergunta);
+                TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
                 tvPergunta.setText(version.pergunta);
-                Button tvQuantas = convertView.findViewById(R.id.tvQuantas);
+                TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
                 tvQuantas.setText("/"+qtd+"");
 
                 tv1.setOnClickListener(this);
@@ -152,8 +153,7 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
 
     @Override
     public void onFocusChange(View v, boolean hasFocus) {
-
-        if(hasFocus) {
+        if(!hasFocus) {
             EditText ed = (EditText)v;
             respostasUsuario[position] = Integer.parseInt(ed.getText().toString());
 
