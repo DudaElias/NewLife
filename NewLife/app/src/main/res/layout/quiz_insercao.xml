@@ -58,6 +58,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10" />
+        <Button
+        android:id="@+id/btn1"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/botao_quiz1"
+        android:textColor="#FFFFFF"></Button>
 
         <FrameLayout
             android:layout_width="match_parent"
