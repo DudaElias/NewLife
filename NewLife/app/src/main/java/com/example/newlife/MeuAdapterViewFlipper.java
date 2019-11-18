@@ -16,7 +16,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickListener {
+public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickListener, View.OnFocusChangeListener {
     private ArrayList<Questao> questoes;
     private int qtd;
     private int position;
@@ -57,17 +57,17 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 qual.setText(version.codQuestao+"");
 
                 String[] respostas1 = version.respostas.split(",");
-                TextView tv1 = convertView.findViewById(R.id.btn1);
+                Button tv1 = convertView.findViewById(R.id.btn1);
                 tv1.setText(respostas1[0]);
-                TextView tv2 = convertView.findViewById(R.id.btn2);
+                Button tv2 = convertView.findViewById(R.id.btn2);
                 tv2.setText(respostas1[1]);
-                TextView tv3 = convertView.findViewById(R.id.btn3);
+                Button tv3 = convertView.findViewById(R.id.btn3);
                 tv3.setText(respostas1[2]);
-                TextView tv4 = convertView.findViewById(R.id.btn4);
+                Button tv4 = convertView.findViewById(R.id.btn4);
                 tv4.setText(respostas1[3]);
-                TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
+                Button tvPergunta = convertView.findViewById(R.id.tvPergunta);
                 tvPergunta.setText(version.pergunta);
-                TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
+                Button tvQuantas = convertView.findViewById(R.id.tvQuantas);
                 tvQuantas.setText("/"+qtd+"");
 
                 tv1.setOnClickListener(this);
@@ -81,11 +81,12 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 convertView = LayoutInflater.from(mContext).inflate(R.layout.quiz_insercao, parent, false);
                 TextView qual = convertView.findViewById(R.id.tvQual);
                 qual.setText(version.codQuestao+"");
-                EditText resposta = convertView.findViewById(R.id.etResposta);
+                EditText resposta = convertView.findViewById(R.id.edResposta);
                 TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
                 tvPergunta.setText(version.pergunta);
                 TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
                 tvQuantas.setText("/"+qtd+"");
+                resposta.setOnFocusChangeListener(this);
             }
             else
             {
@@ -94,17 +95,17 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 qual.setText(version.codQuestao+"");
 
                 String[] respostas1 = version.respostas.split(",");
-                TextView tv1 = convertView.findViewById(R.id.btn1);
+                Button tv1 = convertView.findViewById(R.id.btn1);
                 tv1.setText(respostas1[0]);
-                TextView tv2 = convertView.findViewById(R.id.btn2);
+                Button tv2 = convertView.findViewById(R.id.btn2);
                 tv2.setText(respostas1[1]);
-                TextView tv3 = convertView.findViewById(R.id.btn3);
+                Button tv3 = convertView.findViewById(R.id.btn3);
                 tv3.setText(respostas1[2]);
-                TextView tv4 = convertView.findViewById(R.id.btn4);
+                Button tv4 = convertView.findViewById(R.id.btn4);
                 tv4.setText(respostas1[3]);
-                TextView tv5 = convertView.findViewById(R.id.btn5);
+                Button tv5 = convertView.findViewById(R.id.btn5);
                 tv5.setText(respostas1[4]);
-                TextView tv6 = convertView.findViewById(R.id.btn6);
+                Button tv6 = convertView.findViewById(R.id.btn6);
                 tv6.setText(respostas1[5]);
                 TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
                 tvPergunta.setText(version.pergunta);
@@ -117,6 +118,7 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 tv4.setOnClickListener(this);
                 tv5.setOnClickListener(this);
                 tv6.setOnClickListener(this);
+
             }
         }
         return convertView;
@@ -128,17 +130,14 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
 
         String[] respostas = questoes.get(position).respostas.split(",");
         TextView clicado = (TextView) v;
-        for(int i=0;i<respostas.length;i++)
-            if(respostas[i].equals(clicado.getText().toString())) {
+        for(int i=0;i<respostas.length;i++) {
+            if (respostas[i].equals(clicado.getText().toString())) {
                 if (questoes.get(position).tipo.equals("Alternativa2")) {
                     respostasUsuario[position] += i;
-                } else if(questoes.get(position).tipo.equals("Alternativa1")){
+                } else if (questoes.get(position).tipo.equals("Alternativa1")) {
                     respostasUsuario[position] = i;
                 }
             }
-        if(questoes.get(position).tipo.equals("Dissertativa")) {
-            respostasUsuario[position] = Integer.parseInt(clicado.getText().toString());
-
         }
 
         if(position == qtd-1) {
@@ -149,5 +148,16 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
 
 
 
+    }
+
+    @Override
+    public void onFocusChange(View v, boolean hasFocus) {
+
+        if(hasFocus) {
+            EditText ed = (EditText)v;
+            respostasUsuario[position] = Integer.parseInt(ed.getText().toString());
+
+            Log.d("batata: ", respostasUsuario[position] + "");
+        }
     }
 }
