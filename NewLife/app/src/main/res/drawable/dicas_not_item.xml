@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item android:height="40dp"
+        android:width="50dp">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle">
+            <solid android:color="#738491"/>
+            <corners android:bottomLeftRadius="3dp"
+                android:topLeftRadius="3dp"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/suplemento"
+        android:width="32dp"
+        android:height="32dp"
+        android:gravity="center"/>
+</layer-list>
+
