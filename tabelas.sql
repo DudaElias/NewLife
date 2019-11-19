@@ -1689,11 +1689,15 @@ create table Receita
 (
 	codReceita int primary key not null,
 	nomeReceita varchar(50) not null,
-	restricoes varchar(20) not null,
-	alimentos varchar(200) not null,
-	descricao ntext
+	medidas ntext not null,
+	alimentos ntext not null,
+	modoPreparo ntext not null
 )
-
+insert into Receita values(1, '', '2, 2 csopa, 1cchá, 1 pitada', '', '')
+insert into Receita values(1, 'Crepioca de Frango', '2, 2 csopa, 1cchá, 1 pitada', 'Ovo, Goma de tapioca, Semente de chia, Sal', 'Bata todos os ingredientes com o garfo/fouet ou no mixer/liqui. Despeje na frigideira previamente untada (se não quiser untar, garanta que o anti-aderente esteja 100%). Mantenha o fogo baixo e a frigideira tampada. Quando ela estiver bem firme vire apenas para dourar o outro lado. Coloque o recheio, dobre e pronto!')
+insert into Receita values(2, 'Bolinho de Granola ', '2 xíc, 1/2 xíc, 1/4 xíc, 2, 2, 1, a gosto', 'Granola, Farinha de aveia, Óleo de coco, Bananas, Ovos, Fermento em pó, Canela em pó', 'Bater com o mixer ou liqui as bananas, ovos e óleo de coco. Reserve. Misture os demais ingredientes em uma tigela e incorpore a mistura líquida, misture até obter uma massa homogênea. Coloque em forminhas de silicone para muffin/cupcake. Leve ao forno pré aquecido em 180o graus até assarem (faça o teste do palito) ~30 minutos')
+insert into Receita values(3, 'Bolo de cenoura de liquidificador', '370g, 4, 360ml, 360g, 390g, 18g, 1 pitada, , , 100g, 240g, 12g, 120ml', 'Cenoura, Ovo, Ólep de girassol, Açúcar refinado, Farinha de trigo, Fermento químico, Sal, Óleo, Farinha, Chocolate em pó, Açú1car refinado, manteiga, água', 'Preaquece o forno a 180C. Unte com óleo uma forma retangular de aproximadamente 30cm x 25cm, polvilhe com a farinha de trigo e bata a forma para remover bem o excesso. Em uma tigela grande misture a farinha, o fermento, o sal e reserve. Descasque as cenouras, corte em rodelas e coloque no liquidificador, adicione o óleo, o açúcar e os ovos e bata até obter um creme liso. Aos poucos comece adicionar os líquidos aos ingredientes secos, use um fouet para misturar os ingredientes até obter uma massa lisa e homogênea. Transfira a massa para a forma preparada e leve para assar por aproximadamente 30 minutos. Depois desse tempo, espete um palito no centro da massa. Se o palito sair limpo é hora de retirar do forno, se sair com um pouco de massa coloque o bolo de volta no forno até assar completamente. Corte o bolo ainda quente sem retirá-lo da forma. Junte todos os ingredientes em uma panela média e leve ao fogo médio mexendo sempre com uma espátula. Quando a mistura ferver, deixe cozinhar por aproximadamente 5 a 8 minutos sem parar de mexer. Desligue a calda e despeje imediatamente sobre o bolo.')
+insert into Receita values(4, '', '2, 2 csopa, 1cchá, 1 pitada', '', '')
 
 create table Dieta
 (
