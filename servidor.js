@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();         
 const bodyParser = require('body-parser');
-const porta = 3000; //porta padrão
+const porta = 8080; //porta padrão
 const sql = require('mssql');
 const conexaoStr = "Server=regulus.cotuca.unicamp.br;Database=PR118343;User Id=PR118343;Password=PR118343;";
 //conexao com BD
