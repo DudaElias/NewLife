@@ -1728,3 +1728,4 @@ insert into Questao values(9,1,'Qual o seu peso?(em Kg)','Dissertativa', null)
 insert into Questao values(10,1,'Qual sua idade?','Dissertativa', null)
 insert into Questao values(11,1,'Se fez um exame, qual seu indice glicêmico no mesmo?','Dissertativa', null)
 insert into Questao values(12,1,'Restrições alimentares:','Alternativa2', 'Ovo, Frutos do Mar, Laticínios, Amendoim, Glúten, Soja')
+insert into Questao values(13,1,'Gênero: ','Escolha', 'Feminino, Masculino');

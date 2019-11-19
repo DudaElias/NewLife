@@ -9,15 +9,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickListener {
     private ArrayList<Questao> questoes;
@@ -58,7 +66,7 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
             if(version.tipo.equals("Alternativa1")) {
                 convertView = LayoutInflater.from(mContext).inflate(R.layout.quiz_alternativa, parent, false);
                 TextView qual = convertView.findViewById(R.id.tvQual);
-                qual.setText(version.codQuestao+"");
+                qual.setText(version.codQuestao+""+"/"+ qtd+"");
 
                 String[] respostas1 = version.respostas.split(",");
                 Button tv1 = convertView.findViewById(R.id.btn1);
@@ -71,8 +79,8 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 tv4.setText(respostas1[3]);
                 TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
                 tvPergunta.setText(version.pergunta);
-                TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
-                tvQuantas.setText("/"+qtd+"");
+                /*TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
+                tvQuantas.setText("/"+qtd+"");*/
 
                 tv1.setOnClickListener(this);
                 tv2.setOnClickListener(this);
@@ -84,12 +92,13 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
             {
                 convertView = LayoutInflater.from(mContext).inflate(R.layout.quiz_insercao, parent, false);
                 TextView qual = convertView.findViewById(R.id.tvQual);
-                qual.setText(version.codQuestao+"");
+                qual.setText(version.codQuestao+""+"/"+ qtd+"");
                 final EditText resposta = convertView.findViewById(R.id.edResposta);
+                final View  aux = convertView;
                 TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
                 tvPergunta.setText(version.pergunta);
-                TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
-                tvQuantas.setText("/"+qtd+"");
+                /*TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
+                tvQuantas.setText("/"+qtd+"");*/
                 resposta.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -104,18 +113,22 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                     @Override
                     public void afterTextChanged(Editable s)
                     {
-
-                        respostasUsuario[position] = Integer.parseInt(s.toString());
-                        Log.d("a", respostasUsuario[position]+ "");
+                        if(s.toString().equals(""))
+                            return;
+                        if(campoNumerico(s.toString()))
+                            respostasUsuario[position] = Integer.parseInt(s.toString());
+                        else {
+                            Toast.makeText(aux.getContext(), "Apenas caracteres numéricos!", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
 
             }
-            else
+            else if(version.tipo.equals("Alternativa2"))
             {
                 convertView = LayoutInflater.from(mContext).inflate(R.layout.quiz_alternativa_plus, parent, false);
                 TextView qual = convertView.findViewById(R.id.tvQual);
-                qual.setText(version.codQuestao+"");
+                qual.setText(version.codQuestao+""+"/"+ qtd+"");
 
                 String[] respostas1 = version.respostas.split(",");
                 Button tv1 = convertView.findViewById(R.id.btn1);
@@ -132,8 +145,8 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 tv6.setText(respostas1[5]);
                 TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
                 tvPergunta.setText(version.pergunta);
-                TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
-                tvQuantas.setText("/"+qtd+"");
+                /*TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
+                tvQuantas.setText("/"+qtd+"");*/
 
                 tv1.setOnClickListener(this);
                 tv2.setOnClickListener(this);
@@ -142,6 +155,23 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 tv5.setOnClickListener(this);
                 tv6.setOnClickListener(this);
 
+            }
+            else
+            {
+                convertView = LayoutInflater.from(mContext).inflate(R.layout.quiz_escolha, parent, false);
+                TextView qual = convertView.findViewById(R.id.tvQual);
+                qual.setText(version.codQuestao+""+"/"+ qtd+"");
+                TextView tvPergunta = convertView.findViewById(R.id.tvPergunta);
+                tvPergunta.setText(version.pergunta);
+                /*TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
+                tvQuantas.setText("/"+qtd+"");*/
+                Spinner resposta = (Spinner) convertView.findViewById(R.id.spEscolha);
+                List<String> list = new ArrayList<String>();
+                for(int i = 0; i < version.respostas.split(",").length;i++)
+                    list.add(version.respostas.split(",")[i]);
+                ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(convertView.getContext(), android.R.layout.simple_spinner_item, list);
+                dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                resposta.setAdapter(dataAdapter);
             }
         }
         return convertView;
@@ -169,18 +199,11 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                     }
                 }
             }
-
-            if (position == qtd - 1) {
-                for (int i = 0; i < qtd; i++) {
-                    Log.d("n sei: ", respostasUsuario[i] + "");
-                }
-            }
         }
-
-
-
-
+       /* ViewFlipper ve = ((LinearLayout)v.getParent().getParent()).findViewById(R.id.adapterViewFlipper);
+        ve.showNext();*/
     }
+    boolean campoNumerico(String campo){ return campo.matches("[0-9]{"+campo.length()+"}"); }
 
 
 }

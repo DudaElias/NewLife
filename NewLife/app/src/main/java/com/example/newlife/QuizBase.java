@@ -77,7 +77,7 @@ public class QuizBase extends AppCompatActivity {
                     qe.setTipo(q.getTipo());
                     listaOficial.add(qe);
                 }
-                flipper.setAdapter(new MeuAdapterViewFlipper(QuizBase.this, listaOficial, 12));
+                flipper.setAdapter(new MeuAdapterViewFlipper(QuizBase.this, listaOficial, 13));
 
 
             }
@@ -105,7 +105,7 @@ public class QuizBase extends AppCompatActivity {
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (flipper.getDisplayedChild() == 11)
+                if (flipper.getDisplayedChild() == 12)
                     return;
                 /*flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
                 flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
