@@ -25,30 +25,48 @@ public class Algoritmo
             imc = 2;
 
 
-        if(idade<19|| idade>65 || diabetes == 0 || diabetes == 1 || imc !=1 || hipertensao==0){
+        //Gorduras
+        if(idade<19|| idade>64 || diabetes == 0 || diabetes == 1 || imc !=1 || hipertensao==0){
             this.gorduras = 0;
         }
-
-        else if((idade>12 && idade <19) || imc != 1){
-            this.proteinas = 0;
+        else{
+            this.gorduras = 1;
         }
-        else if(this.insonia == 0){
+
+        //Proteinas
+        if((idade>12 && idade <19) || imc != 1)
+            this.proteinas = 0;
+        else
+            this.proteinas = 1;
+
+
+        //Carboidratos
+        if(this.insonia == 0){
             this.carboidratos=0;
         }
         else if(idade>18|| diabetes ==0 || diabetes== 1 || ansiedadeStress==0||imc==1 ||hipertensao==0)
             this.carboidratos = 2;
-        /*else if (){
+        else
+            this.carboidratos=1;
 
-        }*/
+        //Magnesio
+        if(!mulher || idade>64 || diabetes == 0 || diabetes == 1 || ansiedadeStress == 0|| hipertensao==0|| insonia==0)
+            this.magnesio = 0;
+        else
+            this.magnesio = 1;
 
-        //magnesio
+        //Zinco
+        if(!mulher || (idade>12 && idade<19) || idade>64)
+            this.zinco = 0;
+        else
+            this.zinco = 1;
 
+        //Ferro
+        if(mulher || (idade>12 && idade<19))
+            this.ferro = 1;
+       // else if(idade>64)
 
-
-
-
-        else{
-            this.gorduras = 1;
+       /* else{
             this.proteinas = 1;
             this.carboidratos = 1;
             this.magnesio = 1;
@@ -64,7 +82,7 @@ public class Algoritmo
             this.hidratacao = 1;
             this.luzAzul = 1;
             this.exercicio = 1;
-        }
+        }*/
 
     }
 
