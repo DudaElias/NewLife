@@ -43,7 +43,7 @@ public class QuizBase extends AppCompatActivity{
     private Animation slide_in_left, slide_in_right, slide_out_left, slide_out_right;
     ImageButton btnV, btnA;
     private BluetoothAdapter BA;
-    private final String nomeDispositivo = "beMyEyes"; //Mude beMyEyes para o nome do seu módulo Bluetooth.
+    private final String nomeDispositivo = "HMsoft"; //Mude beMyEyes para o nome do seu módulo Bluetooth.
     private final int REQUEST_ENABLE_BT = 1; // Código padrão para o requerimento em tempo de execução.
     private ConexaoBluetooth conexao;
     private IntentFilter it = null;
@@ -135,7 +135,8 @@ public class QuizBase extends AppCompatActivity{
 
 
                 BA = BluetoothAdapter.getDefaultAdapter();
-                    BtEnable();}*/
+                    BtEnable();}
+*/
                 /*flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
                 flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
                 flipper.setOutAnimation(QuizBase.this,R.animator.slideoutleft);*/
