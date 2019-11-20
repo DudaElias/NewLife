@@ -121,9 +121,9 @@ public class QuizBase extends AppCompatActivity{
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (flipper.getDisplayedChild() == 13)
+                if (flipper.getDisplayedChild() == 12)
                     return;
-                if(flipper.getDisplayedChild() == 12)
+                /*if(flipper.getDisplayedChild() == 12)
                 {
                     while(true) {
                     it = new IntentFilter(); // Instancia o filtro declarado logo após o onCreate().
@@ -133,15 +133,16 @@ public class QuizBase extends AppCompatActivity{
                     break;
                 }
 
-                    BA = BluetoothAdapter.getDefaultAdapter();
-                    BtEnable();
+
+                BA = BluetoothAdapter.getDefaultAdapter();
+                    BtEnable();}*/
                 /*flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
                 flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
                 flipper.setOutAnimation(QuizBase.this,R.animator.slideoutleft);*/
                 flipper.showNext();
             }
 
-        }});
+        });
 
 
 

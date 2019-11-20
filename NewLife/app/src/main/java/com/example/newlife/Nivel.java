@@ -5,13 +5,11 @@ public class Nivel
 
 	protected int nivel;
 	protected int exercicios;
-	protected int intensidadeExercicio;
 	protected int junkFood;
 
-	public Nivel(int e, int i, int j)
+	public Nivel(int e,int j)
 	{
 		exercicios = e;
-		intensidadeExercicio = i;
 		junkFood = j;
 	}
 
@@ -19,7 +17,6 @@ public class Nivel
 	{
 		nivel = 0;
 		exercicios = 0;
-		intensidadeExercicio = 0;
 		junkFood = 0;
 	}
 
