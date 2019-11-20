@@ -1,7 +1,10 @@
 package com.example.newlife;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -28,11 +31,16 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class QuizBase extends AppCompatActivity {
+public class QuizBase extends AppCompatActivity{
 
 
     private Animation slide_in_left, slide_in_right, slide_out_left, slide_out_right;
     ImageButton btnV, btnA;
+
+    private static final int REQUEST_ENABLE_BT = 0;
+    private static final int REQUEST_DISCOVER_BT = 1;
+    BluetoothAdapter adapterArduino;
+
 
     ArrayList<Questao> teste = new ArrayList<>();
     @Override
@@ -105,18 +113,53 @@ public class QuizBase extends AppCompatActivity {
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (flipper.getDisplayedChild() == 12)
+                if (flipper.getDisplayedChild() == 13)
                     return;
+                if(flipper.getDisplayedChild() == 12)
+                {
+                    adapterArduino = BluetoothAdapter.getDefaultAdapter();
+                    if(adapterArduino == null)//sem  bluetooth {
+                        return;
+                    }
+                    else // tem bluetooth
+                    {
+                        if(!adapterArduino.isEnabled()) {
+                            Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                            startActivityForResult(intent, REQUEST_ENABLE_BT);
+                            if(!adapterArduino.isDiscovering())
+                            {
+                                Intent intent2 = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+                                startActivityForResult(intent2, REQUEST_DISCOVER_BT);
+                            }
+                        }
+
+                    }
                 /*flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
                 flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
                 flipper.setOutAnimation(QuizBase.this,R.animator.slideoutleft);*/
                 flipper.showNext();
             }
+
         });
+
+
 
 
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch(requestCode)
+        {
+            case REQUEST_ENABLE_BT:
+                if(resultCode == RESULT_OK)
+                {
+                    //ligou
+                }
+
+        }
+    }
 }
 

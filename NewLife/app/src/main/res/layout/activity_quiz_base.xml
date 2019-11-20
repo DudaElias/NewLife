@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +8,6 @@
     tools:context=".QuizBase"
     android:orientation="vertical"
     android:background="@drawable/fundo_quiz1"
-
     >
     <android.widget.AdapterViewFlipper
         android:id="@+id/adapterViewFlipper"
@@ -18,7 +17,7 @@
     <RelativeLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_marginTop="-120dp"
+        android:layout_alignParentBottom="true"
         >
         <ImageButton
             android:layout_width="100dp"
@@ -32,7 +31,7 @@
             android:id="@+id/btnAvancar"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="270dp"
+            android:layout_marginLeft="240dp"
             android:background="@drawable/botao_avancar_quiz1"></ImageButton>
     </RelativeLayout>
-</LinearLayout>
+</RelativeLayout>

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -166,10 +167,11 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 /*TextView tvQuantas = convertView.findViewById(R.id.tvQuantas);
                 tvQuantas.setText("/"+qtd+"");*/
                 Spinner resposta = (Spinner) convertView.findViewById(R.id.spEscolha);
+
                 List<String> list = new ArrayList<String>();
                 for(int i = 0; i < version.respostas.split(",").length;i++)
                     list.add(version.respostas.split(",")[i]);
-                ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(convertView.getContext(), android.R.layout.simple_spinner_item, list);
+                ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(convertView.getContext(), R.layout.adaptador_spinner, list);
                 dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 resposta.setAdapter(dataAdapter);
             }
