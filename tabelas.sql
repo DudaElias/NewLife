@@ -1683,9 +1683,26 @@ create table Dica
  codDica int primary key not null,
  nomeDica varchar(20) not null,
  descricao ntext not null,
+ restricoes ntext not null,
  imagem varchar(100) not null
 )
 
+create table Notificacao
+(
+	codNot int primary key not null,
+	nomeNot varchar(100) not null,
+	descricao ntext not null,
+	restricoes ntext not null,
+	horario dateTime not null,
+	imagem varchar(150) not null
+)
+
+create table Extra
+(
+	codExtra int primary key identity(1,1) not null,
+	nomeExtra varchar(150) not null,
+	descricao ntext not null
+)
 
 create table Receita
 (
@@ -1755,5 +1772,4 @@ insert into Questao values(11,1,'Se fez um exame, qual seu indice glicêmico no 
 insert into Questao values(12,1,'Restrições alimentares:','Alternativa2', 'Ovo, Frutos do Mar, Laticínios, Amendoim, Glúten, Soja')
 insert into Questao values(13,1,'Gênero: ','Escolha', 'Feminino, Masculino');
 
-select*from Alimento
-select
+
