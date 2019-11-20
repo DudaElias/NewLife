@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5AECDD"
+    android:gravity="top"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10pt"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="Pressão Alta"
+        android:textAlignment="center"
+        android:textColor="#006F80"
+        android:textSize="12pt" />
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="170dp"
+
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="175dp"
+        android:background="@drawable/botao_quiz2"
+        android:textColor="#FFFFFF"></Button>
+
+</LinearLayout>
