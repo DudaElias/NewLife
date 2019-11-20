@@ -1,10 +1,19 @@
 package com.example.newlife;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.media.Image;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -28,11 +37,18 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class QuizBase extends AppCompatActivity {
+public class QuizBase extends AppCompatActivity{
 
 
     private Animation slide_in_left, slide_in_right, slide_out_left, slide_out_right;
     ImageButton btnV, btnA;
+    private BluetoothAdapter BA;
+    private final String nomeDispositivo = "beMyEyes"; //Mude beMyEyes para o nome do seu módulo Bluetooth.
+    private final int REQUEST_ENABLE_BT = 1; // Código padrão para o requerimento em tempo de execução.
+    private ConexaoBluetooth conexao;
+    private IntentFilter it = null;
+    private final String[] PermissionsLocation = {Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION}; //Array de permissões relacionadas ao Bluetooth no Android 6.0 ou maior
+    private final int ResquestLocationId = 0; // Código padrão para o requerimento em tempo de execução.
 
     ArrayList<Questao> teste = new ArrayList<>();
     @Override
@@ -107,16 +123,84 @@ public class QuizBase extends AppCompatActivity {
             public void onClick(View v) {
                 if (flipper.getDisplayedChild() == 12)
                     return;
+                /*if(flipper.getDisplayedChild() == 12)
+                {
+                    while(true) {
+                    it = new IntentFilter(); // Instancia o filtro declarado logo após o onCreate().
+                    it.addAction(BluetoothDevice.ACTION_FOUND);
+                    it.addCategory(Intent.CATEGORY_DEFAULT);
+                    registerReceiver(mReceiver, it); // Registra um Receiver para o App.
+                    break;
+                }
+
+
+                BA = BluetoothAdapter.getDefaultAdapter();
+                    BtEnable();}*/
                 /*flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
                 flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
                 flipper.setOutAnimation(QuizBase.this,R.animator.slideoutleft);*/
                 flipper.showNext();
             }
+
         });
 
 
 
-    }
 
+
+    }
+                IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
+        private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+            public void onReceive(Context context, Intent intent) {
+                String action = intent.getAction();
+                // Quando a ação "discover" achar um dispositivo
+                if (BluetoothDevice.ACTION_FOUND.equals(action)) {
+                    BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                    try{
+                        if(device.getName().trim().equals(nomeDispositivo)) {
+                            conexao = ConexaoBluetooth.getInstance(device, true);
+                            if(conexao.isConnected()) {
+                                Toast.makeText(QuizBase.this, "Conectado ao " + device.getName(), Toast.LENGTH_SHORT).show();
+                                changeActivity(); // chama a ReceivingData
+                            }
+                        }
+
+                    }catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+
+
+        private void changeActivity() {
+
+            Intent i = new Intent(this,Bluetooth.class);
+            startActivity(i);
+        }
+
+        public void BtEnable(){
+            //liga o bluetooth
+            if (!BA.isEnabled()) {
+                Intent turnOn = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(turnOn, REQUEST_ENABLE_BT);
+                Toast.makeText(QuizBase.this, "Bluetooth Ligado", Toast.LENGTH_SHORT).show();
+
+            } else {
+                lookFor();
+            }
+            // Essa if em especial, verifica se a versão Android é 6.0 ou maior, pois caso seja, uma permissão para localização, além das relacionadas ao Bluetooth, sao necessárias.
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if(checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+                    requestPermissions(PermissionsLocation,ResquestLocationId);
+                }
+            }
+        }
+
+        protected void lookFor() { // Procura por dispositivos
+            if(BA.startDiscovery()){}
+            else
+                ;
+        }
 }
 
