@@ -105,7 +105,13 @@ public class TelaLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final Intent data = new Intent(TelaLogin.this, QuizBase.class);
-                Retrofit r = new Retrofit.Builder()
+                Usuario usu = new Usuario();
+                usu.setNome(nomeC.getText().toString());
+                usu.setEmail(emailC.getText().toString());
+                usu.setSenha(senhaC.getText().toString());
+                Bundle x = new Bundle();
+                x.putSerializable("aluno", usu);
+               /*Retrofit r = new Retrofit.Builder()
                         .baseUrl(JsonPlaceHolder.BASE_URL)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
@@ -133,8 +139,9 @@ public class TelaLogin extends AppCompatActivity {
                     public void onFailure(Call<Usuario> call, Throwable t) {
 
                     }
-                });
-                //data.putExtras(x);
+                });*/
+                data.putExtras(x);
+                startActivity(data);
             }
         });
     }

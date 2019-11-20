@@ -49,6 +49,7 @@ public class QuizBase extends AppCompatActivity{
     private IntentFilter it = null;
     private final String[] PermissionsLocation = {Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION}; //Array de permissões relacionadas ao Bluetooth no Android 6.0 ou maior
     private final int ResquestLocationId = 0; // Código padrão para o requerimento em tempo de execução.
+    Usuario usu;
 
     ArrayList<Questao> teste = new ArrayList<>();
     @Override
@@ -64,6 +65,8 @@ public class QuizBase extends AppCompatActivity{
         slide_out_right = AnimationUtils.loadAnimation(this, R.anim.slide_out_right);
 
 
+        Bundle b = getIntent().getExtras();
+        usu = (Usuario)b.getSerializable("aluno");
         Retrofit r = new Retrofit.Builder()
                 .baseUrl(JsonPlaceHolder.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -121,8 +124,43 @@ public class QuizBase extends AppCompatActivity{
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (flipper.getDisplayedChild() == 12)
+                if (flipper.getDisplayedChild() == 12) {
+
+                    Algoritmo a = ((MeuAdapterViewFlipper)flipper.getAdapter()).alg;
+                    Nivel n = ((MeuAdapterViewFlipper)flipper.getAdapter()).n;
+                    int[] respostas = ((MeuAdapterViewFlipper)flipper.getAdapter()).respostasUsuario;
+                    Retrofit r = new Retrofit.Builder()
+                            .baseUrl(JsonPlaceHolder.BASE_URL)
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .build();
+                    JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
+                    usu.setAltura(respostas[7]);
+                    usu.setIdade(respostas[9]);
+                    usu.setDieta("");
+                    usu.setEvolucao(0);
+                    usu.setNivel(n.nivel);
+                    usu.setPeso(respostas[8]);
+                    if(a.m)
+                        usu.setGenero('F');
+                    else
+                        usu.setGenero('M');
+                    usu.setRestricoes(a.carboidratos+","+a.gorduras+","+a.proteinas+","+a.fibras+","+a.complexoB+","+a.vitC+","+a.vitD+","+a.sodio+","+a.antioxidante+","+a.magnesio+","+a.zinco+","+a.ferro+","+a.potassio+","+a.diabetes+","+a.ansiedadeStress+","+a.g);
+                    Call<Usuario> call = j.criarUsuario(usu);
+
+                    call.enqueue(new Callback<Usuario>() {
+                        @Override
+                        public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+
+                            Log.d("aaaaa:", "FUNCIONOU ESSA MIERDA");
+                        }
+
+                        @Override
+                        public void onFailure(Call<Usuario> call, Throwable t) {
+
+                        }
+                    });
                     return;
+                }
                 /*if(flipper.getDisplayedChild() == 12)
                 {
                     while(true) {

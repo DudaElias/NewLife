@@ -1,6 +1,7 @@
 package com.example.newlife;
 
 import android.content.Context;
+import android.content.Intent;
 import android.sax.TextElementListener;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -42,6 +43,9 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
     private int position;
     private Context mContext;
     int[] respostasUsuario;
+    Nivel n;
+    Algoritmo alg;
+    int check = 0;
 
     public MeuAdapterViewFlipper(Context context, ArrayList<Questao> q, int qtd) {
         this.mContext = context;
@@ -218,27 +222,34 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
         respostasUsuario[position] = i;
-        Nivel n = new Nivel(respostasUsuario[1], respostasUsuario[0]);
-        //int diabetes, int hipotensao, int hipertensao, int ansiedadeStress, int insonia, int idade, int glicemia, double altura, double peso, boolean mulher
-        int hipo, hiper;
-        boolean m;
-        if(respostasUsuario[3] == 0 || respostasUsuario[3] == 1) {
-            hipo = 0;
-            hiper = respostasUsuario[3];
-        }
-        else if(respostasUsuario[3] == 2) {
-            hipo = 1;
-            hiper = 0;
-        }
-        else
-            hipo = hiper = 0;
-        if(respostasUsuario[position] == 0)
-            m = true;
-        else
-            m= false;
-        Algoritmo alg = new Algoritmo(respostasUsuario[2],hipo,hiper,respostasUsuario[4],respostasUsuario[5],respostasUsuario[9],respostasUsuario[10], respostasUsuario[7], respostasUsuario[8],m);
-        n.DeterminarNivel();
+        if(++check > 1) {
 
+
+            n = new Nivel(respostasUsuario[1], respostasUsuario[0]);
+            //int diabetes, int hipotensao, int hipertensao, int ansiedadeStress, int insonia, int idade, int glicemia, double altura, double peso, boolean mulher
+            int hipo, hiper;
+            boolean m;
+            if (respostasUsuario[3] == 0 || respostasUsuario[3] == 1) {
+                hipo = 0;
+                hiper = respostasUsuario[3];
+            } else if (respostasUsuario[3] == 2) {
+                hipo = 1;
+                hiper = 0;
+            } else
+                hipo = hiper = 0;
+            if (respostasUsuario[position] == 0)
+                m = true;
+            else
+                m = false;
+            alg = new Algoritmo(respostasUsuario[2], hipo, hiper, respostasUsuario[4], respostasUsuario[5], respostasUsuario[9], respostasUsuario[10], respostasUsuario[7], respostasUsuario[8], m);
+            n.DeterminarNivel();
+
+        }
+    }
+
+
+    protected void PuxarBanco()
+    {
         Retrofit r = new Retrofit.Builder()
                 .baseUrl(JsonPlaceHolder.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -281,7 +292,7 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
 
 
                 for (Receita q: lista) {
-                    Log.d("alimento", q.nomeReceita);
+                    Log.d("receita: ", q.nomeReceita);
                 }
 
 
@@ -291,8 +302,9 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
             public void onFailure(Call<List<Receita>> call, Throwable t) {
 
             }
-        });
+    });
     }
+
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {

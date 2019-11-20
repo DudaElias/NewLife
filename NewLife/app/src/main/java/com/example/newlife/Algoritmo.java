@@ -2,9 +2,9 @@ package com.example.newlife;
 
 public class Algoritmo
 {
-    int diabetes, hipotensao, hipertensao, ansiedadeStress, insonia, idade, glicemia;
-    double altura, peso;
-    boolean mulher = true;
+    int diabetes, hipotensao, hipertensao, ansiedadeStress, insonia, i, g;
+    double a, p;
+    boolean m = true;
     String restricao[];
 
 
@@ -14,20 +14,25 @@ public class Algoritmo
 
     public Algoritmo (int diabetes, int hipotensao, int hipertensao, int ansiedadeStress, int insonia, int idade, int glicemia, double altura, double peso, boolean mulher){
         //alto =0; normal = 1; baixo = 2;
+        a = altura;
+        p = peso;
         int imc;
+        g = glicemia;
+        m = mulher;
+        i = idade;
 
         if(IMC(altura, peso) <= 18.5)
             imc = 2;
         else if(IMC(altura, peso) > 25)
             imc = 0;
         else
-            imc = 2;
+            imc = 1;
 
         //Gorduras
-        if(idade<19 || idade>64 || diabetes == 0 || diabetes == 1 || imc !=1 || hipertensao==0)
-            this.gorduras = 0;
+        if(idade<=18 || idade>=65 || diabetes == 0 || diabetes == 1 || imc !=1 || hipertensao==0)
+            this.gorduras = 2;
         else
-            this.gorduras = 1;
+            this.gorduras = 0;
 
         //Proteinas
         if((idade>12 && idade <19) || imc != 1)
@@ -40,13 +45,13 @@ public class Algoritmo
         if(this.insonia == 0){
             this.carboidratos=0;
         }
-        else if(idade>18|| diabetes ==0 || diabetes== 1 || ansiedadeStress==0||imc==1 ||hipertensao==0)
+        else if(idade>=18|| diabetes ==0 || diabetes== 1 || ansiedadeStress==0||imc==1 ||hipertensao==0)
             this.carboidratos = 2;
         else
             this.carboidratos=1;
 
         //Magnesio
-        if(!mulher || idade>64 || diabetes == 0 || diabetes == 1 || ansiedadeStress == 0|| hipertensao==0|| insonia==0)
+        if(idade>64 || diabetes == 0 || diabetes == 1 || ansiedadeStress == 0|| hipertensao==0|| insonia==0)
             this.magnesio = 0;
         else
             this.magnesio = 1;

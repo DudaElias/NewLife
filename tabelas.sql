@@ -1,20 +1,22 @@
-create table Perfil
+Ôªøcreate table Perfil
 (
    id int primary key identity(1,1) not null,
    nome varchar(30) not null,
    senha varchar(50) not null,
    email varchar(50) not null,
    nivel int not null,
-   restricoes varchar(20) not null,
+   restricoes varchar(200) not null,
    peso float not null,
    altura float not null,
+   genero char not null,
+   idade int not null,
    dieta ntext,
    evolucao float
 )
 
 select*from Perfil
 select * from Perfil where nome='Dudao'
-insert into Perfil values('Dudao', 'duda29','dudao@gmail.com', 1, 'Nenhuma', 64, 160, 'blablabla',0)
+insert into Perfil values('Dudao', 'duda29','dudao@gmail.com', 1, '', 64, 160,'F',15, 'blablabla',0)
 create table Restricao
 (
 	codRestricao int primary key not null,
@@ -54,31 +56,31 @@ create table Alimento
 
 insert into Alimento values('Figo',13,0.5,1.1,0,2,0,1.8,0,2,0,0,2,2,0,0,2,2, null)/*1*/
 
-insert into Alimento values('T‚mara',70,2.5,2,0,1,0,10,0,2,0,0,2,0,2,0,2,2, null)/*2*/
+insert into Alimento values('T√¢mara',70,2.5,2,0,1,0,10,0,2,0,0,2,0,2,0,2,2, null)/*2*/
 
 insert into Alimento values('Uva',15,1,1,0,1,0,0.7,0,2,0,0,2,0,0,0,0,2, null)/*3*/
 
-insert into Alimento values('Rom„',17,0.5,0.6,0,1,0,3.2,0,2,0,0,2,0,0,0,0,2, null)/*4*/
+insert into Alimento values('Rom√£',17,0.5,0.6,0,1,0,3.2,0,2,0,0,2,0,0,0,0,2, null)/*4*/
 
 insert into Alimento values('Laranja',9,0.5,0.8,0,1,0,1.4,0,2,0,0,2,0,2,0,0,2, null)/*5*/
 
-insert into Alimento values('Lim„o',9.5,0.5,0.8,0,1,0,1,0,2,0,0,2,0,0,0,0,2, null)/*6*/
+insert into Alimento values('Lim√£o',9.5,0.5,0.8,0,1,0,1,0,2,0,0,2,0,0,0,0,2, null)/*6*/
 
 insert into Alimento values('Tangerina',13,0.3,0.8,0,0,0,0.9,0,2,0,0,2,0,0,0,0,2, null)/*7*/
 
 insert into Alimento values('Caqui',25,0.7,0.7,0,0,0,6.5,0,0,0,0,0,0,0,0,0,2, null)/*1*/
 
-insert into Alimento values('Macad‚mia',14,1.4,0.7,0,0,0,8.5,0,2,0,0,0,0,2,0,2,2, null)/*1*/
+insert into Alimento values('Macad√¢mia',14,1.4,0.7,0,0,0,8.5,0,2,0,0,0,0,2,0,2,2, null)/*1*/
 
 insert into Alimento values('Lichia',14,0.4,0.9,0,1,0,0.3,0,2,0,0,0,0,0,0,0,2, null)/*1*/
 
-insert into Alimento values('Maracuj·',18,1.5,2.1,0,1,0,6,0,2,0,0,0,0,2,0,0,2, null)/*1*/
+insert into Alimento values('Maracuj√°',18,1.5,2.1,0,1,0,6,0,2,0,0,0,0,2,0,0,2, null)/*1*/
 
 insert into Alimento values('Abacate',7,12,2,0,0,0,5,0,0,0,0,0,0,0,2,0,2, null)/*1*/
 
 insert into Alimento values('Abacaxi',12.4,0.3,0.6,0,1,0,1.1,0,0,0,0,0,0,2,0,0,2, null)/*1*/
 
-insert into Alimento values('AÁaÌ',12.4,40,0.6,0,1,0,1.1,0,2,0,2,2,0,2,2,2,2, null)/*1*/
+insert into Alimento values('A√ßa√≠',12.4,40,0.6,0,1,0,1.1,0,2,0,2,2,0,2,2,2,2, null)/*1*/
 
 insert into Alimento values('Ameixa',11.4,0.3,0.7,0,1,0,1.4,0,0,0,0,0,0,0,0,0,2, null)/*1*/
 
@@ -98,13 +100,13 @@ insert into Alimento values('Jabuticaba',13,0.1,0.8,0,0,0,0.3,0,0,0,0,0,0,2,0,0,
 
 insert into Alimento values('Manga',15,0.25,0.7,0,1,0,2,0,2,0,0,0,0,0,0,0,2, null)/*1*/
 
-insert into Alimento values('MaÁ„',15,0.2,0.25,0,2,0,1.9,0,2,0,0,2,0,0,0,0,2, null)/*1*/
+insert into Alimento values('Ma√ß√£',15,0.2,0.25,0,2,0,1.9,0,2,0,0,2,0,0,0,0,2, null)/*1*/
 
-insert into Alimento values('Mam„o',11,0.05,0.75,0,2,0,1.5,0,2,0,0,2,0,0,2,0,2, null)/*1*/
+insert into Alimento values('Mam√£o',11,0.05,0.75,0,2,0,1.5,0,2,0,0,2,0,0,2,0,2, null)/*1*/
 
-insert into Alimento values('Mel„o',14,0.3,1.2,0,2,0,0.5,0,2,0,0,2,0,0,0,0,2, null)/*1*/
+insert into Alimento values('Mel√£o',14,0.3,1.2,0,2,0,0.5,0,2,0,0,2,0,0,0,0,2, null)/*1*/
 
-insert into Alimento values('PÍra',14.6,0.25,0.5,0,2,0,2.7,0,2,0,0,2,0,2,0,0,2, null)/*1*/
+insert into Alimento values('P√™ra',14.6,0.25,0.5,0,2,0,2.7,0,2,0,0,2,0,2,0,0,2, null)/*1*/
 
 insert into Alimento values('Pitanga',10,0.3,0.9,0,0,0,2.2,0,0,0,0,0,0,0,0,0,0, null)/*1*/
 
@@ -117,20 +119,20 @@ insert into Alimento values('Morango',6.7,0.3,0.9,0,2,0,1.7,0,2,0,0,2,0,2,0,2,2,
 insert into Alimento values('Banana',123.8,0.3,1.04,0,1,0,2.6,0,0,0,0,2,0,2,0,0,2, null)/*1*/
 
 
-/*	HORTALI«AS	*/
+/*	HORTALI√áAS	*/
 
 
-insert into Alimento values('AbÛbora',13.8,0.3,0.7,0,0,0,2.9,0,1,0,0,0,0,2,2,0,2, null)/*1*/
+insert into Alimento values('Ab√≥bora',13.8,0.3,0.7,0,0,0,2.9,0,1,0,0,0,0,2,2,0,2, null)/*1*/
 
-insert into Alimento values('Almeir„o',3.3,0,1.8,0,0,0,2.6,0,1,0,0,0,0,2,2,0,2, null)/*2*/
+insert into Alimento values('Almeir√£o',3.3,0,1.8,0,0,0,2.6,0,1,0,0,0,0,2,2,0,2, null)/*2*/
 
-insert into Alimento values('BrÛcolis',4,0.4,3.6,0,1,0,0.7,0,2,0,0,2,0,2,2,0,2, null)/*3*/
+insert into Alimento values('Br√≥colis',4,0.4,3.6,0,1,0,0.7,0,2,0,0,2,0,2,2,0,2, null)/*3*/
 
-insert into Alimento values('ChicÛria',4.7,0.3,1.7,0,0,0,4,0,2,0,0,2,0,2,2,0,2, null)/*4*/
+insert into Alimento values('Chic√≥ria',4.7,0.3,1.7,0,0,0,4,0,2,0,0,2,0,2,2,0,2, null)/*4*/
 
 insert into Alimento values('Escarola',5.6,9.5,1.5,0,0,0,1.7,0,2,0,0,2,0,2,2,0,2, null)/*5*/
 
-insert into Alimento values('JilÛ',4.5,0.2,1.9,0,0,0,2.5,0,2,0,0,2,0,0,0,0,2, null)/*6*/
+insert into Alimento values('Jil√≥',4.5,0.2,1.9,0,0,0,2.5,0,2,0,0,2,0,0,0,0,2, null)/*6*/
 
 insert into Alimento values('Nabo',18,0.3,1.2,0,0,0,4.9,0,2,0,0,2,0,1,1,0,2, null)/*7*/
 
@@ -150,9 +152,9 @@ insert into Alimento values('Lentilha',19.5,0.4,9,0,0,0,7.9,0,0,0,0,0,0,2,2,0,2,
 
 insert into Alimento values('Palmito',3.8,0.3,3,0,0,0,2.4,0,1,0,0,0,0,2,2,2,2, null)/*1*/
 
-insert into Alimento values('R˙cula',3.6,0.7,2.6,0,0,0,1.6,0,1,0,0,1,0,2,2,0,2, null)/*1*/
+insert into Alimento values('R√∫cula',3.6,0.7,2.6,0,0,0,1.6,0,1,0,0,1,0,2,2,0,2, null)/*1*/
 
-insert into Alimento values('Agri„o',1.3,0.1,1.9,0,0,0,0.5,0,2,0,0,2,0,2,2,0,2, null)/*1*/
+insert into Alimento values('Agri√£o',1.3,0.1,1.9,0,0,0,0.5,0,2,0,0,2,0,2,2,0,2, null)/*1*/
 
 insert into Alimento values('Batata',20.1,0.1,1.9,0,0,0,0,2,0,0,0,0,0,2,0,0,2, null)/*1*/
 
@@ -170,11 +172,11 @@ insert into Alimento values('Berinjela',15,0.2,0.25,0,2,0,1.9,0,2,0,0,2,0,0,0,0,
 
 insert into Alimento values('Couve Flor',4.1,0.5,1.8,0,0,0,2.3,0,2,0,0,2,0,2,0,0,2, null)/*1*/
 
-insert into Alimento values('Feij„o',21.6,5.2,5.5,0,0,0,5.5,0,1,0,0,0,0,2,2,2,2, null)/*1*/
+insert into Alimento values('Feij√£o',21.6,5.2,5.5,0,0,0,5.5,0,1,0,0,0,0,2,2,2,2, null)/*1*/
 
 insert into Alimento values('Quiabo',4.5,0.2,1.9,0,0,0,2.5,0,2,0,0,0,0,2,0,2,2, null)/*1*/
 
-insert into Alimento values('Sals„o',1.2,0.1,0.3,0,0,0,1.2,0,1,0,0,0,0,0,0,0,2, null)/*1*/
+insert into Alimento values('Sals√£o',1.2,0.1,0.3,0,0,0,1.2,0,1,0,0,0,0,0,0,0,2, null)/*1*/
 
 insert into Alimento values('Alface',2.9,0.1,1.4,0,0,0,1.3,0,1,0,0,0,0,0,0,0,2, null)/*1*/
 
@@ -182,13 +184,13 @@ insert into Alimento values('Cebola',9.6,0.2,1.4,0,0,0,1.6,0,1,0,0,0,0,2,0,0,2, 
 
 insert into Alimento values('Couve de Bruxelas',7.1,0.5,2.5,0,0,0,2.6,0,2,0,0,2,0,2,0,2,2, null)/*1*/
 
-insert into Alimento values('Gr„o de Bico',27.4,2.6,8.9,0,0,0,7.6,0,1,0,0,0,0,2,2,0,2, null)/*1*/
+insert into Alimento values('Gr√£o de Bico',27.4,2.6,8.9,0,0,0,7.6,0,1,0,0,0,0,2,2,0,2, null)/*1*/
 
 insert into Alimento values('Milho verde',21,1.5,3.4,0,2,0,2.4,0,1,0,0,0,0,2,2,0,2, null)/*1*/
 
 insert into Alimento values('Rabanete',3.4,0.1,0.7,0,0,0,1.6,0,2,0,0,0,0,0,0,0,2, null)/*1*/
 
-insert into Alimento values('Alho PorÛ',14.2,0.3,1.5,0,0,0,1.8,0,2,0,0,0,0,2,0,2,2, null)/*1*/
+insert into Alimento values('Alho Por√≥',14.2,0.3,1.5,0,0,0,1.8,0,2,0,0,0,0,2,0,2,2, null)/*1*/
 
 insert into Alimento values('Beterraba',10,0.2,1.7,0,0,0,2,0,1,0,0,0,0,2,0,0,2, null)/*1*/
 
@@ -207,37 +209,37 @@ insert into Alimento values('Soja',9.9,9,16.6,0,2,0,6,1,1,0,0,0,0,2,2,2,2, null)
 
 /*CARNE BOVINA*/
 
-insert into Alimento values('Bife de FilÈ',0,7.9,28.8,0,1,0,0,2,0,0,0,0,0,0,0,2,2, null)/*1*/
+insert into Alimento values('Bife de Fil√©',0,7.9,28.8,0,1,0,0,2,0,0,0,0,0,0,0,2,2, null)/*1*/
 
 insert into Alimento values('Picanha',0,14.2,27,0,1,0,0,2,0,0,0,0,2,0,2,2,2, 92)/*1*/
 
-insert into Alimento values('FilÈ Mignon',0,17.1,26.5,0,1,0,0,2,0,0,0,0,0,2,0,0,2, 97)/*1*/
+insert into Alimento values('Fil√© Mignon',0,17.1,26.5,0,1,0,0,2,0,0,0,0,0,2,0,0,2, 97)/*1*/
 
 insert into Alimento values('Costela',0,28.5,23,0,1,0,0,2,0,0,0,0,0,0,0,0,2, 85)/*1*/
 
 insert into Alimento values('Maminha',0,7.7,34.3,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 94)/*1*/
 
-insert into Alimento values('Carne moÌda',0,17.9,25.6,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 88)/*1*/
+insert into Alimento values('Carne mo√≠da',0,17.9,25.6,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 88)/*1*/
 
 /*CARNE BOVINA*/
 
-insert into Alimento values('Bife de FilÈ',0,7.9,28.8,0,1,0,0,2,0,0,0,0,0,0,0,2,2, null)/*this boy*/
+insert into Alimento values('Bife de Fil√©',0,7.9,28.8,0,1,0,0,2,0,0,0,0,0,0,0,2,2, null)/*this boy*/
 
 insert into Alimento values('Picanha',0,14.2,27,0,1,0,0,2,0,0,0,0,2,0,2,2,2, 92)/*this boy*/
 
-insert into Alimento values('FilÈ Mignon',0,17.1,26.5,0,1,0,0,2,0,0,0,0,0,2,0,0,2, 97)/*this boy*/
+insert into Alimento values('Fil√© Mignon',0,17.1,26.5,0,1,0,0,2,0,0,0,0,0,2,0,0,2, 97)/*this boy*/
 
 insert into Alimento values('Costela',0,28.5,23,0,1,0,0,2,0,0,0,0,0,0,0,0,2, 85)/*this boy*/
 
 insert into Alimento values('Maminha',0,7.7,34.3,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 94)/*this boy*/
 
-insert into Alimento values('Carne moÌda',0,17.9,25.6,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 88)/*this boy*/
+insert into Alimento values('Carne mo√≠da',0,17.9,25.6,0,1,0,0,2,0,0,0,0,0,2,2,2,2, 88)/*this boy*/
 
 /*	PEIXE	*/
 
-insert into Alimento values('Til·pia',0,2.6,26.2,0,1,0,0,2,0,0,0,2,2,2,0,2,2, 57)/*1*/
+insert into Alimento values('Til√°pia',0,2.6,26.2,0,1,0,0,2,0,0,0,2,2,2,0,2,2, 57)/*1*/
 
-insert into Alimento values('Salm„o',0,12.3,22.1,0,1,0,0,2,0,0,0,2,2,2,0,0,2, 63)/*1*/
+insert into Alimento values('Salm√£o',0,12.3,22.1,0,1,0,0,2,0,0,0,2,2,2,0,0,2, 63)/*1*/
 
 insert into Alimento values('Atum',0,6.3,29.9,0,1,0,0,2,0,0,0,2,2,2,0,2,2, 49)/*1*/
 
@@ -335,7 +337,7 @@ insert into Alimento values(2,1,2,0)/*25*/
 
 insert into Alimento values(2,1,2,0)/*26*/
 
-/*Creme em pÛ*/
+/*Creme em p√≥*/
 
 insert into Alimento values(0,0,0,0)/*27*/
 
@@ -398,7 +400,7 @@ insert into Alimento values(2,2,0,0)/*46*/
 
 insert into Alimento values(2,2,2,0)/*47*/
 
-/*P„o*/
+/*P√£o*/
 insert into Alimento values(2,2,2,0)/*48*/
 
 insert into Alimento values(0,2,2,0)/*49*/
@@ -442,7 +444,7 @@ insert into Alimento values(1,2,2,0)/*62*/
 insert into Alimento values(2,0,1,2)/*63*/
 
 
-/*Vegetais/hortaliÁas*/
+/*Vegetais/hortali√ßas*/
 
 insert into Alimento values(0,1,0,0)/*64*/
 
@@ -612,7 +614,7 @@ insert into Alimento values(0,0,0,0)/*138*/
 
 insert into Alimento values(0,0,0,0)/*139*/
 
-/*P„o de queijo*/
+/*P√£o de queijo*/
 
 
 insert into Alimento values(0,1,0,0)/*140*/
@@ -1006,7 +1008,7 @@ insert into Alimento values(0,0,0,0)/*322*/
 
 
 /*Presunto*/
-insert into Alimento values(2,2,0,0)/*323 presunto È transgÍnico?*/
+insert into Alimento values(2,2,0,0)/*323 presunto √© transg√™nico?*/
 
 
 /*Tablete de tempero*/
@@ -1214,7 +1216,7 @@ insert into Alimento values(0,0,0,0)/*416*/
 insert into Alimento values(0,0,0,0)/*417*/
 
 
-/*LinguiÁa*/
+/*Lingui√ßa*/
 
 insert into Alimento values(0,0,0,0)/*418*/
 
@@ -1288,7 +1290,7 @@ insert into Alimento values(0,0,0,0)/*445*/
 
 insert into Alimento values(0,0,0,0)/*446*/
 
-/*Bebidas l·cteas*/
+/*Bebidas l√°cteas*/
 
 insert into Alimento values(0,0,0,0)/*447*/
 
@@ -1317,13 +1319,13 @@ insert into Alimento values(0,0,2,0)/*454 cabra*/
 
 insert into Alimento values(0,0,2,0)/*455 achocolatado*/
 
-insert into Alimento values(0,0,0,0)/*456 desnatado em pÛ*/
+insert into Alimento values(0,0,0,0)/*456 desnatado em p√≥*/
 
 insert into Alimento values(0,0,0,0)/*457 desnatado*/
 
 insert into Alimento values(0,0,0,0)/*458 integral*/
 
-insert into Alimento values(0,0,0,0)/*459 integral em pÛ*/
+insert into Alimento values(0,0,0,0)/*459 integral em p√≥*/
 
 insert into Alimento values(0,0,0,0)/*460 fermentado*/
 
@@ -1407,7 +1409,7 @@ insert into Alimento values(0,0,0,0)/*490*/
 
 insert into Alimento values(0,0,0,0)/*491*/
 
-/*AÁ˙car*/
+/*A√ß√∫car*/
 
 insert into Alimento values(0,0,0,0)/*492*/
 
@@ -1454,7 +1456,7 @@ insert into Alimento values(0,0,0,0)/*509*/
 insert into Alimento values(0,0,0,0)/*510*/
 
 
-/*CafÈ*/
+/*Caf√©*/
 
 insert into Alimento values(0,0,0,0)/*511*/
 
@@ -1631,7 +1633,7 @@ insert into Alimento values(0,0,0,0)/*583*/
 insert into Alimento values(0,0,0,0)/*584*/
 
 
-/*TremoÁo*/
+/*Tremo√ßo*/
 
 insert into Alimento values(0,0,0,0)/*585*/
 
@@ -1662,7 +1664,7 @@ insert into Alimento values(0,0,0,0)/*593*/
 insert into Alimento values(0,0,0,0)/*594*/
 
 
-/*Pinh„o*/
+/*Pinh√£o*/
 
 insert into Alimento values(0,0,0,0)/*595*/
 
@@ -1681,9 +1683,26 @@ create table Dica
  codDica int primary key not null,
  nomeDica varchar(20) not null,
  descricao ntext not null,
+ restricoes ntext not null,
  imagem varchar(100) not null
 )
 
+create table Notificacao
+(
+	codNot int primary key not null,
+	nomeNot varchar(100) not null,
+	descricao ntext not null,
+	restricoes ntext not null,
+	horario dateTime not null,
+	imagem varchar(150) not null
+)
+
+create table Extra
+(
+	codExtra int primary key identity(1,1) not null,
+	nomeExtra varchar(150) not null,
+	descricao ntext not null
+)
 
 create table Receita
 (
@@ -1694,18 +1713,29 @@ create table Receita
 	alimentos ntext not null,
 	modoPreparo ntext not null
 )
-insert into Receita values(1, '','', '2, 2 csopa, 1cch·, 1 pitada', '', '')
-insert into Receita values(1, 'Crepioca de Frango','CafÈ da manh„', '2, 2 csopa, 1cch·, 1 pitada', 'Ovo, Goma de tapioca, Semente de chia, Sal', 'Bata todos os ingredientes com o garfo/fouet ou no mixer/liqui. Despeje na frigideira previamente untada (se n„o quiser untar, garanta que o anti-aderente esteja 100%). Mantenha o fogo baixo e a frigideira tampada. Quando ela estiver bem firme vire apenas para dourar o outro lado. Coloque o recheio, dobre e pronto!')
-insert into Receita values(2, 'Bolinho de Granola','CafÈ da manh„',  '2 xÌc, 1/2 xÌc, 1/4 xÌc, 2, 2, 1, a gosto', 'Granola, Farinha de aveia, ”leo de coco, Bananas, Ovos, Fermento em pÛ, Canela em pÛ', 'Bater com o mixer ou liqui as bananas, ovos e Ûleo de coco. Reserve. Misture os demais ingredientes em uma tigela e incorpore a mistura lÌquida, misture atÈ obter uma massa homogÍnea. Coloque em forminhas de silicone para muffin/cupcake. Leve ao forno prÈ aquecido em 180o graus atÈ assarem (faÁa o teste do palito) ~30 minutos')
-/*insert into Receita values(3, 'Bolo de cenoura de liquidificador', '370g, 4, 360ml, 360g, 390g, 18g, 1 pitada, , , 100g, 240g, 12g, 120ml', 'Cenoura, Ovo, ”lep de girassol, AÁ˙car refinado, Farinha de trigo, Fermento quÌmico, Sal, ”leo, Farinha, Chocolate em pÛ, AÁ˙1car refinado, manteiga, ·gua', 'Preaquece o forno a 180C. Unte com Ûleo uma forma retangular de aproximadamente 30cm x 25cm, polvilhe com a farinha de trigo e bata a forma para remover bem o excesso. Em uma tigela grande misture a farinha, o fermento, o sal e reserve. Descasque as cenouras, corte em rodelas e coloque no liquidificador, adicione o Ûleo, o aÁ˙car e os ovos e bata atÈ obter um creme liso. Aos poucos comece adicionar os lÌquidos aos ingredientes secos, use um fouet para misturar os ingredientes atÈ obter uma massa lisa e homogÍnea. Transfira a massa para a forma preparada e leve para assar por aproximadamente 30 minutos. Depois desse tempo, espete um palito no centro da massa. Se o palito sair limpo È hora de retirar do forno, se sair com um pouco de massa coloque o bolo de volta no forno atÈ assar completamente. Corte o bolo ainda quente sem retir·-lo da forma. Junte todos os ingredientes em uma panela mÈdia e leve ao fogo mÈdio mexendo sempre com uma esp·tula. Quando a mistura ferver, deixe cozinhar por aproximadamente 5 a 8 minutos sem parar de mexer. Desligue a calda e despeje imediatamente sobre o bolo.') nonononononono tem gluten*/
-insert into Receita values(3, 'Smoothie de morango e jabuticaba', 'CafÈ da manh„', '1/2 xÌc(ch·), 1/2 xÌc(ch·), 1/2 xÌc(ch·), 4 pedras', 'morango, jabuticaba, ·gua, gelo', 'Bata todos os ingredientes no mixer ou liquidificador.')
-insert into Receita values(4, 'Ovos mexidos com Cogumelos', 'CafÈ da manh„', '2 csopa, 250g, 4, a gosto', 'manteiga, cogumelos paris, ovo, sal', 'Numa panela ou frigideira, derreta 1 colher de sopa de manteiga e cozinhe os cogumelos atÈ ficarem macios e mais escuros. Reserve.Em uma frigideira antiaderente, derreta a outra colher de manteiga e adicione os ovos batidos.Mexa com uma colher e cozinhe atÈ ficar mais firme, porÈm macio.Sirva os ovos e os cogumelos ainda quentes sobre torradas.')
-insert into Receita values(5, 'Frango com Legumes', 'AlmoÁo','1 xÌc(ch·), 1/2 xÌc(ch·), 1/2 xÌc(ch·), 1/2 xÌc(ch·),1/2 xÌc(ch·), 1/2 unidade,1 csopa, a gosto', 'frango desfiado, cenoura cozida e cortada, vagem cortada, piment„o em tiras, abobrinha cortada, cebola cortada, shoyu, pimenta do reino', 'Modo de Preparo Cozinhe a cenoura e a vagem e reserve.Refogue a cebola e o piment„o.Adicione o frango desfiado e os demais legumes e o shoyu e deixe refogar.Tempere ‡ gosto com pimenta.')
-insert into Receita values(6, 'Wrap de salm„o', 'Lanche','2, A gosto, 100g, 100g', 'tortilha de milho, agri„o, salm„o defumado, queijo feta', 'Numa frigideira anti-aderente (sem gordura), doura as tortilhas de ambos os lados.Para cada um dos wraps, coloca no centro a quantidade de agri„o que desejares. Acrescenta, de seguida, o salm„o fumado (50 g por pessoa) e finaliza com queijo feta (50 g por pessoa).')
-insert into Receita values(7, 'Chips de batata doce','Lanche', '1', 'batata doce', 'Forre uma forma com papel manteiga.Fatie a batata em rodelas finas. Coloque um fio de azeite. PrÈ-aqueÁa o forno durante 10 minutos. Coloque a forma no forno e deixe atÈ que a batata pareÁa bem crocante.')
-insert into Receita values(8, 'Bolinho de espinafre', 'Lanche','1/2 xÌc, 1 xÌc, 1/2 xÌc, 1, 1/2 xÌc, 1/2, a gosto', 'ricota, espinafre refogado, brÛcolis refogado e picado em pedaÁos pequenos, ovo, farinha de aveia, cebola picada, sal e pimenta', 'Apos refogar o espinafre e o brÛcolis deixe escorrer para retirar o excesso de ·gua, pique-os bem picadinho e escorra mais um pouco, dessa vez pressionando com a colher.Misture no bowl a ricota esfarelada (ou tofu), os verdes, tempere bem e prove, acerte o sal etc, adicione o ovo e a aveia, misture tudo com a m„o.FaÁa bolinhas e leve para assar em fogo alto atÈ dourar (cerca de 15 minutos).')
-insert into Receita values(9, 'Mingau de Whey', 'Lanche','1 csopa, 50ml,1 csopa, 1 cch·, 1 csopa, 1, a gosto', 'aveia em flocos, ·gua, whey hidrolisado, cacau em pÛ, Ûleo de coco, banana picada, canela', 'Misture a aveia em flocos com a ·gua quente e deixe por 5 minutos. Adicione os outros ingredientes.')
+insert into Receita values(1, '','', '2, 2 csopa, 1cch√°, 1 pitada', '', '')
 
+insert into Receita values(1, 'Crepioca de Frango','Caf√© da manh√£', '2, 2 csopa, 1cch√°, 1 pitada', 'Ovo, Goma de tapioca, Semente de chia, Sal', 'Bata todos os ingredientes com o garfo/fouet ou no mixer/liqui. Despeje na frigideira previamente untada (se n√£o quiser untar, garanta que o anti-aderente esteja 100%). Mantenha o fogo baixo e a frigideira tampada. Quando ela estiver bem firme vire apenas para dourar o outro lado. Coloque o recheio, dobre e pronto!')
+insert into Receita values(2, 'Bolinho de Granola','Caf√© da manh√£',  '2 x√≠c, 1/2 x√≠c, 1/4 x√≠c, 2, 2, 1, a gosto', 'Granola, Farinha de aveia, √ìleo de coco, Bananas, Ovos, Fermento em p√≥, Canela em p√≥', 'Bater com o mixer ou liqui as bananas, ovos e √≥leo de coco. Reserve. Misture os demais ingredientes em uma tigela e incorpore a mistura l√≠quida, misture at√© obter uma massa homog√™nea. Coloque em forminhas de silicone para muffin/cupcake. Leve ao forno pr√© aquecido em 180o graus at√© assarem (fa√ßa o teste do palito) ~30 minutos')
+/*insert into Receita values(3, 'Bolo de cenoura de liquidificador', '370g, 4, 360ml, 360g, 390g, 18g, 1 pitada, , , 100g, 240g, 12g, 120ml', 'Cenoura, Ovo, √ìlep de girassol, A√ß√∫car refinado, Farinha de trigo, Fermento qu√≠mico, Sal, √ìleo, Farinha, Chocolate em p√≥, A√ß√∫1car refinado, manteiga, √°gua', 'Preaquece o forno a 180C. Unte com √≥leo uma forma retangular de aproximadamente 30cm x 25cm, polvilhe com a farinha de trigo e bata a forma para remover bem o excesso. Em uma tigela grande misture a farinha, o fermento, o sal e reserve. Descasque as cenouras, corte em rodelas e coloque no liquidificador, adicione o √≥leo, o a√ß√∫car e os ovos e bata at√© obter um creme liso. Aos poucos comece adicionar os l√≠quidos aos ingredientes secos, use um fouet para misturar os ingredientes at√© obter uma massa lisa e homog√™nea. Transfira a massa para a forma preparada e leve para assar por aproximadamente 30 minutos. Depois desse tempo, espete um palito no centro da massa. Se o palito sair limpo √© hora de retirar do forno, se sair com um pouco de massa coloque o bolo de volta no forno at√© assar completamente. Corte o bolo ainda quente sem retir√°-lo da forma. Junte todos os ingredientes em uma panela m√©dia e leve ao fogo m√©dio mexendo sempre com uma esp√°tula. Quando a mistura ferver, deixe cozinhar por aproximadamente 5 a 8 minutos sem parar de mexer. Desligue a calda e despeje imediatamente sobre o bolo.') nonononononono tem gluten*/
+insert into Receita values(3, 'Smoothie de morango e jabuticaba', 'Caf√© da manh√£', '1/2 x√≠c(ch√°), 1/2 x√≠c(ch√°), 1/2 x√≠c(ch√°), 4 pedras', 'morango, jabuticaba, √°gua, gelo', 'Bata todos os ingredientes no mixer ou liquidificador.')
+insert into Receita values(4, 'Ovos mexidos com Cogumelos', 'Caf√© da manh√£', '2 csopa, 250g, 4, a gosto', 'manteiga, cogumelos paris, ovo, sal', 'Numa panela ou frigideira, derreta 1 colher de sopa de manteiga e cozinhe os cogumelos at√© ficarem macios e mais escuros. Reserve.Em uma frigideira antiaderente, derreta a outra colher de manteiga e adicione os ovos batidos.Mexa com uma colher e cozinhe at√© ficar mais firme, por√©m macio.Sirva os ovos e os cogumelos ainda quentes sobre torradas.')
+insert into Receita values(5, 'Frango com Legumes', 'Almo√ßo','1 x√≠c(ch√°), 1/2 x√≠c(ch√°), 1/2 x√≠c(ch√°), 1/2 x√≠c(ch√°),1/2 x√≠c(ch√°), 1/2 unidade,1 csopa, a gosto', 'frango desfiado, cenoura cozida e cortada, vagem cortada, piment√£o em tiras, abobrinha cortada, cebola cortada, shoyu, pimenta do reino', 'Modo de Preparo Cozinhe a cenoura e a vagem e reserve.Refogue a cebola e o piment√£o.Adicione o frango desfiado e os demais legumes e o shoyu e deixe refogar.Tempere √† gosto com pimenta.')
+insert into Receita values(6, 'Wrap de salm√£o', 'Lanche','2, A gosto, 100g, 100g', 'tortilha de milho, agri√£o, salm√£o defumado, queijo feta', 'Numa frigideira anti-aderente (sem gordura), doura as tortilhas de ambos os lados.Para cada um dos wraps, coloca no centro a quantidade de agri√£o que desejares. Acrescenta, de seguida, o salm√£o fumado (50 g por pessoa) e finaliza com queijo feta (50 g por pessoa).')
+insert into Receita values(7, 'Chips de batata doce','Lanche', '1', 'batata doce', 'Forre uma forma com papel manteiga.Fatie a batata em rodelas finas. Coloque um fio de azeite. Pr√©-aque√ßa o forno durante 10 minutos. Coloque a forma no forno e deixe at√© que a batata pare√ßa bem crocante.')
+insert into Receita values(8, 'Bolinho de espinafre', 'Lanche','1/2 x√≠c, 1 x√≠c, 1/2 x√≠c, 1, 1/2 x√≠c, 1/2, a gosto', 'ricota, espinafre refogado, br√≥colis refogado e picado em peda√ßos pequenos, ovo, farinha de aveia, cebola picada, sal e pimenta', 'Apos refogar o espinafre e o br√≥colis deixe escorrer para retirar o excesso de √°gua, pique-os bem picadinho e escorra mais um pouco, dessa vez pressionando com a colher.Misture no bowl a ricota esfarelada (ou tofu), os verdes, tempere bem e prove, acerte o sal etc, adicione o ovo e a aveia, misture tudo com a m√£o.Fa√ßa bolinhas e leve para assar em fogo alto at√© dourar (cerca de 15 minutos).')
+insert into Receita values(9, 'Mingau de Whey', 'Lanche','1 csopa, 50ml,1 csopa, 1 cch√°, 1 csopa, 1, a gosto', 'aveia em flocos, √°gua, whey hidrolisado, cacau em p√≥, √≥leo de coco, banana picada, canela', 'Misture a aveia em flocos com a √°gua quente e deixe por 5 minutos. Adicione os outros ingredientes.')
+insert into Receita values(10, 'Pudim de Chia', 'Caf√© da manh√£','1 1/2 csopa, 2/3 x√≠cara,a gosto, a gosto, a gosto', 'semente de chia, leite vegetal de prefer√™ncia, setvia, frutas secas, coco chips', 'Coloque as sementes de chia em um potinho de vidro, preencha com o leite vegetal e adoce a gosto. Tampe o pote e deixe descansar na geladeira durante a noite. No dia seguinte corte frutas frescas, coloque uns chips de coco e est√° pronto.')
+insert into Receita values(11, 'Strogonoff sem Gl√∫ten', 'Almo√ßo','1,2Kg, 1,1 csopa, 1L, 1 csopa, 300g, 1 1/2 xic, 1 csopa, 1 csopa, a gosto, 1 ccha', 'fil√© mignon cortado em tiras ou cubos, cebola picada, manteiga Ghee, leite de am√™ndoas, amido de milho, molho de tomate, champignon fatiado, shoyo, molho ingl√™s, sal, noz-moscada', ' Refogue a cebola na manteiga. Aos poucos coloque as carnes. Se juntar √°gua, retire e reserve. Frite bem as carnes. Misture o amido de milho no leite vegetal e acrescente todos os ingredientes na panela com a carne. Deixe ferver e sirva.')
+insert into Receita values(12, 'Quibe de Couve Flor', 'Almo√ßo',' 3 xic, 600g, 1/2, a gosto, a gosto, a gosto, a gosto', 'arroz de couve-flor, carne mo√≠da, cebola picada, salsinha, sal, pimenta, azeite', 'Primeiro prepare o arroz de couve-flor: depois de lavar em √°gua corrente e deixar de molho uns 20 minutos, corte os floretes e bata no liquidificador/processador at√© virar um arroz (ser√° preciso fazer em etapas). Transfira para um refrat√°rio, cubra com papel filme e fa√ßa furinhos. Leve ao micro-ondas por 5 minutos. Depois de feito, misture a carne, 3 x√≠caras do arroz e os temperos e distribua em um refrat√°rio. Regue com um fio de azeite e leve ao forno pr√©-aquecido a 180 graus por uns 35 a 40 minutos.')
+insert into Receita values(13, 'Salada Quente', 'Almo√ßo','2 xic, 1, a gosto, a gosto, 4 xic, 1/2, a gosto', 'gr√£o de bico, folha de louro, sal, pimenta, folhas de espinafre lavados, cebola picada, azeite para refogar', 'Deixe o gr√£o-de-bico de molho de um dia para o outro ou por pelo menos 8 horas. Cozinhe na press√£o com a folha de louro e sal deixando no ponto al-dente (mais ou menos 15 minutos). Escorra e reserve. Refogue a cebola picada no azeite at√© ficar transparente. Pique grosseiramente as folhas de espinafre e refogue junto com a cebola apenas at√© murchar. Apague o fogo, junte o gr√£o-de-bico cozido. Finalize com pimenta, um fio de azeite e acerte o sal, se necess√°rio. Sirva quente.')
+insert into Receita values(14, 'Fritada de Espinafre', 'Jantar','2 csopa, 1/2, 1 xic, 250g, 6, 1/4 ccha, 1/4 ccha, 1/4', '√≥leo, cebola cortada em cubos, tomate sem sementes cortado em cubos e rodelas, folhas de espinafre cortadas grosseiramente, ovos, sal, pimenta-do-reino, suco de lim√£o-siciliano', 'Em uma frigideira (ou assadeira) que possa ir ao forno, espalhe o √≥leo em todo o fundo e leve ao fogo m√©dio at√© aquecer. Coloque a cebola e o tomate e refogue por 2 minutos. Junte o espinafre e espere murchar. Misture os ovos batidos com o sal e a pimenta. Deixe cozinhar por 4 minutos sem mexer. Coloque as rodelas de tomate por cima e regue com o lim√£o. Leve ao forno preaquecido a 180 ÀöC e asse por 3 minutos ou at√© dourar.')
+insert into Receita values(15, 'Escondidinho de batata-doce com carne mo√≠da', 'Lanche','1/2 xic, 1 csopa, 1 xic, a gosto', 'batata-doce com casca e cozida, mostarda, carne mo√≠da cozida, sal', 'Amasse a batata com um garfo, e  misture-a com a mostarda e o sal. Coloque a carne mo√≠da no fundo do potinho e a batata-doce no topo. Leve ao forno ou microondas at√© aquecer.')
+insert into Receita values(16, 'Espaguete de legumes de Let√≠cia Spiller', 'Almo√ßo','a gosto, 1, 2, 1/2, 1, 4 por√ß√µes, 1, 1', 'alho amassado, cebola m√©dia picada em cubos, tomates picados em cubos, polpa de tomate, palmito pupunha grande cortado em fios, br√≥colis, cenoura cortada em rodelas levemente cozidas, abobrinha media cortada em tiras', 'Doure o alho, metade da cebola e os tomates picadinhos em um fio de azeite. Coloque a polpa de tomate e deixe refogar com um pouco de √°gua. Em outra panela, refogue alho e o restante da cebola no azeite. Coloque o palmito, refogue e coloque um pouco de √°gua, se necess√°rio. Acrescente o br√≥colis, a cenoura e a abobrinha, mexendo um pouco para refogar. Acerte o sal e tempere a gosto. Coloque o molho de tomate por cima e sirva.')
+insert into Receita values(17, 'Lasanha de abobrinha e tofu', 'Janta','300g, 1 ccha,  3 csopa, 1, 3 dentes, 3, 3 xic, 1 1/2 ccha, 1/2 xic, a gosto, a gosto', 'tofu firme, azeite de oliva, cebola pequena picada, alho picado, abobrinha grandes cortadas em l√¢minas, molho de tomate caseiro, or√©gano, folhas frescas de manjeric√£o, sal, pimenta ', 'Amasse bem o tofu e tempere com o sal, a pimenta, a c√∫rcuma e 2 colheres (sopa) de azeite. Reserve. Em uma panela, aque√ßa o restante do azeite e refogue a cebola e o alho. Junte o tofu e refogue mais um pouco. Monte a lasanha em uma travessa refrat√°ria untada com o azeite. Intercale camadas da abobrinha, do molho de tomate e do tofu refogado. Finalize com a abobrinha e algumas colheradas de molho. Polvilhe com o or√©gano e espalhe o manjeric√£o. Leve ao forno preaquecido a 180ÀöC por 20 minutos.')
+insert into Receita values(18, 'Macarr√£o de gr√£o-de-bico com espinafre', 'Janta','1 csopa, 1 csopa, 1 dente, 1 xic, 2 csopa, 1/2, 200g, 100g, a gosto, a gosto', 'manteiga, azeite, alho picado, caldo de legumes caseiro, biomassa de banana verde, suco de lim√£o siciliano, macarr√£o de gr√£o de bico, espinafre, raspas de lim√£o, sal', 'Prepare o  molho primeiro: em uma panela, junte a manteiga com o azeite e doure o alho. Acrescente o caldo de legumes, a biomassa de banana verde, raspas e o suco de lim√£o. Tempere com o sal e reserve. Em uma panela com √°gua fervente e temperada com 1 fio de azeite e um pouco de sal, adicione o macarr√£o e o espinafre. Cozinhe por 3 minutos (ou s√≥ at√© a massa ficar al dente). Escorra e passe o macarr√£o com o espinafre para um prato. Regue com o molho e decore com a pimenta.')
+insert into Receita values(19, 'Arroz de couve-flor com ghee', 'Janta','1, 1/4, a gosto, 1 ccha, 1L', 'couve-flor pequena, cebola picada, sal, manteiga ghee, √°gua fervente', 'Mergulhe a couve-flor inteira na √°gua e retire em seguida. Escorra bem, pique em peda√ßos e bata rapidamente no liquidificador. Reserve. Refogue a cebola com a manteiga ghee, junte a couve-flor e j√° desligue o fogo. Ajuste o sal. Sirva quente ou use no recheio do charuto.')
+insert into Receita values(20, 'Pizza de omelete com espinafre', 'Janta','2, 1 ccha, 1 xic, 1/4, a gosto, a gosto, a gosto, a gosto, a gosto', 'ovos caipiras, manteiga, espinafre previamente salteado na manteiga, cebola pequena cortada em rodelas finas, azeite, or√©gano, manjeric√£o, tomate cereja cortado em rodelas, queijo parmes√£o ralado', 'Bata os ovos com um garfo, adicione o sal e reserve. Em uma frigideira, coloque o azeite e um pouco de manteiga. Despeje os despeje os ovos batidos. Adicione os verdes, os tomates, cebola e, por √∫ltimo, o queijo. Tampe e deixe no fogo baixo por 3 minutos. Finalize com mais or√©gano e manjeric√£o.')
 
 create table Dieta
 (
@@ -1728,16 +1758,18 @@ create table Questao
 
 /*Quiz base*/
 insert into Questao values(1,1,'Quanto come fora de casa?','Alternativa1','Raramente , 1x por semana , 2/3x por semana , Quase sempre')
-insert into Questao values(2,1,'Faz atividade fÌsica?','Alternativa1','Raramente , 1x por semana , 2/3x por semana , +5 por semana')
-insert into Questao values(3,1,'Possui diabetes?','Alternativa1','Sim(Tipo 1) , Sim(Tipo 2) , N„o(PrÈ-diabÈtico) , N„o')
-insert into Questao values(4,1,'Possui hipertens„o?','Alternativa1','Sim(Preocupante) , Sim , N„o(Press„o baixa) , N„o(Normal)')
+insert into Questao values(2,1,'Faz atividade f√≠sica?','Alternativa1','Raramente , 1x por semana , 2/3x por semana , +5 por semana')
+insert into Questao values(3,1,'Possui diabetes?','Alternativa1','Sim(Tipo 1) , Sim(Tipo 2) , N√£o(Pr√©-diab√©tico) , N√£o')
+insert into Questao values(4,1,'Possui hipertens√£o?','Alternativa1','Sim(Preocupante) , Sim , N√£o(Press√£o baixa) , N√£o(Normal)')
 insert into Questao values(5,1,'Problemas de estresse e/ou ansiedade?','Alternativa1','Sim(Diariamente) , Sim(Muitas vezes) , Sim(Algumas vezes) , Raramente')
 insert into Questao values(6,1,'Quanto dorme por noite?','Alternativa1',' Menos que 4h , Entre 4 e 5h  , Entre 6 e 8h , 8h ou +')
-insert into Questao values(7,1,'Quanto de ·gua bebe por dia?','Alternativa1','-1L , 1/2L , 3/5L , +5L')
+insert into Questao values(7,1,'Quanto de √°gua bebe por dia?','Alternativa1','-1L , 1/2L , 3/5L , +5L')
 
 insert into Questao values(8,1,'Qual sua altura? (em cm)','Dissertativa', null)
 insert into Questao values(9,1,'Qual o seu peso?(em Kg)','Dissertativa', null)
 insert into Questao values(10,1,'Qual sua idade?','Dissertativa', null)
-insert into Questao values(11,1,'Se fez um exame, qual seu indice glicÍmico no mesmo?','Dissertativa', null)
-insert into Questao values(12,1,'RestriÁıes alimentares:','Alternativa2', 'Ovo, Frutos do Mar, LaticÌnios, Amendoim, Gl˙ten, Soja')
-insert into Questao values(13,1,'GÍnero: ','Escolha', 'Feminino, Masculino');
+insert into Questao values(11,1,'Se fez um exame, qual seu indice glic√™mico no mesmo?','Dissertativa', null)
+insert into Questao values(12,1,'Restri√ß√µes alimentares:','Alternativa2', 'Ovo, Frutos do Mar, Latic√≠nios, Amendoim, Gl√∫ten, Soja')
+insert into Questao values(13,1,'G√™nero: ','Escolha', 'Feminino, Masculino');
+
+
