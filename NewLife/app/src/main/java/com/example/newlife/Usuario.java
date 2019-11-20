@@ -2,13 +2,34 @@ package com.example.newlife;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
 
     Integer id;
-
     Integer nivel;
+    Integer idade;
+
+    char genero;
     String nome,senha,email,restricoes,dieta;
     Float altura,evolucao, peso;
+
+    public char getGenero() {
+        return genero;
+    }
+
+    public void setGenero(char genero) {
+        this.genero = genero;
+    }
+
+
+    public Integer getIdade() {
+        return idade;
+    }
+
+    public void setIdade(Integer idade) {
+        this.idade = idade;
+    }
 
     @SerializedName("body")
     private String text;
