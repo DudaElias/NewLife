@@ -152,6 +152,8 @@ public class QuizBase extends AppCompatActivity{
                         public void onResponse(Call<Usuario> call, Response<Usuario> response) {
 
                             Intent intent = new Intent(QuizBase.this, User.class);
+
+
                         }
 
                         @Override
