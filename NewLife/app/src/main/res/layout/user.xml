@@ -118,26 +118,9 @@
         <TextView
             android:layout_width="263dp"
             android:layout_height="70dp"
-
-
             android:layout_gravity="center"
             android:layout_marginStart="76dp"
-            android:layout_marginTop="250dp"
-
-
-            android:background="@drawable/circle_border"
-            android:elevation="8dp"
-            android:fontFamily="@font/comfortaa"
-            android:text="Altura:"
-            android:textAlignment="center"
-            android:textSize="15pt" />
-
-        <TextView
-            android:layout_width="263dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="76dp"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="200dp"
             android:background="@drawable/circle_border"
             android:elevation="8dp"
             android:fontFamily="@font/comfortaa"
@@ -150,7 +133,7 @@
             android:layout_height="70dp"
             android:layout_gravity="center"
             android:layout_marginStart="76dp"
-            android:layout_marginTop="350dp"
+            android:layout_marginTop="300dp"
             android:background="@drawable/circle_border"
             android:elevation="8dp"
             android:fontFamily="@font/comfortaa"
