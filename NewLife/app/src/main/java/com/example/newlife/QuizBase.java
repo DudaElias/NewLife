@@ -151,7 +151,9 @@ public class QuizBase extends AppCompatActivity{
                         @Override
                         public void onResponse(Call<Usuario> call, Response<Usuario> response) {
 
-                            Log.d("aaaaa:", "FUNCIONOU ESSA MIERDA");
+                            Intent intent = new Intent(QuizBase.this, User.class);
+
+
                         }
 
                         @Override
