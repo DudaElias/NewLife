@@ -51,13 +51,13 @@ public class Receitas extends AppCompatActivity {
             public void onResponse(Call<List<Receita>> call, Response<List<Receita>> response) {
                 final List<Receita> as = response.body();
                 final List<Alimento> alimentos = new ArrayList<>();
+                final ArrayList<Receita> atual= new ArrayList<Receita>();
                 dados = new String[response.body().size()];
                 int i = 0;
                 for(Receita r : as)
                 {
                     dados[i] = r.getNomeReceita();
-                    Log.d("potato", r.getNomeReceita());
-                    i++;
+                    atual.add(r);
                 }
                 //String[] params = new String[]{"carbo", "gordu", "pro", "fibras", "B", "C", "D", "sodio", "antioxidante", "magnesio", "zinco", "ferro", "potassio", "diabetes", "estresse", "gli", "ins"};
                 String[] res = usu.getRestricoes().split(",");
@@ -189,7 +189,7 @@ public class Receitas extends AppCompatActivity {
 
 
                 }
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(Receitas.this, android.R.layout.simple_list_item_1, dados);
+                final ListaReceitasAdapter adapter = new ListaReceitasAdapter(Receitas.this,atual, as.size());
                 listview.setAdapter(adapter);
                 listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
