@@ -51,21 +51,18 @@ public class Receitas extends AppCompatActivity {
             public void onResponse(Call<List<Receita>> call, Response<List<Receita>> response) {
                 final List<Receita> as = response.body();
                 final List<Alimento> alimentos = new ArrayList<>();
-                final ArrayList<Receita> atual= new ArrayList<Receita>();
+                final ArrayList<Receita> atual = new ArrayList<Receita>();
                 dados = new String[response.body().size()];
                 int i = 0;
-                for(Receita r : as)
-                {
+                for (Receita r : as) {
                     dados[i] = r.getNomeReceita();
                     atual.add(r);
                 }
                 //String[] params = new String[]{"carbo", "gordu", "pro", "fibras", "B", "C", "D", "sodio", "antioxidante", "magnesio", "zinco", "ferro", "potassio", "diabetes", "estresse", "gli", "ins"};
                 String[] res = usu.getRestricoes().split(",");
                 int[] data = new int[13];
-                for(int in = 0; in < 13; in++)
+                for (int in = 0; in < 13; in++)
                     data[in] = Integer.parseInt(res[in]);
-
-
 
 
                 Call<List<Alimento>> a = j.getAlimentos();
@@ -74,7 +71,7 @@ public class Receitas extends AppCompatActivity {
                     public void onResponse(Call<List<Alimento>> call, Response<List<Alimento>> response) {
                         List<Alimento> ali = response.body();
 
-                        for(Alimento a : ali)
+                        for (Alimento a : ali)
                             alimentos.add(a);
 
                     }
@@ -86,44 +83,62 @@ public class Receitas extends AppCompatActivity {
                 });
 
                 int[] melhoresCafe = new int[3];
-                int[] auxCafe = new int [3];
+                int[] auxCafe = new int[3];
+                auxCafe[0] = 20000000;
+                auxCafe[1] = 20000000;
+                auxCafe[2] = 20000000;
                 int[] melhoresAl = new int[3];
                 int[] auxAl = new int[3];
+
+                auxCafe[0] = 20000000;
+                auxCafe[1] = 20000000;
+                auxCafe[2] = 20000000;
+
                 int[] melhoresLanche = new int[3];
                 int[] auxLanche = new int[3];
+
+                auxCafe[0] = 20000000;
+                auxCafe[1] = 20000000;
+                auxCafe[2] = 20000000;
+
+
                 int[] melhoresJantar = new int[3];
                 int[] auxJantar = new int[3];
 
-                for(Receita receita : as)
-                {
+                auxCafe[0] = 20000000;
+                auxCafe[1] = 20000000;
+                auxCafe[2] = 20000000;
+
+
+                for (Receita receita : as) {
 
                     int carboR = 0, protR = 0, gorR = 0;
                     int j;
-                    int gord = 0, carb=0, prot=0, fibras=0, vitB=0, vitC=0, vitD=0, sodio=0, antoxi=0, mag=0, zinc=0, fer=0, pot=0;
+                    int gord = 0, carb = 0, prot = 0, fibras = 0, vitB = 0, vitC = 0, vitD = 0, sodio = 0, antoxi = 0, mag = 0, zinc = 0, fer = 0, pot = 0;
 
                     String[] alimentosNaReceita = receita.alimentos.split(",");
-                    for(j = 0; j < alimentosNaReceita.length; j++) {
+                    for (j = 0; j < alimentosNaReceita.length; j++) {
                         for (Alimento alimento : alimentos) {
                             if (alimento.nome.equals(alimentosNaReceita[j])) {
 
                                 int gorduras, proteinas, carboidratos;
-                                if(alimento.gorduras < 1)
+                                if (alimento.gorduras < 1)
                                     gorduras = 2;
-                                else if(alimento.gorduras > 10)
+                                else if (alimento.gorduras > 10)
                                     gorduras = 0;
                                 else
                                     gorduras = 1;
 
-                                if(alimento.proteinas < 5)
+                                if (alimento.proteinas < 5)
                                     proteinas = 2;
-                                else if(alimento.proteinas > 15)
+                                else if (alimento.proteinas > 15)
                                     proteinas = 0;
                                 else
                                     proteinas = 1;
 
-                                if(alimento.carboidratos < 1)
+                                if (alimento.carboidratos < 1)
                                     carboidratos = 2;
-                                else if(alimento.carboidratos > 10)
+                                else if (alimento.carboidratos > 10)
                                     carboidratos = 0;
                                 else
                                     carboidratos = 1;
@@ -147,60 +162,69 @@ public class Receitas extends AppCompatActivity {
                         }
                     }
 
-                    int somatoria = gord + carb +  prot + fibras + vitB + vitC + vitD + sodio + antoxi + mag + zinc + fer + pot;
+                    int somatoria = gord + carb + prot + fibras + vitB + vitC + vitD + sodio + antoxi + mag + zinc + fer + pot;
 
-                    for(int k = 0 ; k < 3; k++)
-                    {
-                        if(receita.periodo.equals("Café da manhã")){
-                            if(auxCafe[k] > somatoria){
-                                auxCafe[k]=somatoria;
+                    for (int k = 0; k < 3; k++) {
+                        if (receita.periodo.equals("Café da manhã")) {
+                            if (auxCafe[k] > somatoria) {
+                                auxCafe[k] = somatoria;
                                 melhoresCafe[k] = j;
+                                break;
                             }
-                        }
-                        else if(receita.periodo.equals("Almoço")){
-                            if(auxAl[k] > somatoria){
+                        } else if (receita.periodo.equals("Almoço")) {
+                            if (auxAl[k] > somatoria) {
                                 auxAl[k] = somatoria;
                                 melhoresAl[k] = j;
+                                break;
                             }
-                        }
-                        else if(receita.periodo.equals("Lanche")){
-                         if(auxLanche[k]>somatoria){
-                             auxLanche[k] = somatoria;
-                             melhoresLanche[k]=j;
-                         }
-                        }
-                        else{
-                            if(auxJantar[k]>somatoria){
+                        } else if (receita.periodo.equals("Lanche")) {
+                            if (auxLanche[k] > somatoria) {
+                                auxLanche[k] = somatoria;
+                                melhoresLanche[k] = j;
+                                break;
+                            }
+                        } else {
+                            if (auxJantar[k] > somatoria) {
                                 auxJantar[k] = somatoria;
-                                melhoresJantar[k]=j;
+                                melhoresJantar[k] = j;
+                                break;
 
                             }
                         }
                     }
-
                         /*       2    1      0
                             g	< 1	1<g<10  >10
                             p	< 5	1<g<15  >15
                             c	< 1	1<g<10  >10 */
+                    final ArrayList<Receita> receitasArray = new ArrayList<>();
+                    receitasArray.add(as.get(melhoresCafe[0]));
+                    receitasArray.add(as.get(melhoresCafe[1]));
+                    receitasArray.add(as.get(melhoresCafe[2]));
+                    receitasArray.add(as.get(melhoresAl[0]));
+                    receitasArray.add(as.get(melhoresAl[1]));
+                    receitasArray.add(as.get(melhoresAl[2]));
+                    receitasArray.add(as.get(melhoresLanche[0]));
+                    receitasArray.add(as.get(melhoresLanche[1]));
+                    receitasArray.add(as.get(melhoresLanche[2]));
+                    receitasArray.add(as.get(melhoresJantar[0]));
+                    receitasArray.add(as.get(melhoresJantar[1]));
+                    receitasArray.add(as.get(melhoresJantar[2]));
 
 
-
-
-
+                    final ListaReceitasAdapter adapter = new ListaReceitasAdapter(Receitas.this, receitasArray, 12);
+                    listview.setAdapter(adapter);
+                    listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Intent intent = new Intent(Receitas.this, ReceitaAtual.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("receita", receitasArray.get(position));
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                        }
+                    });
 
                 }
-                final ListaReceitasAdapter adapter = new ListaReceitasAdapter(Receitas.this,atual, as.size());
-                listview.setAdapter(adapter);
-                listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent intent = new Intent(Receitas.this, ReceitaAtual.class);
-                        Bundle bundle  = new Bundle();
-                        bundle.putSerializable("receita", as.get(0));
-                        intent.putExtras(bundle);
-                        startActivity(intent);
-                    }
-                });
             }
 
             @Override

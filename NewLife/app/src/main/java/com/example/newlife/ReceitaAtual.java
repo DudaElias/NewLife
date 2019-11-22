@@ -7,6 +7,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class ReceitaAtual extends AppCompatActivity {
 
     @Override
@@ -23,18 +25,21 @@ public class ReceitaAtual extends AppCompatActivity {
         tvNome.setText(receita.getNomeReceita());
 
 
-        String[] dados  = new String[500];
+        ArrayList<String> dados  = new ArrayList<String>();
+        ArrayList<String> dados2 = new ArrayList<String>();
         String[] dadosQtd = receita.medidas.split(",");
         String [] dadosIng = receita.alimentos.split(",");
+        String [] modo = receita.modoPreparo.split("/");
         for(int i = 0; i < dadosQtd.length; i++)
         {
-            dados[i] = dadosQtd[i] + " " + dadosIng[i];
+            dados.add(dadosQtd[i] + " " + dadosIng[i]);
         }
+        for(int i = 0; i < modo.length; i++)
+
+            dados2.add(modo[i]);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(ReceitaAtual.this, android.R.layout.simple_list_item_1, dados);
         lstIng.setAdapter(adapter);
-
-        dados = receita.modoPreparo.split(".");
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(ReceitaAtual.this, android.R.layout.simple_list_item_1, dados);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(ReceitaAtual.this, android.R.layout.simple_list_item_1, dados2);
         lstModo.setAdapter(adapter2);
     }
 }
