@@ -2,7 +2,9 @@ package com.example.newlife;
 
 import com.google.gson.annotations.SerializedName;
 
-class Receita {
+import java.io.Serializable;
+
+class Receita implements Serializable {
 
     Integer codReceita;
 
