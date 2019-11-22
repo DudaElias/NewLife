@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Receitas"></activity>
+        <activity android:name=".ReceitaAtual"></activity>
+        <activity android:name=".Receitas" />
         <activity android:name=".Dicas" />
         <activity android:name=".SendBluetooth" />
         <activity android:name=".BuscarBluetooth" />
