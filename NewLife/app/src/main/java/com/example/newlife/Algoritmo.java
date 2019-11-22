@@ -30,9 +30,9 @@ public class Algoritmo
 
         //Gorduras
         if(idade<=18 || idade>=65 || diabetes == 0 || diabetes == 1 || imc !=1 || hipertensao==0)
-            this.gorduras = 2;
-        else
             this.gorduras = 0;
+        else
+            this.gorduras = 1;
 
         //Proteinas
         if((idade>12 && idade <19) || imc != 1)
@@ -132,7 +132,7 @@ public class Algoritmo
 
     public double IMC(double altura, double peso){
         double imc;
-        imc = peso/Math.pow(altura, 2);
+        imc = peso/(Math.pow(altura, 2))*10000;
         return imc;
     }
 }

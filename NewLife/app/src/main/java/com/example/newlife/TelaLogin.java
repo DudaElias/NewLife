@@ -87,7 +87,10 @@ public class TelaLogin extends AppCompatActivity {
                         EditText s = findViewById(R.id.txtLSenha);
                         if(usu.get(0).getSenha().equals(s.getText().toString()));
                         {
-                            Intent data = new Intent(TelaLogin.this, QuizBase.class);
+                            Bundle b = new Bundle();
+                            b.putSerializable("usuario",usu.get(0));
+                            Intent data = new Intent(TelaLogin.this, User.class);
+                            data.putExtras(b);
                             startActivity(data);
                         }
                     }
