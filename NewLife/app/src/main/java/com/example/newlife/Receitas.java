@@ -49,7 +49,7 @@ public class Receitas extends AppCompatActivity {
         c.enqueue(new Callback<List<Receita>>() {
             @Override
             public void onResponse(Call<List<Receita>> call, Response<List<Receita>> response) {
-                List<Receita> as = response.body();
+                final List<Receita> as = response.body();
                 final List<Alimento> alimentos = new ArrayList<>();
                 dados = new String[response.body().size()];
                 int i = 0;
@@ -88,14 +88,18 @@ public class Receitas extends AppCompatActivity {
                 int[] melhoresCafe = new int[3];
                 int[] auxCafe = new int [3];
                 int[] melhoresAl = new int[3];
+                int[] auxAl = new int[3];
                 int[] melhoresLanche = new int[3];
+                int[] auxLanche = new int[3];
                 int[] melhoresJantar = new int[3];
+                int[] auxJantar = new int[3];
+
                 for(Receita receita : as)
                 {
 
                     int carboR = 0, protR = 0, gorR = 0;
                     int j;
-                    int gord = 0, carb, prot, fibras, vitB, vitC, vitD, sodio, antoxi, mag, zinc, fer, pot;
+                    int gord = 0, carb=0, prot=0, fibras=0, vitB=0, vitC=0, vitD=0, sodio=0, antoxi=0, mag=0, zinc=0, fer=0, pot=0;
 
                     String[] alimentosNaReceita = receita.alimentos.split(",");
                     for(j = 0; j < alimentosNaReceita.length; j++) {
@@ -130,17 +134,48 @@ public class Receitas extends AppCompatActivity {
 
                                 fibras += ComparaDieta(alimento.fibras.intValue(), data[3]);
                                 vitB += ComparaDieta(alimento.B, data[4]);
-                                vitC += ComparaDieta();
+                                vitC += ComparaDieta(alimento.C, data[5]);
+                                vitD += ComparaDieta(alimento.D, data[6]);
+                                sodio += ComparaDieta(alimento.sodio, data[7]);
+                                antoxi += ComparaDieta(alimento.sodio, data[8]);
+                                mag += ComparaDieta(alimento.magnesio, data[9]);
+                                zinc += ComparaDieta(alimento.zinco.intValue(), data[10]);
+                                fer += ComparaDieta(alimento.ferro.intValue(), data[11]);
+                                pot += ComparaDieta(alimento.potassio.intValue(), data[12]);
                             }
 
                         }
                     }
 
-                    int somatoria = gord + carb +  prot, fibras, vitB, vitC, vitD, sodio, antoxi, mag, zinc, fer, pot;
-                    for(int j = 0 ; j < 3;j++)
+                    int somatoria = gord + carb +  prot + fibras + vitB + vitC + vitD + sodio + antoxi + mag + zinc + fer + pot;
+
+                    for(int k = 0 ; k < 3; k++)
                     {
-                        //if categorias
-                        vet[j] > somatoria
+                        if(receita.periodo.equals("Café da manhã")){
+                            if(auxCafe[k] > somatoria){
+                                auxCafe[k]=somatoria;
+                                melhoresCafe[k] = j;
+                            }
+                        }
+                        else if(receita.periodo.equals("Almoço")){
+                            if(auxAl[k] > somatoria){
+                                auxAl[k] = somatoria;
+                                melhoresAl[k] = j;
+                            }
+                        }
+                        else if(receita.periodo.equals("Lanche")){
+                         if(auxLanche[k]>somatoria){
+                             auxLanche[k] = somatoria;
+                             melhoresLanche[k]=j;
+                         }
+                        }
+                        else{
+                            if(auxJantar[k]>somatoria){
+                                auxJantar[k] = somatoria;
+                                melhoresJantar[k]=j;
+
+                            }
+                        }
                     }
 
                         /*       2    1      0
@@ -150,22 +185,6 @@ public class Receitas extends AppCompatActivity {
 
 
 
-                    double carboP = 0, protP = 0, gorP = 0;
-                    int soma = carboR+protR+gorR;
-                    carboP = (carboR*100)/(soma);
-                    protP = (protR*100)/(soma);
-                    gorP = (gorR*100)/(soma);
-
-                    for(int l = 0; l < 3; l++)
-                    {
-                        if()// periodo do dia
-                        {
-                            int somaVet = carbo + alimentos.get(vet[l]).carboidratos;
-                            int somaAtual = carbo + carboR;
-                            if (somaAtual < somaVet)
-                                vet[l] = j;
-                        }
-                    }
 
 
 
@@ -177,7 +196,7 @@ public class Receitas extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Intent intent = new Intent(Receitas.this, ReceitaAtual.class);
                         Bundle bundle  = new Bundle();
-                        bundle.putSerializable("receita", usu.get(0));
+                        bundle.putSerializable("receita", as.get(0));
                         intent.putExtras(bundle);
                         startActivity(intent);
                     }
