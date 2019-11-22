@@ -86,6 +86,7 @@ public class Receitas extends AppCompatActivity {
                 });
 
                 int[] melhoresCafe = new int[3];
+                int[] auxCafe = new int [3];
                 int[] melhoresAl = new int[3];
                 int[] melhoresLanche = new int[3];
                 int[] melhoresJantar = new int[3];
@@ -94,11 +95,13 @@ public class Receitas extends AppCompatActivity {
 
                     int carboR = 0, protR = 0, gorR = 0;
                     int j;
+                    int gord = 0, carb, prot, fibras, vitB, vitC, vitD, sodio, antoxi, mag, zinc, fer, pot;
+
                     String[] alimentosNaReceita = receita.alimentos.split(",");
                     for(j = 0; j < alimentosNaReceita.length; j++) {
                         for (Alimento alimento : alimentos) {
                             if (alimento.nome.equals(alimentosNaReceita[j])) {
-                                int gord, carb, prot, fibras, vitB, vitC, vitD, sodio, antoxi, mag, zinc, fer, pot;
+
                                 int gorduras, proteinas, carboidratos;
                                 if(alimento.gorduras < 1)
                                     gorduras = 2;
@@ -121,19 +124,23 @@ public class Receitas extends AppCompatActivity {
                                 else
                                     carboidratos = 1;
 
-                                gord = gorduras;
-                                prot = proteinas;
-                                carb = carboidratos;
+                                gord += gorduras;
+                                prot += proteinas;
+                                carb += carboidratos;
 
-                                fibras = ComparaDieta(alimento.fibras, data[3]);
-                                fibras = ComparaDieta(alimento.fibras, data[3]);
-
-
-		........
-                                int somatoria = carboidratos + g + p + s + vitb;
-                                // QUANTO MENOR MELHOOOOOOOOOR, OK DUDAO, NÃO ESQUECEEEE
+                                fibras += ComparaDieta(alimento.fibras.intValue(), data[3]);
+                                vitB += ComparaDieta(alimento.B, data[4]);
+                                vitC += ComparaDieta();
                             }
+
                         }
+                    }
+
+                    int somatoria = gord + carb +  prot, fibras, vitB, vitC, vitD, sodio, antoxi, mag, zinc, fer, pot;
+                    for(int j = 0 ; j < 3;j++)
+                    {
+                        //if categorias
+                        vet[j] > somatoria
                     }
 
                         /*       2    1      0
