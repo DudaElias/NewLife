@@ -137,7 +137,7 @@ public class QuizBase extends AppCompatActivity{
                         usu.setGenero('F');
                     else
                         usu.setGenero('M');
-                    usu.setRestricoes(a.carboidratos+","+a.gorduras+","+a.proteinas+","+a.fibras+","+a.complexoB+","+a.vitC+","+a.vitD+","+a.sodio+","+a.antioxidante+","+a.magnesio+","+a.zinco+","+a.ferro+","+a.potassio+","+a.diabetes+","+a.ansiedadeStress+","+a.g);
+                    usu.setRestricoes(a.carboidratos+","+a.gorduras+","+a.proteinas+","+a.fibras+","+a.complexoB+","+a.vitC+","+a.vitD+","+a.sodio+","+a.antioxidante+","+a.magnesio+","+a.zinco+","+a.ferro+","+a.potassio+","+a.diabetes+","+a.an+","+a.g+","+a.in);
                     Call<Usuario> call = j.criarUsuario(usu);
 
                     call.enqueue(new Callback<Usuario>() {
