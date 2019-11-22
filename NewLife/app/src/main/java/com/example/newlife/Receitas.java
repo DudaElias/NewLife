@@ -1,5 +1,7 @@
 package com.example.newlife;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -15,7 +17,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,23 +40,120 @@ public class Receitas extends AppCompatActivity {
         final Bundle b = getIntent().getExtras();
         final Usuario usu = (Usuario)b.getSerializable("usuario");
                     listview = (ListView) findViewById(R.id.list);
-            Retrofit r = new Retrofit.Builder()
+           final Retrofit r = new Retrofit.Builder()
                     .baseUrl(JsonPlaceHolder.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
-            JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
+           final JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
             Call<List<Receita>> c = j.getReceitas();
         c.enqueue(new Callback<List<Receita>>() {
                 @Override
                 public void onResponse(Call<List<Receita>> call, Response<List<Receita>> response) {
-                    final List<Receita> usu = response.body();
+                    List<Receita> as = response.body();
+                    final List<Alimento> alimentos = new ArrayList<>();
                     dados = new String[response.body().size()];
                     int i = 0;
-                    for(Receita r : usu)
+                    for(Receita r : as)
                     {
                         dados[i] = r.getNomeReceita();
                         Log.d("potato", r.getNomeReceita());
                         i++;
+                    }
+                    //String[] params = new String[]{"carbo", "gordu", "pro", "fibras", "B", "C", "D", "sodio", "antioxidante", "magnesio", "zinco", "ferro", "potassio", "diabetes", "estresse", "gli", "ins"};
+                    String[] res = usu.getRestricoes().split(",");
+
+                   int gord, carb, prot, fibras, vitB, vitC, vitD, sodio, antoxi, mag, zinc, fer, pot;
+
+
+                    Call<List<Alimento>> a = j.getAlimentos();
+                    a.enqueue(new Callback<List<Alimento>>() {
+                        @Override
+                        public void onResponse(Call<List<Alimento>> call, Response<List<Alimento>> response) {
+                           List<Alimento> ali = response.body();
+
+                           for(Alimento a : ali)
+                               alimentos.add(a);
+
+                        }
+
+                            @Override
+                            public void onFailure(Call<List<Alimento>> call, Throwable t) {
+                                Log.d("potato", t.getMessage());
+                            }
+                        });
+
+                    int[] melhoresCafe = new int[3];
+                    int[] melhoresAl = new int[3];
+                    int[] melhoresLanche = new int[3];
+                    int[] melhoresJantar = new int[3];
+                    for(Receita receita : as)
+                    {
+
+                        int carboR = 0, protR = 0, gorR = 0;
+                        int j;
+                        String[] alimentosNaReceita = receita.alimentos.split(",");
+                        for(j = 0; j < alimentosNaReceita.length; j++) {
+                            for (Alimento alimento : alimentos) {
+                                if (alimento.nome.equals(alimentosNaReceita[j])) {
+
+                                    int gorduras, proteinas, carboidratos;
+                                    if(alimento.gorduras < 1)
+                                        gorduras = 2;
+                                    else if(alimento.gorduras > 10)
+                                        gorduras = 0;
+                                    else
+                                        gorduras = 1;
+
+                                    if(alimento.proteinas < 5)
+                                        proteinas = 2;
+                                    else if(alimento.proteinas > 15)
+                                        proteinas = 0;
+                                    else
+                                        proteinas = 1;
+
+                                    if(alimento.carboidratos < 1)
+                                        carboidratos = 2;
+                                    else if(alimento.carboidratos > 10)
+                                        carboidratos = 0;
+                                    else
+                                        carboidratos = 1;
+
+                                    gord += gorduras;
+                                    prot += proteinas;
+                                    carb += carboidratos;
+
+                                    fibras += ComparaDieta(alimento.fibras, usu.dieta[3])
+
+                                }
+                            }
+                        }
+
+                        /*       2    1      0
+                            g	< 1	1<g<10  >10
+                            p	< 5	1<g<15  >15
+                            c	< 1	1<g<10  >10 */
+
+
+
+                        double carboP = 0, protP = 0, gorP = 0;
+                        int soma = carboR+protR+gorR;
+                        carboP = (carboR*100)/(soma);
+                        protP = (protR*100)/(soma);
+                        gorP = (gorR*100)/(soma);
+
+                        for(int l = 0; l < 3; l++)
+                        {
+                            if()// periodo do dia
+                            {
+                                int somaVet = carbo + alimentos.get(vet[l]).carboidratos;
+                                int somaAtual = carbo + carboR;
+                                if (somaAtual < somaVet)
+                                    vet[l] = j;
+                            }
+                        }
+
+
+
                     }
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(Receitas.this, android.R.layout.simple_list_item_1, dados);
                     listview.setAdapter(adapter);
@@ -114,6 +216,32 @@ public class Receitas extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.options_menu, menu);
         return true;
     }
+    public int ComparaDieta(int comida, int usu)
+    {
+        int retorno = 0;
+
+        if(comida == usu)
+            retorno = 0;
+        else if(comida == 2)
+        {
+            if(usu == 1)
+                retorno = 1;
+            else
+                retorno = 2;
+        }
+        else if(comida == 0)
+        {
+            if(usu == 1)
+                retorno = 1;
+            else
+                retorno = 2;
+        }
+        else if(comida == 1)
+            retorno = 1;
 
 
+        return retorno;
+
+
+    }
 }

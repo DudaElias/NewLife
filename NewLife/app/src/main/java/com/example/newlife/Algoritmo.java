@@ -2,7 +2,7 @@ package com.example.newlife;
 
 public class Algoritmo
 {
-    int diabetes, hipotensao, hipertensao, ansiedadeStress, insonia, i, g;
+    int diabetes, hipotensao, hipertensao, an, in, i, g;
     double a, p;
     boolean m = true;
     String restricao[];
@@ -20,6 +20,8 @@ public class Algoritmo
         g = glicemia;
         m = mulher;
         i = idade;
+        an = ansiedadeStress;
+        in = insonia;
 
         if(IMC(altura, peso) <= 18.5)
             imc = 2;
@@ -42,7 +44,7 @@ public class Algoritmo
 
 
         //Carboidratos
-        if(this.insonia == 0){
+        if(this.in == 0){
             this.carboidratos=0;
         }
         else if(idade>=18|| diabetes ==0 || diabetes== 1 || ansiedadeStress==0||imc==1 ||hipertensao==0)
@@ -107,13 +109,13 @@ public class Algoritmo
             this.antioxidante =1;
 
         //Sodio
-        if(hipertensao==0)
+        if(hipertensao == 0 || hipertensao == 1)
             this.sodio=2;
         else
             this.sodio=1;
 
         //Fibras
-        if(!mulher || idade >64 || diabetes == 0|| diabetes==1|| glicemia == 0 || imc != 1 || hipertensao == 0 || hipotensao == 0)
+        if(!mulher || idade >64 || diabetes == 0|| diabetes==1|| glicemia == 0 || imc != 1 || hipertensao == 0 || hipote nsao == 0)
             this.fibras=0;
         else
             this.fibras= 1;
