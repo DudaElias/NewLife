@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DEE8FF"
+    tools:context=".ReceitaAtual">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:id="@+id/nome"
+        android:text="Batata Frita"
+        android:fontFamily="@font/comfortaa_bold"
+        />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_marginTop="200dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@drawable/fundo_receita"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing"
+            android:layout_marginTop="20dp"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:text="Ingredientes:"
+            android:fontFamily="@font/comfortaa_bold"
+            />
+        <ListView
+            android:layout_width="match_parent"
+            android:id="@+id/ingredientes"
+            android:layout_height="200dp">
+
+        </ListView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:text="Modo de Preparo:"
+                android:fontFamily="@font/comfortaa_bold"
+                />
+            <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/modo"
+                android:layout_height="200dp">
+
+            </ListView>
+            </LinearLayout>
+        </ScrollView>
+
+</RelativeLayout>

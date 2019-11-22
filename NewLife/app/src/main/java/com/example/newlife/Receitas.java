@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -159,6 +160,16 @@ public class Receitas extends AppCompatActivity {
                     }
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(Receitas.this, android.R.layout.simple_list_item_1, dados);
                     listview.setAdapter(adapter);
+                    listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Intent intent = new Intent(Receitas.this, ReceitaAtual.class);
+                            Bundle bundle  = new Bundle();
+                            bundle.putSerializable("receita", usu.get(0));
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                        }
+                    });
                 }
 
                 @Override
@@ -208,7 +219,6 @@ public class Receitas extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.options_menu, menu);
         return true;
     }
-
     public int ComparaDieta(int comida, int usu)
     {
         int retorno = 0;
