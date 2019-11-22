@@ -5,15 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-
-    <Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="10dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,6 +16,16 @@
         android:layout_height="240dp"
         android:orientation="vertical"
         android:gravity="center">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#46DF8A"
+            android:elevation="10dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
         <LinearLayout android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/superfoods"
@@ -57,6 +58,7 @@
                     android:layout_marginBottom="22dp"
                     android:fontFamily="@font/exo_2_semibold"
                     android:text="10"
+                    android:id="@+id/nivel"
                     android:textAlignment="center"
                     android:textColor="#EBEBEB"
                     android:textSize="25pt" />
@@ -88,6 +90,7 @@
             android:elevation="8dp"
             android:fontFamily="@font/comfortaa"
             android:text="Nome"
+            android:id="@+id/nome"
             android:textAlignment="center"
             android:textSize="15pt" />
 
@@ -100,6 +103,7 @@
 
             <TextView
                 android:layout_width="200dp"
+                android:id="@+id/genero"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/circle_border"
@@ -111,6 +115,7 @@
 
             <TextView
                 android:layout_width="164dp"
+                android:id="@+id/idade"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="10dp"
@@ -127,26 +132,10 @@
         <TextView
             android:layout_width="263dp"
             android:layout_height="70dp"
-
-
             android:layout_gravity="center"
             android:layout_marginStart="76dp"
             android:layout_marginTop="250dp"
-
-
-            android:background="@drawable/circle_border"
-            android:elevation="8dp"
-            android:fontFamily="@font/comfortaa"
-            android:text="Altura:"
-            android:textAlignment="center"
-            android:textSize="15pt" />
-
-        <TextView
-            android:layout_width="263dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="76dp"
-            android:layout_marginTop="250dp"
+            android:id="@+id/IMC"
             android:background="@drawable/circle_border"
             android:elevation="8dp"
             android:fontFamily="@font/comfortaa"
@@ -157,6 +146,7 @@
         <TextView
             android:layout_width="263dp"
             android:layout_height="70dp"
+            android:id="@+id/glicemia"
             android:layout_gravity="center"
             android:layout_marginStart="76dp"
             android:layout_marginTop="350dp"
@@ -167,5 +157,5 @@
             android:textAlignment="center"
             android:textSize="15pt" />
     </RelativeLayout>
-
+    </LinearLayout>
 </LinearLayout>

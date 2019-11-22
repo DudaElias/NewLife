@@ -7,32 +7,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
-public class User extends AppCompatActivity {
+import java.net.UnknownServiceException;
+
+public class Dicas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_page);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setContentView(R.layout.activity_dicas);
         final Bundle b = getIntent().getExtras();
         final Usuario usu = (Usuario)b.getSerializable("usuario");
-        TextView tvNivel = findViewById(R.id.nivel);
-
-        TextView tvNome = findViewById(R.id.nome);
-        TextView tvGenero = findViewById(R.id.genero);
-        TextView tvIdade = findViewById(R.id.idade);
-        TextView tvImc = findViewById(R.id.IMC);
-        TextView tvGlicemia = findViewById(R.id.glicemia);
-        tvNome.setText(usu.getNome());
-        tvGenero.setText(usu.getGenero()+" ");
-        tvIdade.setText("Idade: " + usu.getIdade()+ "");
-        double imc;
-        imc = usu.peso/(Math.pow(usu.altura, 2))*10000;
-        tvImc.setText("IMC:"+ imc);
-        tvNivel.setText(usu.nivel+"");
-
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         myToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
 
@@ -43,19 +29,20 @@ public class User extends AppCompatActivity {
                 {
                     // do something
 
-                }
-                else if(item.getItemId()== R.id.dicas)
-                {
-                    // do something
-                    Intent intent = new Intent(User.this, Dicas.class);
+                    Intent intent = new Intent(Dicas.this, User.class);
+
                     b.putSerializable("usuario",usu);
                     intent.putExtras(b);
                     startActivity(intent);
                 }
+                else if(item.getItemId()== R.id.dicas)
+                {
+                    // do something
+                }
                 else{
                     // do something
 
-                    Intent intent = new Intent(User.this, Receitas.class);
+                    Intent intent = new Intent(Dicas.this, Receitas.class);
 
                     b.putSerializable("usuario",usu);
                     intent.putExtras(b);
@@ -73,5 +60,4 @@ public class User extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.options_menu, menu);
         return true;
     }
-
 }

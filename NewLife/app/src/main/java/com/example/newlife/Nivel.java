@@ -22,29 +22,29 @@ public class Nivel
 
 	public int DeterminarNivel()
 	{
-		if(exercicios == 0 && junkFood > 10) // n�vel 1
+		if(exercicios == 0 && junkFood == 3) // n�vel 1
 			return 1;
-		if((exercicios == 2 || exercicios == 3) && junkFood > 10) //n�vel 2
+		if((exercicios == 1 || exercicios == 2) && junkFood == 3) //n�vel 2
 			return 2;
-		if(exercicios >=4 && junkFood > 10)
+		if(exercicios ==3 && junkFood == 3)
 			return 2;
-		if(exercicios == 0 && junkFood >= 5) //n�vel 3
+		if(exercicios == 0 && junkFood == 1) //n�vel 3
 			return 3;
-		if((exercicios == 2 || exercicios == 3) && junkFood >= 5)//n�vel 4
+		if((exercicios == 1 || exercicios == 2) && junkFood == 1)//n�vel 4
 			return 4;
-		if(exercicios == 0 && junkFood < 5) //n�vel 5
+		if(exercicios == 0 && junkFood == 1) //n�vel 5
 			return 5;
-		if(exercicios >=4 && junkFood >=5)
+		if(exercicios ==3 && junkFood ==1)
 			return 5;
-		if(exercicios == 0 && junkFood <=1) //n�vel 6
+		if(exercicios == 0 && junkFood ==0) //n�vel 6
 			return 6;
-		if((exercicios == 2 || exercicios == 3) && junkFood < 5)//nivel 7
+		if((exercicios == 1 || exercicios == 2) && junkFood == 1)//nivel 7
 			return 7;
-		if(exercicios >=4 && junkFood < 5) //n�vel 8
+		if(exercicios == 3 && junkFood == 1) //n�vel 8
 			return 8;
-		if((exercicios == 2 || exercicios == 3) && junkFood <=1)//n�vel 9
+		if((exercicios == 1 || exercicios == 2) && junkFood <=0)//n�vel 9
 			return 9;
-		if(exercicios >=4 && junkFood <=1) //n�vel 10
+		if(exercicios ==3 && junkFood ==0) //n�vel 10
 			return 10;
 		return 0;
 	}

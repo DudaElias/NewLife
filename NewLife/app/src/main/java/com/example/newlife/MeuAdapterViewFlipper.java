@@ -222,29 +222,24 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
         respostasUsuario[position] = i;
-        if(++check > 1) {
-
-
-            n = new Nivel(respostasUsuario[1], respostasUsuario[0]);
-            //int diabetes, int hipotensao, int hipertensao, int ansiedadeStress, int insonia, int idade, int glicemia, double altura, double peso, boolean mulher
-            int hipo, hiper;
-            boolean m;
-            if (respostasUsuario[3] == 0 || respostasUsuario[3] == 1) {
-                hipo = 0;
-                hiper = respostasUsuario[3];
-            } else if (respostasUsuario[3] == 2) {
-                hipo = 1;
-                hiper = 0;
-            } else
-                hipo = hiper = 0;
-            if (respostasUsuario[position] == 0)
-                m = true;
-            else
-                m = false;
-            alg = new Algoritmo(respostasUsuario[2], hipo, hiper, respostasUsuario[4], respostasUsuario[5], respostasUsuario[9], respostasUsuario[10], respostasUsuario[7], respostasUsuario[8], m);
-            n.DeterminarNivel();
-
-        }
+        n = new Nivel(respostasUsuario[1], respostasUsuario[0]);
+        //int diabetes, int hipotensao, int hipertensao, int ansiedadeStress, int insonia, int idade, int glicemia, double altura, double peso, boolean mulher
+        int hipo, hiper;
+        boolean m;
+        if (respostasUsuario[3] == 0 || respostasUsuario[3] == 1) {
+            hipo = 0;
+            hiper = respostasUsuario[3];
+        } else if (respostasUsuario[3] == 2) {
+            hipo = 1;
+            hiper = 0;
+        } else
+            hipo = hiper = 0;
+        if (respostasUsuario[position] == 0)
+            m = true;
+        else
+            m = false;
+        alg = new Algoritmo(respostasUsuario[2], hipo, hiper, respostasUsuario[4], respostasUsuario[5], respostasUsuario[9], respostasUsuario[10], respostasUsuario[7], respostasUsuario[8], m);
+        n.nivel = n.DeterminarNivel();
     }
 
 
