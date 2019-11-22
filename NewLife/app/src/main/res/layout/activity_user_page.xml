@@ -5,12 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#2ADB87"
     android:orientation="vertical">
-
-<<<<<<< HEAD
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-=======
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,7 +28,6 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
         <LinearLayout android:layout_width="match_parent"
         android:layout_height="200dp"
->>>>>>> dc0d571a550f1c85dcdfbb9f74c86313bb2646b7
         android:background="@drawable/superfoods"
         android:orientation="vertical"
         android:gravity="center">
