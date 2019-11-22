@@ -2,8 +2,8 @@ package com.example.newlife;
 
 public class Algoritmo
 {
-    int diabetes, hipotensao, hipertensao, an, in, i, g;
-    double a, p;
+    int diabetes, hipotensao, hipertensao, an, in, i, g, a;
+    double p;
     boolean m = true;
     String restricao[];
 
@@ -12,7 +12,7 @@ public class Algoritmo
     int gorduras, proteinas, carboidratos, magnesio, zinco, ferro, potassio, complexoB, vitC, vitD, antioxidante, sodio, fibras, hidratacao, luzAzul, exercicio;
 
 
-    public Algoritmo (int diabetes, int hipotensao, int hipertensao, int ansiedadeStress, int insonia, int idade, int glicemia, double altura, double peso, boolean mulher){
+    public Algoritmo (int diabetes, int hipotensao, int hipertensao, int ansiedadeStress, int insonia, int idade, int glicemia, int altura, double peso, boolean mulher){
         //alto =0; normal = 1; baixo = 2;
         a = altura;
         p = peso;
@@ -132,9 +132,10 @@ public class Algoritmo
         this.luzAzul = 0;
     }
 
-    public double IMC(double altura, double peso){
+    public double IMC(int altura, double peso){
         double imc;
-        imc = peso/(Math.pow(altura, 2))*10000;
+        double alt = altura/100;
+        imc = peso/(Math.pow(altura, 2));
         return imc;
     }
 }
