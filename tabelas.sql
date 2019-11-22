@@ -52,7 +52,17 @@ create table Alimento
 
 /*	FRUTAS	*/
 
-
+insert into Alimento values ('Ovo', 0.6,1.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Granola', 53.3,24.1,14.8,0,0,0,1,1,1,0,0,1,0,1,1,1,1,0,null)
+/*od dois de cima estão prontos, mas n adicionados*/
+insert into Alimento values ('Farinha de Aveia', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Farinha de Trigo', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Óleo', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Óleo de coco', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Fermento', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Canela', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Água', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Gelo', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
 
 insert into Alimento values('Figo',13,0.5,1.1,0,2,0,1.8,0,2,0,0,2,2,0,0,2,2, null)/*1*/
 
