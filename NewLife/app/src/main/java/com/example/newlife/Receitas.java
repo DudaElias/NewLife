@@ -60,6 +60,9 @@ public class Receitas extends AppCompatActivity {
                     }
                     //String[] params = new String[]{"carbo", "gordu", "pro", "fibras", "B", "C", "D", "sodio", "antioxidante", "magnesio", "zinco", "ferro", "potassio", "diabetes", "estresse", "gli", "ins"};
                     String[] res = usu.getRestricoes().split(",");
+                    int[] data = new int[13];
+                    for(int in = 0; in < 13; in++)
+                        data[in] = Integer.parseInt(res[in]);
 
                    int gord, carb, prot, fibras, vitB, vitC, vitD, sodio, antoxi, mag, zinc, fer, pot;
 
@@ -121,7 +124,7 @@ public class Receitas extends AppCompatActivity {
                                     prot += proteinas;
                                     carb += carboidratos;
 
-                                    fibras += ComparaDieta(alimento.fibras, usu.dieta[3])
+                                    fibras += ComparaDieta(alimento.fibras, data[3]);
 
                                 }
                             }
