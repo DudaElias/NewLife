@@ -61,32 +61,8 @@ public class Receitas extends AppCompatActivity {
                     //String[] params = new String[]{"carbo", "gordu", "pro", "fibras", "B", "C", "D", "sodio", "antioxidante", "magnesio", "zinco", "ferro", "potassio", "diabetes", "estresse", "gli", "ins"};
                     String[] res = usu.getRestricoes().split(",");
 
-                    int carbo, prot, gor;
-                    if(res[13].equals("0") || res[13].equals("1") ||( usu.peso/Math.pow(usu.altura, 2)*10000) >25 || usu.getIdade() >=65)
-                    {
-                        carbo = 10;
-                        prot = 30;
-                        gor = 60;
-                    }
-                    else if(res[14].equals("0") || res[14].equals("1") || res[16].equals("0")|| res[16].equals("1")|| res[7].equals("2"))
-                    {
-                        carbo = 15;
-                        prot = 35;
-                        gor = 50;
-                    }
-                    else if(Integer.parseInt(res[15]) <= 70 || usu.getIdade() < 13)
-                    {
-                        carbo = 20;
-                        prot = 35;
-                        gor = 45;
-                    }
-                    else
-                    {
-                        carbo = 15;
-                        prot = 40;
-                        gor = 45;
+                   int gord, carb, prot, fibras, vitB, vitC, vitD, sodio, antoxi, mag, zinc, fer, pot;
 
-                    }
 
                     Call<List<Alimento>> a = j.getAlimentos();
                     a.enqueue(new Callback<List<Alimento>>() {
@@ -118,12 +94,46 @@ public class Receitas extends AppCompatActivity {
                         for(j = 0; j < alimentosNaReceita.length; j++) {
                             for (Alimento alimento : alimentos) {
                                 if (alimento.nome.equals(alimentosNaReceita[j])) {
-                                    carboR += alimento.carboidratos;
-                                    protR += alimento.proteinas;
-                                    gorR += alimento.gorduras;
+
+                                    int gorduras, proteinas, carboidratos;
+                                    if(alimento.gorduras < 1)
+                                        gorduras = 2;
+                                    else if(alimento.gorduras > 10)
+                                        gorduras = 0;
+                                    else
+                                        gorduras = 1;
+
+                                    if(alimento.proteinas < 5)
+                                        proteinas = 2;
+                                    else if(alimento.proteinas > 15)
+                                        proteinas = 0;
+                                    else
+                                        proteinas = 1;
+
+                                    if(alimento.carboidratos < 1)
+                                        carboidratos = 2;
+                                    else if(alimento.carboidratos > 10)
+                                        carboidratos = 0;
+                                    else
+                                        carboidratos = 1;
+
+                                    gord += gorduras;
+                                    prot += proteinas;
+                                    carb += carboidratos;
+
+                                    fibras += ComparaDieta(alimento.fibras, usu.dieta[3])
+
                                 }
                             }
                         }
+
+                        /*       2    1      0
+                            g	< 1	1<g<10  >10
+                            p	< 5	1<g<15  >15
+                            c	< 1	1<g<10  >10 */
+
+
+
                         double carboP = 0, protP = 0, gorP = 0;
                         int soma = carboR+protR+gorR;
                         carboP = (carboR*100)/(soma);
@@ -194,5 +204,34 @@ public class Receitas extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.options_menu, menu);
         return true;
+    }
+
+    public int ComparaDieta(int comida, int usu)
+    {
+        int retorno = 0;
+
+        if(comida == usu)
+            retorno = 0;
+        else if(comida == 2)
+        {
+            if(usu == 1)
+                retorno = 1;
+            else
+                retorno = 2;
+        }
+        else if(comida == 0)
+        {
+            if(usu == 1)
+                retorno = 1;
+            else
+                retorno = 2;
+        }
+        else if(comida == 1)
+            retorno = 1;
+
+
+        return retorno;
+
+
     }
 }

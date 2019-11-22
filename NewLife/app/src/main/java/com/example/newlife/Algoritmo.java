@@ -115,7 +115,7 @@ public class Algoritmo
             this.sodio=1;
 
         //Fibras
-        if(!mulher || idade >64 || diabetes == 0|| diabetes==1|| glicemia == 0 || imc != 1 || hipertensao == 0 || hipotensao == 0)
+        if(!mulher || idade >64 || diabetes == 0|| diabetes==1|| glicemia == 0 || imc != 1 || hipertensao == 0 || hipote nsao == 0)
             this.fibras=0;
         else
             this.fibras= 1;
