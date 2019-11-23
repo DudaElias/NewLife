@@ -40,7 +40,7 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
     private ArrayList<Questao> questoes;
 
     private int qtd;
-    private int position;
+   int position;
     private Context mContext;
     int[] respostasUsuario;
     Nivel n;
@@ -52,6 +52,8 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
         this.questoes = q;
         this.qtd = qtd;
         respostasUsuario = new int[qtd];
+        for(int i = 0; i <qtd; i++)
+            respostasUsuario[i] = -1;
     }
 
     @Override
@@ -207,6 +209,7 @@ public class MeuAdapterViewFlipper  extends BaseAdapter implements View.OnClickL
                 for (int i = 0; i < respostas.length; i++) {
                     if (respostas[i].equals(clicado.getText().toString())) {
                         if (questoes.get(position).tipo.equals("Alternativa2")) {
+                            respostasUsuario[position] = 0;
                             respostasUsuario[position] += i;
                         } else if (questoes.get(position).tipo.equals("Alternativa1")) {
                             respostasUsuario[position] = i;

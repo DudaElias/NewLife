@@ -257,10 +257,16 @@ public class Receitas extends AppCompatActivity {
                     b.putSerializable("usuario",usu);
                     intent.putExtras(b);
                     startActivity(intent);
+                }else if(item.getItemId() == R.id.receitas){
                 }
+
                 else{
                     // do something
 
+                    Intent intent = new Intent(Receitas.this, QuizBase.class);
+                    b.putSerializable("usuario",usu);
+                    intent.putExtras(b);
+                    startActivity(intent);
                 }
 
                 return false;

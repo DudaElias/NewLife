@@ -38,12 +38,20 @@ public class Dicas extends AppCompatActivity {
                 else if(item.getItemId()== R.id.dicas)
                 {
                     // do something
-                }
-                else{
+                }else if(item.getItemId() == R.id.receitas){
                     // do something
 
                     Intent intent = new Intent(Dicas.this, Receitas.class);
 
+                    b.putSerializable("usuario",usu);
+                    intent.putExtras(b);
+                    startActivity(intent);
+                }
+
+                else{
+                    // do something
+
+                    Intent intent = new Intent(Dicas.this, QuizBase.class);
                     b.putSerializable("usuario",usu);
                     intent.putExtras(b);
                     startActivity(intent);

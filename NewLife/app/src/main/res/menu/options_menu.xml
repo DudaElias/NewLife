@@ -9,5 +9,8 @@
             android:title="Dicas" />
         <item android:id="@+id/receitas"
             android:title="Receitas" />
+
+        <item android:id="@+id/quiz"
+            android:title="Refazer Quiz" />
     </group>
 </menu>

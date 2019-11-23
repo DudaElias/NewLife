@@ -312,9 +312,21 @@ create table Notificacao
 	nomeNot varchar(100) not null,
 	descricao ntext not null,
 	restricoes ntext not null,
-	horario dateTime not null,
+	horario time not null,
 	imagem varchar(150) not null
 )
+
+
+insert into Notificacao values(1, 'Beba água', 'Hidratação é essencial para um bom funcionamento corporal. Médicos indicam que deve-se ingerir no mínimo 2 litros de água ao dia. Torne isso um hábito!','1', '08:00:00', 'agua')
+insert into Notificacao values(2, 'Dormir','Uma noite de sono além de revigorante, regula seu organismo e produz...','1','21:00:00','noite')
+insert into Notificacao values(3,'Dispositivos Eletrônicos','Evite aparelhos eletrônicos a noite, além de tirarem seu sono podem ocasionar problemas visuais. Caso não seja possivel acostume-se a ativar a luz noturna do aparelho e/ou usar lentes especiais','1','20:00:00','oculos')
+insert into Notificacao values(4,'Luz Solar','Se puder vá a um ambiente aberto e tome um banho de sol','1','11:00:00','sol')
+insert into Notificacao values(5,'Relaxe!','Momentos de tranquilidade e lazer são importantes para a sua saúde mental e física, procure caminhar, meditar, ou algo relacionado a tranquilidade','1','9:00:00','natureza')
+insert into Notificacao values(6,'Exercícios','Exercícios são bons para sua saúde além de manter ele em forma ajuda em casos de doenças como: diabetes, obesidadee problemas digestivos. Para um melhor funcionamento do cérebro exercicíos são excelentes.','1','7:00:00','peso')
+insert into Notificacao values(7,'','','','','') // receitas, n sei se da tempo
+insert into Notificacao values(8,'','','','','')
+
+
 
 create table Extra
 (

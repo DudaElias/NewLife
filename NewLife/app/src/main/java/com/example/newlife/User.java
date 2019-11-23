@@ -52,11 +52,20 @@ public class User extends AppCompatActivity {
                     intent.putExtras(b);
                     startActivity(intent);
                 }
-                else{
+                else if(item.getItemId() == R.id.receitas){
                     // do something
 
                     Intent intent = new Intent(User.this, Receitas.class);
 
+                    b.putSerializable("usuario",usu);
+                    intent.putExtras(b);
+                    startActivity(intent);
+                }
+
+                else{
+                    // do something
+
+                    Intent intent = new Intent(User.this, QuizBase.class);
                     b.putSerializable("usuario",usu);
                     intent.putExtras(b);
                     startActivity(intent);

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class BuscarBluetooth extends MainActivity implements AdapterView.OnItemClickListener
+public class BuscarBluetooth extends TelaLogin implements AdapterView.OnItemClickListener
         {
 protected List<BluetoothDevice> lista;
 private ListView listView;

@@ -22,6 +22,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterViewFlipper;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -59,7 +60,7 @@ public class QuizBase extends AppCompatActivity{
 
 
         Bundle b = getIntent().getExtras();
-        usu = (Usuario)b.getSerializable("aluno");
+        usu = (Usuario)b.getSerializable("usuario");
         Retrofit r = new Retrofit.Builder()
                 .baseUrl(JsonPlaceHolder.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -109,6 +110,8 @@ public class QuizBase extends AppCompatActivity{
             public void onClick(View v) {
                 if (flipper.getDisplayedChild() == 0)
                     return;
+
+                btnA.setClickable(true);
                /* flipper.setInAnimation(QuizBase.this, R.animator.slideinleft);
                 flipper.setOutAnimation(QuizBase.this,R.animator.slideoutright);*/
                 flipper.showPrevious();
@@ -117,66 +120,118 @@ public class QuizBase extends AppCompatActivity{
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (flipper.getDisplayedChild() == 12) {
 
-                    Algoritmo a = ((MeuAdapterViewFlipper)flipper.getAdapter()).alg;
-                    Nivel n = ((MeuAdapterViewFlipper)flipper.getAdapter()).n;
-                    int[] respostas = ((MeuAdapterViewFlipper)flipper.getAdapter()).respostasUsuario;
-                    Retrofit r = new Retrofit.Builder()
-                            .baseUrl(JsonPlaceHolder.BASE_URL)
-                            .addConverterFactory(GsonConverterFactory.create())
-                            .build();
-                    JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
-                    usu.setAltura(respostas[7]);
-                    usu.setIdade(respostas[9]);
-                    usu.setDieta("");
-                    usu.setEvolucao(0);
-                    usu.setNivel(n.nivel);
-                    usu.setPeso(respostas[8]);
-                    if(a.m)
-                        usu.setGenero('F');
-                    else
-                        usu.setGenero('M');
-                    usu.setRestricoes(a.carboidratos+","+a.gorduras+","+a.proteinas+","+a.fibras+","+a.complexoB+","+a.vitC+","+a.vitD+","+a.sodio+","+a.antioxidante+","+a.magnesio+","+a.zinco+","+a.ferro+","+a.potassio+","+a.diabetes+","+a.an+","+a.g+","+a.in);
-                    Call<Usuario> call = j.criarUsuario(usu);
+                final int[] respostas = ((MeuAdapterViewFlipper) flipper.getAdapter()).respostasUsuario;
+                if (respostas[((MeuAdapterViewFlipper)flipper.getAdapter()).position] == -1 &&  ((MeuAdapterViewFlipper)flipper.getAdapter()).position != 10 && ((MeuAdapterViewFlipper)flipper.getAdapter()).position != 11){
 
-                    call.enqueue(new Callback<Usuario>() {
-                        @Override
-                        public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                    Toast.makeText(QuizBase.this, "Deve-se selecionar um valor antes de continuar", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (flipper.getDisplayedChild() == 12) {
 
-                            Bundle b = new Bundle();
-                            b.putSerializable("usuario",usu);
-                            Intent data = new Intent(QuizBase.this, User.class);
-                            data.putExtras(b);
-                            startActivity(data);
+                        btnA.setClickable(false);
+                        Retrofit r = new Retrofit.Builder()
+                                .baseUrl(JsonPlaceHolder.BASE_URL)
+                                .addConverterFactory(GsonConverterFactory.create())
+                                .build();
+                       final  JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
+                        Call<List<Usuario>> x = j.getUsuario(usu.getNome());
+                        x.enqueue(new Callback<List<Usuario>>() {
+                                      @Override
+                                      public void onResponse(Call<List<Usuario>> call, Response<List<Usuario>> response) {
+                                          List<Usuario> usuario = response.body();
+                                          if (usuario.size() == 0) {
 
-                        }
+                                              Algoritmo a = ((MeuAdapterViewFlipper) flipper.getAdapter()).alg;
+                                              Nivel n = ((MeuAdapterViewFlipper) flipper.getAdapter()).n;
 
-                        @Override
-                        public void onFailure(Call<Usuario> call, Throwable t) {
+                                              Retrofit r = new Retrofit.Builder()
+                                                      .baseUrl(JsonPlaceHolder.BASE_URL)
+                                                      .addConverterFactory(GsonConverterFactory.create())
+                                                      .build();
+                                              JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
+                                              usu.setAltura(respostas[7]);
+                                              usu.setIdade(respostas[9]);
+                                              usu.setDieta("");
+                                              usu.setEvolucao(0);
+                                              usu.setNivel(n.nivel);
+                                              usu.setPeso(respostas[8]);
+                                              if (a.m)
+                                                  usu.setGenero('F');
+                                              else
+                                                  usu.setGenero('M');
+                                              usu.setRestricoes(a.carboidratos + "," + a.gorduras + "," + a.proteinas + "," + a.fibras + "," + a.complexoB + "," + a.vitC + "," + a.vitD + "," + a.sodio + "," + a.antioxidante + "," + a.magnesio + "," + a.zinco + "," + a.ferro + "," + a.potassio + "," + a.diabetes + "," + a.an + "," + a.g + "," + a.in);
+                                              Call<Usuario>call2= j.criarUsuario(usu);
 
-                        }
-                    });
-                    return;
+                                              call2.enqueue(new Callback<Usuario>() {
+                                                  @Override
+                                                  public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+
+                                                      Bundle b = new Bundle();
+                                                      b.putSerializable("usuario", usu);
+                                                      Intent data = new Intent(QuizBase.this, User.class);
+                                                      data.putExtras(b);
+                                                      startActivity(data);
+
+                                                  }
+
+                                                  @Override
+                                                  public void onFailure(Call<Usuario> call, Throwable t) {
+
+                                                  }
+                                              });
+
+                                          } else {
+
+                                              Algoritmo a = ((MeuAdapterViewFlipper) flipper.getAdapter()).alg;
+                                              Nivel n = ((MeuAdapterViewFlipper) flipper.getAdapter()).n;
+                                              usu.setAltura(respostas[7]);
+                                              usu.setIdade(respostas[9]);
+                                              usu.setDieta("");
+                                              usu.setEvolucao(0);
+                                              usu.setNivel(n.nivel);
+                                              usu.setPeso(respostas[8]);
+                                              if (a.m)
+                                                  usu.setGenero('F');
+                                              else
+                                                  usu.setGenero('M');
+                                              usu.setRestricoes(a.carboidratos + "," + a.gorduras + "," + a.proteinas + "," + a.fibras + "," + a.complexoB + "," + a.vitC + "," + a.vitD + "," + a.sodio + "," + a.antioxidante + "," + a.magnesio + "," + a.zinco + "," + a.ferro + "," + a.potassio + "," + a.diabetes + "," + a.an + "," + a.g + "," + a.in);
+
+                                              Call<Usuario>call3 = j.atualizarUsuario(usu.id, usu);
+                                              call3.enqueue(new Callback<Usuario>() {
+                                                  @Override
+                                                  public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+
+                                                      Bundle b = new Bundle();
+                                                      b.putSerializable("usuario", usu);
+                                                      Intent data = new Intent(QuizBase.this, User.class);
+                                                      data.putExtras(b);
+                                                      startActivity(data);
+
+                                                  }
+
+                                                  @Override
+                                                  public void onFailure(Call<Usuario> call, Throwable t) {
+
+                                                  }
+                                              });
+
+                                          }
+
+                                      }
+                            @Override
+                            public void onFailure(Call<List<Usuario>> call, Throwable t) {
+                                EditText s = findViewById(R.id.txtLNome);
+                                Log.d("potato", t.getMessage());
+                                s.setText(t.getMessage());
+                            }
+                                  });
+
+
+                        return;
+                    }
+                    flipper.showNext();
                 }
-                /*if(flipper.getDisplayedChild() == 12)
-                {
-                    while(true) {
-                    it = new IntentFilter(); // Instancia o filtro declarado logo após o onCreate().
-                    it.addAction(BluetoothDevice.ACTION_FOUND);
-                    it.addCategory(Intent.CATEGORY_DEFAULT);
-                    registerReceiver(mReceiver, it); // Registra um Receiver para o App.
-                    break;
-                }
 
-
-                BA = BluetoothAdapter.getDefaultAdapter();
-                    BtEnable();}
-*/
-                /*flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
-                flipper.setInAnimation(QuizBase.this, R.animator.slideinright);
-                flipper.setOutAnimation(QuizBase.this,R.animator.slideoutleft);*/
-                flipper.showNext();
             }
 
         });

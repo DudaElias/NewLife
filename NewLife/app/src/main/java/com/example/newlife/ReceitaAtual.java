@@ -1,8 +1,10 @@
 package com.example.newlife;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -41,5 +43,24 @@ public class ReceitaAtual extends AppCompatActivity {
         lstIng.setAdapter(adapter);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(ReceitaAtual.this, android.R.layout.simple_list_item_1, dados2);
         lstModo.setAdapter(adapter2);
+
+        Toolbar t = findViewById(R.id.my_toolbar);
+        setSupportActionBar(t);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home)
+        {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
