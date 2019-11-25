@@ -2,7 +2,7 @@
 int sensorPin = 0;
 int period = 1000;
 #include <SoftwareSerial.h>
-SoftwareSerial HM10(0, 1); // RX = 2, TX = 3
+SoftwareSerial HM10(10, 11); // RX = 2, TX = 3
 int HearHate_porSegundo=0;
 int HearHate_porMin = 0;
 int count = 0;
@@ -12,7 +12,7 @@ const int Calibration_Value = 10;
 float oldValue = 0;
 float rawValue = 0;
 void setup() {
-  HM10.begin(38400); // set HM10 serial at 9600 baud rate
+  HM10.begin(9600); // set HM10 serial at 9600 baud rate
   Serial.begin(38400);
   delay(100);
 }

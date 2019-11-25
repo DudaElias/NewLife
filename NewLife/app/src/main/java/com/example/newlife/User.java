@@ -69,8 +69,6 @@ public class User extends AppCompatActivity {
                 }
 
                 else if(item.getItemId() == R.id.quiz){
-                    // do something
-
                     Intent intent = new Intent(User.this, QuizBase.class);
                     b.putSerializable("usuario",usu);
                     intent.putExtras(b);
@@ -98,6 +96,10 @@ public class User extends AppCompatActivity {
 
                         }
                     });
+                }
+
+                else{
+
                 }
 
                 return false;
