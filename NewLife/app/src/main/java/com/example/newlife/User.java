@@ -98,10 +98,6 @@ public class User extends AppCompatActivity {
                     });
                 }
 
-                else{
-
-                }
-
                 return false;
             }
         });

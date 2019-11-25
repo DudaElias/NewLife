@@ -26,6 +26,9 @@ public interface JsonPlaceHolder {
     @GET("receitas")
     Call<List<Receita>> getReceitas();
 
+    @GET("dicas")
+    Call<List<Dica>> getDicas();
+
     @GET("usuario/{id}")
     Call<List<Usuario>> getUsuario(@Path("id") String id);
 
