@@ -62,13 +62,15 @@ public class User extends AppCompatActivity {
                     startActivity(intent);
                 }
 
-                else{
-                    // do something
-
+                else if(item.getItemId() == R.id.quiz){
                     Intent intent = new Intent(User.this, QuizBase.class);
                     b.putSerializable("usuario",usu);
                     intent.putExtras(b);
                     startActivity(intent);
+                }
+
+                else{
+
                 }
 
                 return false;
