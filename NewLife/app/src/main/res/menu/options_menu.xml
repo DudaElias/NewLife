@@ -9,8 +9,9 @@
             android:title="Dicas" />
         <item android:id="@+id/receitas"
             android:title="Receitas" />
-
         <item android:id="@+id/quiz"
             android:title="Refazer Quiz" />
+        <item android:id="@+id/deletar"
+            android:title="Deletar Usuário" />
     </group>
 </menu>

@@ -9,6 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class User extends AppCompatActivity {
 
     @Override
@@ -62,13 +68,36 @@ public class User extends AppCompatActivity {
                     startActivity(intent);
                 }
 
-                else{
+                else if(item.getItemId() == R.id.quiz){
                     // do something
 
                     Intent intent = new Intent(User.this, QuizBase.class);
                     b.putSerializable("usuario",usu);
                     intent.putExtras(b);
                     startActivity(intent);
+                }
+                else
+                {
+                    Retrofit r = new Retrofit.Builder()
+                            .baseUrl(JsonPlaceHolder.BASE_URL)
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .build();
+                    JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
+                    Call<Usuario> c = j.deletarUsuario(usu.id);
+                    c.enqueue(new Callback<Usuario>() {
+                        @Override
+                        public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+
+                            Intent data = new Intent(User.this, TelaLogin.class);
+                            startActivity(data);
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<Usuario> call, Throwable t) {
+
+                        }
+                    });
                 }
 
                 return false;

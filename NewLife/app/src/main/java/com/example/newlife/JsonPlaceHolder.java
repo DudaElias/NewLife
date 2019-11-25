@@ -6,6 +6,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.PATCH;
 import retrofit2.http.POST;
@@ -34,5 +35,9 @@ public interface JsonPlaceHolder {
 
     @PUT("usuario/{id}")
     Call<Usuario> atualizarUsuario(@Path("id") int id, @Body Usuario user);
+
+
+    @DELETE("usuario/{id}")
+    Call<Usuario> deletarUsuario(@Path("id") int id);
 
 }
