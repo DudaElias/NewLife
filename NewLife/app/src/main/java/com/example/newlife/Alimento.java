@@ -2,12 +2,12 @@ package com.example.newlife;
 
 import com.google.gson.annotations.SerializedName;
 
-class Alimento {
+import java.io.Serializable;
+
+class Alimento implements Serializable {
 
     Integer id;
     String nome;
-
-
     Float carboidratos;
     Float gorduras;
     Float proteinas;
