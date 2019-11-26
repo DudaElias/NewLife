@@ -45,7 +45,7 @@ public class SendBluetooth extends AppCompatActivity {
         txtDevice = (TextView)findViewById(R.id.txtDevice);
 
         btDevice = getIntent().getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-        txtDevice.setText( btDevice.getName() + " - " + btDevice.getAddress());
+        //txtDevice.setText( btDevice.getName() + " - " + btDevice.getAddress());
         try
         {
                 socket = btDevice.createRfcommSocketToServiceRecord(uuid);
@@ -98,7 +98,10 @@ public class SendBluetooth extends AppCompatActivity {
                                     handler.post(new Runnable() {
                                         @Override
                                         public void run() {
-                                            txtDevice.setText(data);
+                                            if(Integer.parseInt(data) <= 0 || Integer.parseInt(data) >= 2)
+                                                txtDevice.setText("Seu dedo não foi colocado corretamente!");
+                                            else
+                                                txtDevice.setText(data);
                                         }
                                     });
 
