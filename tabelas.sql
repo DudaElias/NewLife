@@ -52,26 +52,22 @@ create table Alimento
 	colesterol float
 )
 
+insert into Alimento values ('Ovo', 0.6,1.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,null) /*18 e null*/
+insert into Alimento values ('Granola', 53.3,24.1,14.8,0,0,0,1,1,1,0,0,1,0,1,1,1,1,null)
+/*ADICIONAR*/
+insert into Alimento values ('Goma de tapioca', 54,0,14.8,3.2,0,0,0,0,0,0,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Semente de Chia', 44,32.8,17.2,0,0,0,27.6,0,0,0,1,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Cogumelo', 5.09,3.2,1.87,0,0,0,2.4,0,0,0,1,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Tortilha de milho', 44.6,2.9,5.7,0,1,0,6.3,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Queijo feta', 4.1,21.3,14.2,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Ricota', 3,13,11.3,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+/*Precisa esses*/
+insert into Alimento values ('Leite de amendoa', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Stevia', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Tofu', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
 
-/*	FRUTAS	
+select * from Receita
 
-ovo
-goma de tapioca
-semente de chia
-sal
-granola
-farinha de trigo
-farinha de chia
-óleo
-óleo de coco
-fermento em pó
-canela
-água
-*/
-
-
-insert into Alimento values ('Ovo', 0.6,1.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,null)
-insert into Alimento values ('Granola', 53.3,24.1,14.8,0,0,0,1,1,1,0,0,1,0,1,1,1,1,0,null)
 /*od dois de cima estão prontos, mas n adicionados*/
 insert into Alimento values ('Farinha de Aveia', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
 insert into Alimento values ('Farinha de Trigo', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
