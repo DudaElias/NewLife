@@ -99,6 +99,8 @@ public class SendBluetooth extends AppCompatActivity {
                                         @Override
                                         public void run() {
                                             txtDevice.setText(data);
+
+
                                         }
                                     });
 

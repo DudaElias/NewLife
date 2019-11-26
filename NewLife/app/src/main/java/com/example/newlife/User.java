@@ -41,9 +41,15 @@ public class User extends AppCompatActivity {
         TextView tvIdade = findViewById(R.id.idade);
         TextView tvImc = findViewById(R.id.IMC);
         TextView tvGlicemia = findViewById(R.id.glicemia);
+
         tvNome.setText(usu.getNome());
-        tvGenero.setText(usu.getGenero()+" ");
+        if(usu.getGenero() == 'F')
+            tvGenero.setText("Mulher");
+        else
+            tvGenero.setText("Homem");
         tvIdade.setText("Idade: " + usu.getIdade()+ "");
+        String[] res = usu.getRestricoes().split(",");
+        tvGlicemia.setText(res[15]);
         double imc;
         imc = usu.peso/(Math.pow(usu.altura, 2))*10000;
         int imcInt = (int) imc;
