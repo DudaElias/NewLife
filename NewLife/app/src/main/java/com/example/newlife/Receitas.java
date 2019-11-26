@@ -58,7 +58,7 @@ public class Receitas extends AppCompatActivity {
                     dados[i] = r.getNomeReceita();
                     atual.add(r);
                 }
-                //String[] params = new String[]{"carbo", "gordu", "pro", "fibras", "B", "C", "D", "sodio", "antioxidante", "magnesio", "zinco", "ferro", "potassio", "diabetes", "estresse", "gli", "ins"};
+                //String[] params = new String[]{"carbo", "gordu", "pro", "fibras", "B", "C", "D", "sodio", "antioxidante", "magnesio", "zinco", "ferro", "potassio", "diabetes", "estresse", "gli", "i                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ns"};
 
 
                 final Retrofit re = new Retrofit.Builder()

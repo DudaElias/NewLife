@@ -98,10 +98,12 @@ public class SendBluetooth extends AppCompatActivity {
                                     handler.post(new Runnable() {
                                         @Override
                                         public void run() {
+
                                             if(Integer.parseInt(data) <= 0 || Integer.parseInt(data) >= 2)
                                                 txtDevice.setText("Seu dedo não foi colocado corretamente!");
                                             else
                                                 txtDevice.setText(data);
+
                                         }
                                     });
 
