@@ -1,6 +1,6 @@
 
 int sensorPin = 0;
-int period = 1000;
+int period = 100;
 #include <SoftwareSerial.h>
 SoftwareSerial HM10(10, 11); // RX = 2, TX = 3
 int HearHate_porSegundo=0;
@@ -13,7 +13,7 @@ float oldValue = 0;
 float rawValue = 0;
 void setup() {
   HM10.begin(9600); // set HM10 serial at 9600 baud rate
-  Serial.begin(38400);
+  Serial.begin(9600);
   delay(100);
 }
 
@@ -28,7 +28,7 @@ rawValue = analogRead (sensorPin);
 
    //cada 1 segundo faz essa conta
    if(count == 10)
-   {
+          {
       HearHate_porSegundo = countBeat;
       HearHate_porMin =60*countBeat;
       Serial.print("HearHate_porSegundo");

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/fundo_login">
+    android:background="@drawable/fundo_login"
+    android:screenOrientation="portrait" >
 
     <ImageButton
         android:id="@+id/imageButton"
