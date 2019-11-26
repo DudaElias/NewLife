@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DEE8FF"
-    tools:context=".ReceitaAtual">
+    tools:context=".ReceitaAtual"
+    android:screenOrientation="portrait" >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"

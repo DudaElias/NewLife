@@ -7,6 +7,24 @@
     android:orientation="vertical"
     tools:context=".BuscarBluetooth">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2ADB87"
+        android:elevation="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pareados:"
+            android:textColor="@android:color/white"
+            android:textSize="26dp"
+            ></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

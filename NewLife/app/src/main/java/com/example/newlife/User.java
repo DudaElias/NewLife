@@ -46,7 +46,8 @@ public class User extends AppCompatActivity {
         tvIdade.setText("Idade: " + usu.getIdade()+ "");
         double imc;
         imc = usu.peso/(Math.pow(usu.altura, 2))*10000;
-        tvImc.setText("IMC:"+ imc);
+        int imcInt = (int) imc;
+        tvImc.setText("IMC:"+ imcInt);
         tvNivel.setText(usu.nivel+"");
         final ArrayList<Dica> dicas = new ArrayList<Dica>();
         final Retrofit r = new Retrofit.Builder()
