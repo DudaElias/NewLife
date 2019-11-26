@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DEE8FF"
+    tools:context=".ReceitaAtual">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#DEE8FF"
+        android:elevation="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:id="@+id/nome"
+        android:text="Sol"
+        android:fontFamily="@font/comfortaa_bold"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@drawable/fundo_receita"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/a"
+                android:layout_marginTop="20dp"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:text="Descrição"
+                android:fontFamily="@font/comfortaa_bold"
+                />
+
+            <TextView
+                android:padding="20dp"
+                android:id="@+id/des"
+                android:layout_width="match_parent"
+                android:layout_height="465dp"></TextView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

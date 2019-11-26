@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 1000);
 
-        mNotificationHelper = new NotificationHelper(this);
+        /*mNotificationHelper = new NotificationHelper(this);
         NotificationCompat.Builder nb = mNotificationHelper.getChannelNotification("batata", "teste de funcionamento");
-        mNotificationHelper.getManager().notify(1, nb.build());
+        mNotificationHelper.getManager().notify(1, nb.build());*/
 
 
 

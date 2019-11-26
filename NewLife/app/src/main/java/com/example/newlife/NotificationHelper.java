@@ -3,13 +3,15 @@ package com.example.newlife;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.Intent;
 
 import androidx.core.app.NotificationCompat;
 
 
-public class NotificationHelper extends ContextWrapper {
+public class NotificationHelper extends  ContextWrapper{
 
     private NotificationManager mManager;
     public static final String channel1ID = "channel1ID";

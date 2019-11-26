@@ -111,8 +111,6 @@ public class Receitas extends AppCompatActivity {
 
 
                 for (Receita receita : as) {
-
-                    int carboR = 0, protR = 0, gorR = 0;
                     int j;
                     int gord = 0, carb = 0, prot = 0, fibras = 0, vitB = 0, vitC = 0, vitD = 0, sodio = 0, antoxi = 0, mag = 0, zinc = 0, fer = 0, pot = 0;
 
@@ -142,10 +140,31 @@ public class Receitas extends AppCompatActivity {
                                     carboidratos = 0;
                                 else
                                     carboidratos = 1;
+                                int gordurasU, proteinasU, carboidratosU;
+                                if (data[0] < 1)
+                                    gordurasU = 2;
+                                else if (data[0] > 10)
+                                    gordurasU = 0;
+                                else
+                                    gordurasU = 1;
 
-                                gord += gorduras;
-                                prot += proteinas;
-                                carb += carboidratos;
+                                if (data[1]< 5)
+                                    proteinasU = 2;
+                                else if (data[1] > 15)
+                                    proteinasU = 0;
+                                else
+                                    proteinasU = 1;
+
+                                if (data[2]< 1)
+                                    carboidratosU = 2;
+                                else if (data[2] > 10)
+                                    carboidratosU = 0;
+                                else
+                                    carboidratosU = 1;
+
+                                gord += ComparaDieta(gorduras, gordurasU);
+                                prot += ComparaDieta(proteinas, proteinasU);
+                                carb += ComparaDieta(carboidratos, carboidratosU);
 
                                 fibras += ComparaDieta(alimento.fibras.intValue(), data[3]);
                                 vitB += ComparaDieta(alimento.B, data[4]);

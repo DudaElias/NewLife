@@ -45,8 +45,6 @@ public class Dicas extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Dica>> call, Response<List<Dica>> response) {
                 List<Dica> lista2 = response.body();
-
-
                 for (Dica q: lista2) {
                     Dica qe = new Dica();
                     qe.setCodDica(q.getCodDica());
@@ -56,18 +54,18 @@ public class Dicas extends AppCompatActivity {
                     qe.setNomeDica(q.getNomeDica());
                     dicas.add(qe);
                 }
-                final ListaDicasAdapter adapter = new ListaDicasAdapter(Dicas.this, dicas, dicas.size());
+                final ListaDicasAdapter adapter = new ListaDicasAdapter(Dicas.this, dicas, 11);
                 listview.setAdapter(adapter);
-                /*listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent intent = new Intent(Dicas.this, ReceitaAtual.class);
+                        Intent intent = new Intent(Dicas.this, DicaAtual.class);
                         Bundle bundle = new Bundle();
-                        bundle.putSerializable("receita", dicas.get(position));
+                        bundle.putSerializable("dica", dicas.get(position));
                         intent.putExtras(bundle);
                         startActivity(intent);
                     }
-                });*/
+                });
 
             }
 

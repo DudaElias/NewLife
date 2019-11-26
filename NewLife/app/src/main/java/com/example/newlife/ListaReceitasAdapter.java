@@ -22,7 +22,6 @@ import java.util.List;
 public class ListaReceitasAdapter extends BaseAdapter {
 
     private int qtd;
-    private int position;
     private Context mContext;
     private ArrayList<Receita> receitas;
 
@@ -52,16 +51,16 @@ public class ListaReceitasAdapter extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
 
         Receita version = receitas.get(position);
-        this.position = position;
         if (convertView == null) {
 
             convertView = LayoutInflater.from(mContext).inflate(R.layout.lista_receita_adapter, parent, false);
-            TextView tvNome = convertView.findViewById(R.id.tvReceita);
-            TextView tvPeriodo = convertView.findViewById(R.id.tvPeriodo);
 
-            tvNome.setText(version.nomeReceita);
-            tvPeriodo.setText(version.periodo);
         }
+        TextView tvNome = convertView.findViewById(R.id.tvReceita);
+        TextView tvPeriodo = convertView.findViewById(R.id.tvPeriodo);
+
+        tvNome.setText(version.nomeReceita);
+        tvPeriodo.setText(version.periodo);
         return convertView;
     }
 }
