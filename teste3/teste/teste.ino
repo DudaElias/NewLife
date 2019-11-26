@@ -41,5 +41,5 @@ rawValue = analogRead (sensorPin);
    }
    
   oldValue = rawValue;
-  delay(period);
+  delay(1000);
 }
