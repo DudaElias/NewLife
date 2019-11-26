@@ -27,7 +27,7 @@
             android:text="Sol"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:textSize="27dp"/>
+            android:textSize="20dp"/>
 
     </LinearLayout>
 </LinearLayout>

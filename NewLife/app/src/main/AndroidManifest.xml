@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ReceitaAtual"></activity>
+        <activity android:name=".DicaAtual"></activity>
+        <activity android:name=".ReceitaAtual" />
         <activity android:name=".Receitas" />
         <activity android:name=".Dicas" />
         <activity android:name=".SendBluetooth" />
@@ -36,6 +37,7 @@
             </intent-filter>
         </activity>
 
+        <receiver android:name=".AlertReceiver" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
