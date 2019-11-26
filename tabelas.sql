@@ -52,35 +52,36 @@ create table Alimento
 	colesterol float
 )
 
+insert into Alimento values('manteiga',0,81.1,0.9,0,1,2,0,0,0,0,0,0,0,0,0,0,2, null)/*this boy*/
 
 /*	FRUTAS	
 
-ovo
-goma de tapioca
-semente de chia
-sal
-granola
-farinha de trigo
-farinha de chia
-óleo
-óleo de coco
-fermento em pó
-canela
-água
+
+farinha de aveia
+manteiga
+pimentao
+abobrinha
+aveia em flocos
+whey hidrolisado
+cacau em pó
+manteiga Ghee
+amido de milho
+molho de tomate
+arroz de couve-flor
+polpa de tomate
+biomassa de banana verde
+macarrão de grão de bico
+tomate cereja
+quejo parmesão
+
 */
 
 
-insert into Alimento values ('Ovo', 0.6,1.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Ovo', 0.6,1.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,null)
 insert into Alimento values ('Granola', 53.3,24.1,14.8,0,0,0,1,1,1,0,0,1,0,1,1,1,1,0,null)
 /*od dois de cima estão prontos, mas n adicionados*/
 insert into Alimento values ('Farinha de Aveia', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
 insert into Alimento values ('Farinha de Trigo', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
-insert into Alimento values ('Óleo', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
-insert into Alimento values ('Óleo de coco', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
-insert into Alimento values ('Fermento', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
-insert into Alimento values ('Canela', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
-insert into Alimento values ('Água', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
-insert into Alimento values ('Gelo', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
 
 insert into Alimento values('Figo',13,0.5,1.1,0,2,0,1.8,0,2,0,0,2,2,0,0,2,2, null)/*1*/
 
