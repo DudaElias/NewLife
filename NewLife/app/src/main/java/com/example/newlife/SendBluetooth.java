@@ -41,7 +41,6 @@ public class SendBluetooth extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_bluetooth);
 
-        edtMsg    = (EditText) findViewById(R.id.edtTxt);
         txtDevice = (TextView)findViewById(R.id.txtDevice);
 
         btDevice = getIntent().getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);

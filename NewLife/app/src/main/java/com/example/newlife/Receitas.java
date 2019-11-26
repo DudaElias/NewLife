@@ -113,7 +113,7 @@ public class Receitas extends AppCompatActivity {
                             String[] alimentosNaReceita = receita.alimentos.split(",");
                             for (int j = 0; j < alimentosNaReceita.length; j++) {
                                 for (Alimento alimento : alimentos) {
-                                    if (alimento.nome.equals(alimentosNaReceita[j])) {
+                                    if (alimento.nome.trim().toLowerCase().equals(alimentosNaReceita[j].trim().toLowerCase())) {
 
                                         int gorduras, proteinas, carboidratos;
                                         if (alimento.gorduras < 1)
@@ -173,12 +173,15 @@ public class Receitas extends AppCompatActivity {
                                         break;
                                     }
                                 } else if (receita.periodo.equals("Lanche")) {
+                                    if(x == 5)
+                                        break;
                                     if (auxLanche[k] > somatoria) {
                                         auxLanche[k] = somatoria;
                                         melhoresLanche[k] = x;
                                         break;
                                     }
                                 } else {
+                                    if(x == 16)
                                     if (auxJantar[k] > somatoria) {
                                         auxJantar[k] = somatoria;
                                         melhoresJantar[k] = x;
@@ -192,6 +195,16 @@ public class Receitas extends AppCompatActivity {
                             g	< 1	1<g<10  >10
                             p	< 5	1<g<15  >15
                             c	< 1	1<g<10  >10 */
+
+                        }
+                        if(melhoresJantar[2] == 0)
+                        {
+                            melhoresJantar[2] = 16;
+
+                        }
+                        if(melhoresLanche[2] == 0)
+                        {
+                            melhoresLanche[2] = 5;
 
                         }
                         final ArrayList<Receita> receitasArray = new ArrayList<>();
