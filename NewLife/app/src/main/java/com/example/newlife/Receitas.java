@@ -100,6 +100,7 @@ public class Receitas extends AppCompatActivity {
                 auxCafe[0] = 20000000;
                 auxCafe[1] = 20000000;
                 auxCafe[2] = 20000000;
+                int j = 0;
 
 
                 int[] melhoresJantar = new int[3];
@@ -113,7 +114,6 @@ public class Receitas extends AppCompatActivity {
                 for (Receita receita : as) {
 
                     int carboR = 0, protR = 0, gorR = 0;
-                    int j;
                     int gord = 0, carb = 0, prot = 0, fibras = 0, vitB = 0, vitC = 0, vitD = 0, sodio = 0, antoxi = 0, mag = 0, zinc = 0, fer = 0, pot = 0;
 
                     String[] alimentosNaReceita = receita.alimentos.split(",");
@@ -192,6 +192,7 @@ public class Receitas extends AppCompatActivity {
                             }
                         }
                     }
+                    j++;
                         /*       2    1      0
                             g	< 1	1<g<10  >10
                             p	< 5	1<g<15  >15
