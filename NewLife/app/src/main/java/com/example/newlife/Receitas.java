@@ -90,32 +90,32 @@ public class Receitas extends AppCompatActivity {
                 int[] melhoresAl = new int[3];
                 int[] auxAl = new int[3];
 
-                auxCafe[0] = 20000000;
-                auxCafe[1] = 20000000;
-                auxCafe[2] = 20000000;
+                auxAl[0] = 20000000;
+                auxAl[1] = 20000000;
+                auxAl[2] = 20000000;
 
                 int[] melhoresLanche = new int[3];
                 int[] auxLanche = new int[3];
 
-                auxCafe[0] = 20000000;
-                auxCafe[1] = 20000000;
-                auxCafe[2] = 20000000;
-                int j = 0;
+                auxLanche[0] = 20000000;
+                auxLanche[1] = 20000000;
+                auxLanche[2] = 20000000;
+                int x = 0;
 
 
                 int[] melhoresJantar = new int[3];
                 int[] auxJantar = new int[3];
 
-                auxCafe[0] = 20000000;
-                auxCafe[1] = 20000000;
-                auxCafe[2] = 20000000;
+                auxJantar[0] = 20000000;
+                auxJantar[1] = 20000000;
+                auxJantar[2] = 20000000;
 
 
                 for (Receita receita : as) {
                     int gord = 0, carb = 0, prot = 0, fibras = 0, vitB = 0, vitC = 0, vitD = 0, sodio = 0, antoxi = 0, mag = 0, zinc = 0, fer = 0, pot = 0;
 
                     String[] alimentosNaReceita = receita.alimentos.split(",");
-                    for (j = 0; j < alimentosNaReceita.length; j++) {
+                    for (int j = 0; j < alimentosNaReceita.length; j++) {
                         for (Alimento alimento : alimentos) {
                             if (alimento.nome.equals(alimentosNaReceita[j])) {
 
@@ -187,64 +187,65 @@ public class Receitas extends AppCompatActivity {
                         if (receita.periodo.equals("Café da manhã")) {
                             if (auxCafe[k] > somatoria) {
                                 auxCafe[k] = somatoria;
-                                melhoresCafe[k] = j;
+                                melhoresCafe[k] = x;
                                 break;
                             }
                         } else if (receita.periodo.equals("Almoço")) {
                             if (auxAl[k] > somatoria) {
                                 auxAl[k] = somatoria;
-                                melhoresAl[k] = j;
+                                melhoresAl[k] = x;
                                 break;
                             }
                         } else if (receita.periodo.equals("Lanche")) {
                             if (auxLanche[k] > somatoria) {
                                 auxLanche[k] = somatoria;
-                                melhoresLanche[k] = j;
+                                melhoresLanche[k] = x;
                                 break;
                             }
                         } else {
                             if (auxJantar[k] > somatoria) {
                                 auxJantar[k] = somatoria;
-                                melhoresJantar[k] = j;
+                                melhoresJantar[k] = x;
                                 break;
 
                             }
                         }
                     }
-                    j++;
+                    x++;
                         /*       2    1      0
                             g	< 1	1<g<10  >10
                             p	< 5	1<g<15  >15
                             c	< 1	1<g<10  >10 */
-                    final ArrayList<Receita> receitasArray = new ArrayList<>();
-                    receitasArray.add(as.get(melhoresCafe[0]));
-                    receitasArray.add(as.get(melhoresCafe[1]));
-                    receitasArray.add(as.get(melhoresCafe[2]));
-                    receitasArray.add(as.get(melhoresAl[0]));
-                    receitasArray.add(as.get(melhoresAl[1]));
-                    receitasArray.add(as.get(melhoresAl[2]));
-                    receitasArray.add(as.get(melhoresLanche[0]));
-                    receitasArray.add(as.get(melhoresLanche[1]));
-                    receitasArray.add(as.get(melhoresLanche[2]));
-                    receitasArray.add(as.get(melhoresJantar[0]));
-                    receitasArray.add(as.get(melhoresJantar[1]));
-                    receitasArray.add(as.get(melhoresJantar[2]));
-
-
-                    final ListaReceitasAdapter adapter = new ListaReceitasAdapter(Receitas.this, receitasArray, 12);
-                    listview.setAdapter(adapter);
-                    listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                            Intent intent = new Intent(Receitas.this, ReceitaAtual.class);
-                            Bundle bundle = new Bundle();
-                            bundle.putSerializable("receita", receitasArray.get(position));
-                            intent.putExtras(bundle);
-                            startActivity(intent);
-                        }
-                    });
 
                 }
+                final ArrayList<Receita> receitasArray = new ArrayList<>();
+                receitasArray.add(as.get(melhoresCafe[0]));
+                receitasArray.add(as.get(melhoresCafe[1]));
+                receitasArray.add(as.get(melhoresCafe[2]));
+                receitasArray.add(as.get(melhoresAl[0]));
+                receitasArray.add(as.get(melhoresAl[1]));
+                receitasArray.add(as.get(melhoresAl[2]));
+                receitasArray.add(as.get(melhoresLanche[0]));
+                receitasArray.add(as.get(melhoresLanche[1]));
+                receitasArray.add(as.get(melhoresLanche[2]));
+                receitasArray.add(as.get(melhoresJantar[0]));
+                receitasArray.add(as.get(melhoresJantar[1]));
+                receitasArray.add(as.get(melhoresJantar[2]));
+
+
+                final ListaReceitasAdapter adapter = new ListaReceitasAdapter(Receitas.this, receitasArray, 12);
+                listview.setAdapter(adapter);
+                listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Intent intent = new Intent(Receitas.this, ReceitaAtual.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("receita", receitasArray.get(position));
+                        intent.putExtras(bundle);
+                        startActivity(intent);
+                    }
+                });
+
             }
 
             @Override

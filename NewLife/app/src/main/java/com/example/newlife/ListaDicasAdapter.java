@@ -77,25 +77,6 @@ public class ListaDicasAdapter extends BaseAdapter{
             convertView = LayoutInflater.from(mContext).inflate(R.layout.dicas_notificacoes, parent, false);
 
         }
-
-        if(version.getRestricoes().equals("1"))
-        {
-            Calendar calendar = Calendar.getInstance();
-
-            calendar.set(Calendar.HOUR_OF_DAY, horas[i]);
-            calendar.set(Calendar.MINUTE, minutos[i]);
-            calendar.set(Calendar.SECOND, segundos[i]);
-
-            AlarmManager alarm = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
-            Bundle bundle = new Bundle();
-            bundle.putSerializable("dica", version);
-            Intent inte = new Intent(mContext, AlertReceiver.class);
-            inte.putExtra("nome", version.getNomeDica());
-            inte.putExtra("descricao", version.getDescricao());
-            PendingIntent pen = PendingIntent.getBroadcast(mContext, 1, inte, 0);
-            alarm.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pen);
-            i++;
-        }
         TextView titulo = convertView.findViewById(R.id.titulo);
         View imagem = convertView.findViewById(R.id.imagem);
         titulo.setText(version.nomeDica);
