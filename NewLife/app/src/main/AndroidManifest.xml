@@ -16,20 +16,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DicaAtual"></activity>
-        <activity android:name=".ReceitaAtual" />
-        <activity android:name=".Receitas" />
-        <activity android:name=".Dicas" />
-        <activity android:name=".SendBluetooth" />
-        <activity android:name=".BuscarBluetooth" />
+        <activity android:name=".DicaAtual" android:screenOrientation="portrait"></activity>
+        <activity android:name=".ReceitaAtual" android:screenOrientation="portrait" />
+        <activity android:name=".Receitas" android:screenOrientation="portrait" />
+        <activity android:name=".Dicas" android:screenOrientation="portrait" />
+        <activity android:name=".SendBluetooth" android:screenOrientation="portrait" />
+        <activity android:name=".BuscarBluetooth" android:screenOrientation="portrait" />
         <activity
             android:name=".UserPage"
             android:label="@string/title_activity_user_page"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".User" />
-        <activity android:name=".QuizBase" />
-        <activity android:name=".TelaLogin" />
-        <activity android:name=".MainActivity">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".User"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".QuizBase"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TelaLogin"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
