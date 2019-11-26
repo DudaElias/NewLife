@@ -97,9 +97,9 @@ public class SendBluetooth extends AppCompatActivity {
                                     handler.post(new Runnable() {
                                         @Override
                                         public void run() {
-                                            if (Integer.parseInt(data.replace("\r", "")) <= 0 || Integer.parseInt(data.replace("\r", "")) >= 180)
+                                            if (Integer.parseInt(data.replace("\r", "")) <= 0 || Integer.parseInt(data.replace("\r", "")) >= 200)
                                                 txtDevice.setText("Seu dedo não foi colocado corretamente!");
-                                            else if (Integer.parseInt(data.replace("\r", "")) < 120)
+                                            else if (Integer.parseInt(data.replace("\r", "")) > 180)
                                                 txtDevice.setText("Seus batimentos estão acelerados!");
                                             else
                                                 txtDevice.setText(data);

@@ -72,6 +72,11 @@ public class Receitas extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<List<Alimento>> call, Response<List<Alimento>> response) {
                         List<Alimento> ali = response.body();
+
+                        boolean podeCafe[] = {true,true,true};
+                        boolean podeAlmoco[] = {true,true,true};
+                        boolean podeLanche[] = {true,true,true};
+                        boolean podeJantar[] = {true,true,true};
                         String[] res = usu.getRestricoes().split(",");
                         int[] data = new int[13];
                         for (int in = 0; in < 13; in++)
@@ -161,28 +166,32 @@ public class Receitas extends AppCompatActivity {
 
                             for (int k = 0; k < 3; k++) {
                                 if (receita.periodo.equals("Café da manhã")) {
-                                    if (auxCafe[k] > somatoria) {
+                                    if (auxCafe[k] > somatoria && podeCafe[k]) {
+                                        podeCafe[k] = false;
                                         auxCafe[k] = somatoria;
                                         melhoresCafe[k] = x;
                                         break;
                                     }
                                 } else if (receita.periodo.equals("Almoço")) {
-                                    if (auxAl[k] > somatoria) {
+                                    if (auxAl[k] > somatoria && podeAlmoco[k]) {
                                         auxAl[k] = somatoria;
+                                        podeAlmoco[k] = false;
+
                                         melhoresAl[k] = x;
                                         break;
                                     }
                                 } else if (receita.periodo.equals("Lanche")) {
-                                    if(x == 5)
-                                        break;
-                                    if (auxLanche[k] > somatoria) {
+                                    if (auxLanche[k] > somatoria && podeLanche[k]) {
                                         auxLanche[k] = somatoria;
+                                        podeLanche[k] = false;
+
                                         melhoresLanche[k] = x;
                                         break;
                                     }
                                 } else {
-                                    if(x == 16)
-                                    if (auxJantar[k] > somatoria) {
+                                    if (auxJantar[k] > somatoria && podeJantar[k]) {
+                                        podeJantar[k] = false;
+
                                         auxJantar[k] = somatoria;
                                         melhoresJantar[k] = x;
                                         break;
@@ -195,16 +204,6 @@ public class Receitas extends AppCompatActivity {
                             g	< 1	1<g<10  >10
                             p	< 5	1<g<15  >15
                             c	< 1	1<g<10  >10 */
-
-                        }
-                        if(melhoresJantar[2] == 0)
-                        {
-                            melhoresJantar[2] = 16;
-
-                        }
-                        if(melhoresLanche[2] == 0)
-                        {
-                            melhoresLanche[2] = 5;
 
                         }
                         final ArrayList<Receita> receitasArray = new ArrayList<>();
