@@ -53,6 +53,24 @@ create table Alimento
 	colesterol float
 )
 
+<<<<<<< HEAD
+insert into Alimento values ('Ovo', 0.6,1.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,null) /*18 e null*/
+insert into Alimento values ('Granola', 53.3,24.1,14.8,0,0,0,1,1,1,0,0,1,0,1,1,1,1,null)
+/*ADICIONAR*/
+insert into Alimento values ('Goma de tapioca', 54,0,14.8,3.2,0,0,0,0,0,0,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Semente de Chia', 44,32.8,17.2,0,0,0,27.6,0,0,0,1,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Cogumelo', 5.09,3.2,1.87,0,0,0,2.4,0,0,0,1,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Tortilha de milho', 44.6,2.9,5.7,0,1,0,6.3,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Queijo feta', 4.1,21.3,14.2,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Ricota', 3,13,11.3,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+/*Precisa esses*/
+insert into Alimento values ('Leite de amendoa', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Stevia', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Tofu', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+
+select * from Receita
+
+=======
 insert into Alimento values('manteiga',0,81.1,0.9,0,1,2,0,0,0,0,0,0,0,0,0,0,2, null)/*this boy*/
 
 /*	FRUTAS	
@@ -76,6 +94,7 @@ leite de amendoas
 
 insert into Alimento values ('Ovo', 1.1,10.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,null)
 insert into Alimento values ('Granola', 53.3,24.1,14.8,0,0,0,1,1,1,0,0,1,0,1,1,1,1,0,null)
+>>>>>>> 92495f5a3e3a54857f0f5b0520450f9b320c4e98
 /*od dois de cima estão prontos, mas n adicionados*/
 insert into Alimento values ('Farinha de Aveia', 66.2,7,17.3,1,0,0,15.4,0,0,0,0,0,0,2,2,2,2,null)
 insert into Alimento values ('Abobrinha', 3.1,0.3,1.2,0,0,0,1,0,1,0,0,0,0,0,0,0,1,null)
