@@ -79,7 +79,7 @@ public class User extends AppCompatActivity {
                         Calendar calendar = Calendar.getInstance();
                         if (qe.getCodDica() == 8) {
                             calendar.set(Calendar.HOUR_OF_DAY, 9);
-                            calendar.set(Calendar.MINUTE, 04);
+                            calendar.set(Calendar.MINUTE, 00);
                             calendar.set(Calendar.SECOND, 00);
 
                             AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
@@ -89,8 +89,8 @@ public class User extends AppCompatActivity {
                             PendingIntent pen1 = PendingIntent.getBroadcast(User.this, 1, inte1, 0);
                             alarm.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pen1);
                         } else if (qe.getCodDica() == 9) {
-                            calendar.set(Calendar.HOUR_OF_DAY, 9);
-                            calendar.set(Calendar.MINUTE, 5);
+                            calendar.set(Calendar.HOUR_OF_DAY, 10);
+                            calendar.set(Calendar.MINUTE, 30);
                             calendar.set(Calendar.SECOND, 00);
 
                             AlarmManager alarm = (AlarmManager) User.this.getSystemService(Context.ALARM_SERVICE);
