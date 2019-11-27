@@ -25,6 +25,7 @@ create table Restricao
 )
 
 select * from Perfil
+select*from Alimento
 
 
 
@@ -74,33 +75,35 @@ insert into Alimento values('manteiga',0,81.1,0.9,0,1,2,0,0,0,0,0,0,0,0,0,0,2, n
 
 /*	FRUTAS	
 
-
-farinha de aveia
-manteiga
-pimentao
-abobrinha
-aveia em flocos
-whey hidrolisado
-cacau em pó
+LOLO
 manteiga Ghee
 amido de milho
 molho de tomate
 arroz de couve-flor
+Semente de chia
+tortilha de milho
+SALIM
 polpa de tomate
 biomassa de banana verde
 macarrão de grão de bico
 tomate cereja
-quejo parmesão
-
+cogumelo
+leite de amendoas
 */
 
 
-insert into Alimento values ('Ovo', 0.6,1.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,null)
+insert into Alimento values ('Ovo', 1.1,10.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,null)
 insert into Alimento values ('Granola', 53.3,24.1,14.8,0,0,0,1,1,1,0,0,1,0,1,1,1,1,0,null)
 >>>>>>> 92495f5a3e3a54857f0f5b0520450f9b320c4e98
 /*od dois de cima estão prontos, mas n adicionados*/
-insert into Alimento values ('Farinha de Aveia', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
-insert into Alimento values ('Farinha de Trigo', 0.6,1.6,0,0,0,0,0,0,0,0,0.063,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Farinha de Aveia', 66.2,7,17.3,1,0,0,15.4,0,0,0,0,0,0,2,2,2,2,null)
+insert into Alimento values ('Abobrinha', 3.1,0.3,1.2,0,0,0,1,0,1,0,0,0,0,0,0,0,1,null)
+insert into Alimento values ('Aveia em Flocos',66.3,6.9,16.9,1,0,0,10.6,0,0,0,0,0,0,2,2,1,2,null)
+insert into Alimento values ('Whey hidrolisado', 0,0,88,0,0,2,1,0,0,0,0,0,0,0,0,0,0,null)
+insert into Alimento values ('Cacau em pó', 57.9,13.7,19.6,0,0,0,33.2,0,0,0,0,0,0,2,2,2,2,null)
+
+
+
 
 insert into Alimento values('Figo',13,0.5,1.1,0,2,0,1.8,0,2,0,0,2,2,0,0,2,2, null)/*1*/
 
@@ -368,7 +371,7 @@ insert into Receita values(1, '','', '2, 2 csopa, 1cchá, 1 pitada', '', '')
 select * from Perfil
 
 
-insert into Receita values(1, 'Crepioca de Frango','Café da manhã', '2, 2 csopa, 1cchá, 1 pitada', 'Ovo, Goma de tapioca, Semente de chia, Sal', 'Bata todos os ingredientes com o garfo/fouet ou no mixer/liqui/ Despeje na frigideira previamente untada (se não quiser untar, garanta que o anti-aderente esteja 100%)/ Mantenha o fogo baixo e a frigideira tampada/ Quando ela estiver bem firme vire apenas para dourar o outro lado/ Coloque o recheio, dobre e pronto!')
+insert into Receita values(1, 'Crepioca de Frango','Café da manhã', '2, 2 csopa, 1cchá, 1 pitada', 'Ovo, Goma de tapioca, Semente de chia, Sal', 'Bata todos os ingredientes com o garfo ou fouet ou no mixer/ Despeje na frigideira previamente untada (se não quiser untar, garanta que o anti-aderente esteja 100%)/ Mantenha o fogo baixo e a frigideira tampada/ Quando ela estiver bem firme vire apenas para dourar o outro lado/ Coloque o recheio, dobre e pronto!')
 insert into Receita values(2, 'Bolinho de Granola','Café da manhã',  '2 xíc, 1/2 xíc, 1/4 xíc, 2, 2, 1, a gosto', 'Granola, Farinha de aveia, Óleo de coco, Bananas, Ovos, Fermento em pó, Canela em pó', 'Bater com o mixer ou liqui as bananas, ovos e óleo de coco/ Reserve/ Misture os demais ingredientes em uma tigela e incorpore a mistura líquida, misture até obter uma massa homogênea/ Coloque em forminhas de silicone para muffin/cupcake/ Leve ao forno pré aquecido em 180o graus até assarem (faça o teste do palito) ~30 minutos')
 /*insert into Receita values(3, 'Bolo de cenoura de liquidificador', '370g, 4, 360ml, 360g, 390g, 18g, 1 pitada, , , 100g, 240g, 12g, 120ml', 'Cenoura, Ovo, Ólep de girassol, Açúcar refinado, Farinha de trigo, Fermento químico, Sal, Óleo, Farinha, Chocolate em pó, Açú1car refinado, manteiga, água', 'Preaquece o forno a 180C/ Unte com óleo uma forma retangular de aproximadamente 30cm x 25cm, polvilhe com a farinha de trigo e bata a forma para remover bem o excesso/ Em uma tigela grande misture a farinha, o fermento, o sal e reserve/ Descasque as cenouras, corte em rodelas e coloque no liquidificador, adicione o óleo, o açúcar e os ovos e bata até obter um creme liso/ Aos poucos comece adicionar os líquidos aos ingredientes secos, use um fouet para misturar os ingredientes até obter uma massa lisa e homogênea/ Transfira a massa para a forma preparada e leve para assar por aproximadamente 30 minutos/ Depois desse tempo, espete um palito no centro da massa/ Se o palito sair limpo é hora de retirar do forno, se sair com um pouco de massa coloque o bolo de volta no forno até assar completamente/ Corte o bolo ainda quente sem retirá-lo da forma/ Junte todos os ingredientes em uma panela média e leve ao fogo médio mexendo sempre com uma espátula/ Quando a mistura ferver, deixe cozinhar por aproximadamente 5 a 8 minutos sem parar de mexer/ Desligue a calda e despeje imediatamente sobre o bolo/') nonononononono tem gluten*/
 insert into Receita values(3, 'Smoothie de morango e jabuticaba', 'Café da manhã', '1/2 xíc(chá), 1/2 xíc(chá), 1/2 xíc(chá), 4 pedras', 'morango, jabuticaba, água, gelo', 'Bata todos os ingredientes no mixer ou liquidificador/')
@@ -385,10 +388,30 @@ insert into Receita values(13, 'Salada Quente', 'Almoço','2 xic, 1, a gosto, a 
 insert into Receita values(14, 'Fritada de Espinafre', 'Jantar','2 csopa, 1/2, 1 xic, 250g, 6, 1/4 ccha, 1/4 ccha, 1/4', 'óleo, cebola cortada em cubos, tomate sem sementes cortado em cubos e rodelas, folhas de espinafre cortadas grosseiramente, ovos, sal, pimenta-do-reino, suco de limão-siciliano', 'Em uma frigideira (ou assadeira) que possa ir ao forno, espalhe o óleo em todo o fundo e leve ao fogo médio até aquecer/ Coloque a cebola e o tomate e refogue por 2 minutos/ Junte o espinafre e espere murchar/ Misture os ovos batidos com o sal e a pimenta/ Deixe cozinhar por 4 minutos sem mexer/ Coloque as rodelas de tomate por cima e regue com o limão/ Leve ao forno preaquecido a 180 ˚C e asse por 3 minutos ou até dourar/')
 insert into Receita values(15, 'Escondidinho de batata-doce com carne moída', 'Lanche','1/2 xic, 1 csopa, 1 xic, a gosto', 'batata-doce com casca e cozida, mostarda, carne moída cozida, sal', 'Amasse a batata com um garfo, e  misture-a com a mostarda e o sal/ Coloque a carne moída no fundo do potinho e a batata-doce no topo/ Leve ao forno ou microondas até aquecer/')
 insert into Receita values(16, 'Espaguete de legumes de Letícia Spiller', 'Almoço','a gosto, 1, 2, 1/2, 1, 4 porções, 1, 1', 'alho amassado, cebola média picada em cubos, tomates picados em cubos, polpa de tomate, palmito pupunha grande cortado em fios, brócolis, cenoura cortada em rodelas levemente cozidas, abobrinha media cortada em tiras', 'Doure o alho, metade da cebola e os tomates picadinhos em um fio de azeite/ Coloque a polpa de tomate e deixe refogar com um pouco de água/ Em outra panela, refogue alho e o restante da cebola no azeite/ Coloque o palmito, refogue e coloque um pouco de água, se necessário/ Acrescente o brócolis, a cenoura e a abobrinha, mexendo um pouco para refogar/ Acerte o sal e tempere a gosto/ Coloque o molho de tomate por cima e sirva/')
-insert into Receita values(17, 'Lasanha de abobrinha e tofu', 'Janta','300g, 1 ccha,  3 csopa, 1, 3 dentes, 3, 3 xic, 1 1/2 ccha, 1/2 xic, a gosto, a gosto', 'tofu firme, azeite de oliva, cebola pequena picada, alho picado, abobrinha grandes cortadas em lâminas, molho de tomate caseiro, orégano, folhas frescas de manjericão, sal, pimenta ', 'Amasse bem o tofu e tempere com o sal, a pimenta, a cúrcuma e 2 colheres (sopa) de azeite/ Reserve/ Em uma panela, aqueça o restante do azeite e refogue a cebola e o alho/ Junte o tofu e refogue mais um pouco/ Monte a lasanha em uma travessa refratária untada com o azeite/ Intercale camadas da abobrinha, do molho de tomate e do tofu refogado/ Finalize com a abobrinha e algumas colheradas de molho/ Polvilhe com o orégano e espalhe o manjericão/ Leve ao forno preaquecido a 180˚C por 20 minutos/')
+insert into Receita values(17, 'Lasanha de abobrinha e tofu', 'Janta','300g, 1 ccha, 1, 3 dentes, 3, 3 xic, 1 1/2 ccha, 1/2 xic, a gosto, a gosto', 'tofu firme, azeite de oliva, cebola pequena picada, alho picado, abobrinha grandes cortadas em lâminas, molho de tomate caseiro, orégano, folhas frescas de manjericão, sal, pimenta ', 'Amasse bem o tofu e tempere com o sal, a pimenta, a cúrcuma e 2 colheres (sopa) de azeite/ Reserve/ Em uma panela, aqueça o restante do azeite e refogue a cebola e o alho/ Junte o tofu e refogue mais um pouco/ Monte a lasanha em uma travessa refratária untada com o azeite/ Intercale camadas da abobrinha, do molho de tomate e do tofu refogado/ Finalize com a abobrinha e algumas colheradas de molho/ Polvilhe com o orégano e espalhe o manjericão/ Leve ao forno preaquecido a 180˚C por 20 minutos/')
 insert into Receita values(18, 'Macarrão de grão-de-bico com espinafre', 'Janta','1 csopa, 1 csopa, 1 dente, 1 xic, 2 csopa, 1/2, 200g, 100g, a gosto, a gosto', 'manteiga, azeite, alho picado, caldo de legumes caseiro, biomassa de banana verde, suco de limão siciliano, macarrão de grão de bico, espinafre, raspas de limão, sal', 'Prepare o  molho primeiro: em uma panela, junte a manteiga com o azeite e doure o alho/ Acrescente o caldo de legumes, a biomassa de banana verde, raspas e o suco de limão/ Tempere com o sal e reserve/ Em uma panela com água fervente e temperada com 1 fio de azeite e um pouco de sal, adicione o macarrão e o espinafre/ Cozinhe por 3 minutos (ou só até a massa ficar al dente)/ Escorra e passe o macarrão com o espinafre para um prato/ Regue com o molho e decore com a pimenta/')
 insert into Receita values(19, 'Arroz de couve-flor com ghee', 'Janta','1, 1/4, a gosto, 1 ccha, 1L', 'couve-flor pequena, cebola picada, sal, manteiga ghee, água fervente', 'Mergulhe a couve-flor inteira na água e retire em seguida/ Escorra bem, pique em pedaços e bata rapidamente no liquidificador/ Reserve/ Refogue a cebola com a manteiga ghee, junte a couve-flor e já desligue o fogo/ Ajuste o sal/ Sirva quente ou use no recheio do charuto/')
 insert into Receita values(20, 'Pizza de omelete com espinafre', 'Janta','2, 1 ccha, 1 xic, 1/4, a gosto, a gosto, a gosto, a gosto, a gosto', 'ovos caipiras, manteiga, espinafre previamente salteado na manteiga, cebola pequena cortada em rodelas finas, azeite, orégano, manjericão, tomate cereja cortado em rodelas, queijo parmesão ralado', 'Bata os ovos com um garfo, adicione o sal e reserve/ Em uma frigideira, coloque o azeite e um pouco de manteiga/ Despeje os despeje os ovos batidos/ Adicione os verdes, os tomates, cebola e, por último, o queijo/ Tampe e deixe no fogo baixo por 3 minutos/ Finalize com mais orégano e manjericão/')
+
+
+update Receita set alimentos = 'Granola, Farinha de aveia, Óleo de coco, Banana, Ovo, Fermento em pó, Canela em pó'where nomeReceita = 'Bolinho de granola'
+update Receita set alimentos = 'manteiga, cogumelo, ovo, sal'where nomeReceita = 'Ovos mexidos com Cogumelos'
+update Receita set alimentos = 'Peito de Frango,cenoura,vagem, pimentão, abobrinha, cebola, shoyu, pimenta do reino'where nomeReceita = 'Frango com Legumes'
+update Receita set alimentos = 'tortilha de milho,agrião,salmão,queijo parmesão'where nomeReceita = 'Wrap de salmão'
+update Receita set alimentos = 'queijo parmesão, espinafre, brócolis, ovo, farinha de aveia, cebola, sal e pimenta'where nomeReceita = 'Bolinho de espinafre'
+update Receita set alimentos = 'aveia em flocos, água, whey hidrolisado, cacau em pó, óleo de coco, banana, canela'where nomeReceita = 'Mingau de Whey'
+update Receita set alimentos = 'semente de chia, leite de amêndoas, setvia, damasco, coco chips'where nomeReceita = 'Pudim de Chia'
+update Receita set alimentos = 'filé mignon, cebola, manteiga Ghee, leite de amêndoas, amido de milho, molho de tomate, cogumelos, shoyo, molho inglês, sal, noz-moscada'where nomeReceita = 'Strogonoff sem Glúten'
+update Receita set alimentos = 'arroz de couve-flor, carne moída, cebola, salsinha, sal, pimenta, azeite'where nomeReceita = 'Quibe de Couve Flor'
+update Receita set alimentos = 'grão de bico, folha de louro, sal, pimenta, espinafre, cebola, azeite para refogar'where nomeReceita = 'Salada Quente'
+update Receita set alimentos = 'óleo, cebola, tomate, espinafre, ovo, sal, pimenta-do-reino, suco de limão-siciliano'where nomeReceita = 'Fritada de Espinafre'
+update Receita set alimentos = 'batata-doce, mostarda, carne moída, sal'where nomeReceita = 'Escondidinho de batata-doce com carne moída'
+update Receita set alimentos = 'alho amassado, cebola, tomates, polpa de tomate, palmito, brócolis, cenoura, abobrinha'where nomeReceita = 'Espaguete de legumes de Letícia Spiller'
+update Receita set alimentos = 'tofu, azeite de oliva, cebola, alho picado, abobrinha, molho de tomate, orégano, folhas frescas de manjericão, sal, pimenta'where nomeReceita = 'Lasanha de abobrinha e tofu'
+update Receita set alimentos = 'couve-flor, cebola, sal, manteiga ghee, água fervente'where nomeReceita = 'Arroz de couve-flor com ghee'
+update Receita set alimentos = 'ovo, manteiga, espinafre, cebola, azeite, orégano, manjericão, tomate cereja, queijo parmesão'where nomeReceita = 'Pizza de omelete com espinafre'
+update Receita set medidas = '300g, 1 ccha, 1, 3 dentes, 3, 3 xic, 1 1/2 ccha, 1/2 xic, a gosto, a gosto' where nomeReceita = 'Lasanha de abobrinha e tofu'
+
 
 create table Dieta
 (

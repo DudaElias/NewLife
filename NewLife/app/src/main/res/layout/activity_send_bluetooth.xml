@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_vertical"
     tools:context=".SendBluetooth"
     android:background="@drawable/gradient_blue">
 
@@ -47,20 +48,6 @@
             android:textSize="10pt">
 
         </TextView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10pt"
-        android:orientation="vertical">
-        <EditText
-            android:id="@+id/edtTxt"
-            android:layout_width="125pt"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/comfortaa"
-            android:textSize="10pt"></EditText>
-
     </LinearLayout>
 
 

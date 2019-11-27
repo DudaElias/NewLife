@@ -80,7 +80,7 @@ public class ListaDicasAdapter extends BaseAdapter{
         TextView titulo = convertView.findViewById(R.id.titulo);
         View imagem = convertView.findViewById(R.id.imagem);
         titulo.setText(version.nomeDica);
-        int id = mContext.getResources().getIdentifier("sol", "drawable", mContext.getPackageName());
+        int id = mContext.getResources().getIdentifier(version.getImagem(), "drawable", mContext.getPackageName());
         Drawable drawable = mContext.getResources().getDrawable(id, null);
         imagem.setBackground(drawable);
         return convertView;

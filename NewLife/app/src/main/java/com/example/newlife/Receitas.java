@@ -72,6 +72,11 @@ public class Receitas extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<List<Alimento>> call, Response<List<Alimento>> response) {
                         List<Alimento> ali = response.body();
+
+                        boolean podeCafe[] = {true,true,true};
+                        boolean podeAlmoco[] = {true,true,true};
+                        boolean podeLanche[] = {true,true,true};
+                        boolean podeJantar[] = {true,true,true};
                         String[] res = usu.getRestricoes().split(",");
                         int[] data = new int[13];
                         for (int in = 0; in < 13; in++)
@@ -113,7 +118,7 @@ public class Receitas extends AppCompatActivity {
                             String[] alimentosNaReceita = receita.alimentos.split(",");
                             for (int j = 0; j < alimentosNaReceita.length; j++) {
                                 for (Alimento alimento : alimentos) {
-                                    if (alimento.nome.equals(alimentosNaReceita[j])) {
+                                    if (alimento.nome.trim().toLowerCase().equals(alimentosNaReceita[j].trim().toLowerCase())) {
 
                                         int gorduras, proteinas, carboidratos;
                                         if (alimento.gorduras < 1)
@@ -161,25 +166,32 @@ public class Receitas extends AppCompatActivity {
 
                             for (int k = 0; k < 3; k++) {
                                 if (receita.periodo.equals("Café da manhã")) {
-                                    if (auxCafe[k] > somatoria) {
+                                    if (auxCafe[k] > somatoria && podeCafe[k]) {
+                                        podeCafe[k] = false;
                                         auxCafe[k] = somatoria;
                                         melhoresCafe[k] = x;
                                         break;
                                     }
                                 } else if (receita.periodo.equals("Almoço")) {
-                                    if (auxAl[k] > somatoria) {
+                                    if (auxAl[k] > somatoria && podeAlmoco[k]) {
                                         auxAl[k] = somatoria;
+                                        podeAlmoco[k] = false;
+
                                         melhoresAl[k] = x;
                                         break;
                                     }
                                 } else if (receita.periodo.equals("Lanche")) {
-                                    if (auxLanche[k] > somatoria) {
+                                    if (auxLanche[k] > somatoria && podeLanche[k]) {
                                         auxLanche[k] = somatoria;
+                                        podeLanche[k] = false;
+
                                         melhoresLanche[k] = x;
                                         break;
                                     }
                                 } else {
-                                    if (auxJantar[k] > somatoria) {
+                                    if (auxJantar[k] > somatoria && podeJantar[k]) {
+                                        podeJantar[k] = false;
+
                                         auxJantar[k] = somatoria;
                                         melhoresJantar[k] = x;
                                         break;
