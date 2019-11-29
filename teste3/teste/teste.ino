@@ -18,18 +18,22 @@ void setup() {
 }
 
 void loop() {
-rawValue = analogRead (sensorPin);
+rawValue = analogRead (sensorPin); // lê o valor que está vindo do sensor
 
-   if( abs(rawValue - oldValue) >= Calibration_Value)
+  //verifica se o móulo está de acordo com o valor calibrado
+   if( abs(rawValue - oldValue) >= Calibration_Value) 
    {
+      //adiciona um na variavel que conta a qtd de batimentos
       countBeat++;
    }
    count++;
 
    //cada 1 segundo faz essa conta
    if(count == 10)
-          {
+   {
+      //variavel que guarda a quantidade de batimentos por segundo
       HearHate_porSegundo = countBeat;
+      //variavel que guarda a quantidade de batimentos por minuto
       HearHate_porMin =60*countBeat;
       Serial.print("HearHate_porSegundo");
       Serial.println(HearHate_porSegundo);
@@ -39,7 +43,8 @@ rawValue = analogRead (sensorPin);
       count=0;
       countBeat=0;
    }
-   
+
+   //valor antigo recebe o novo valor
   oldValue = rawValue;
   delay(100);
 }
