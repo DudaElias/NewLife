@@ -160,7 +160,7 @@ public class QuizBase extends AppCompatActivity{
                                               else
                                                   usu.setGenero('M');
                                               usu.setRestricoes(a.carboidratos + "," + a.gorduras + "," + a.proteinas + "," + a.fibras + "," + a.complexoB + "," + a.vitC + "," + a.vitD + "," + a.sodio + "," + a.antioxidante + "," + a.magnesio + "," + a.zinco + "," + a.ferro + "," + a.potassio + "," + a.diabetes + "," + a.an + "," + a.g + "," + a.in);
-                                              Call<Usuario>call2= j.criarUsuario(usu);
+                                              Call<Usuario>call2= j.criarUsuario(usu); // cria usuario no node
 
                                               call2.enqueue(new Callback<Usuario>() {
                                                   @Override
@@ -168,7 +168,7 @@ public class QuizBase extends AppCompatActivity{
 
                                                       Bundle b = new Bundle();
                                                       b.putSerializable("usuario", usu);
-                                                      Intent data = new Intent(QuizBase.this, User.class);
+                                                      Intent data = new Intent(QuizBase.this, User.class); //pagina inicial do usuario
                                                       data.putExtras(b);
                                                       startActivity(data);
 
@@ -196,21 +196,21 @@ public class QuizBase extends AppCompatActivity{
                                                   usu.setGenero('M');
                                               usu.setRestricoes(a.carboidratos + "," + a.gorduras + "," + a.proteinas + "," + a.fibras + "," + a.complexoB + "," + a.vitC + "," + a.vitD + "," + a.sodio + "," + a.antioxidante + "," + a.magnesio + "," + a.zinco + "," + a.ferro + "," + a.potassio + "," + a.diabetes + "," + a.an + "," + a.g + "," + a.in);
 
-                                              Call<Usuario>call3 = j.atualizarUsuario(usu.id, usu);
-                                              call3.enqueue(new Callback<Usuario>() {
+                                              Call<Void>call3 = j.atualizarUsuario(usu.id, usu);
+                                              call3.enqueue(new Callback<Void>() {
                                                   @Override
-                                                  public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                                                  public void onResponse(Call<Void> call, Response<Void> response) {
 
                                                       Bundle b = new Bundle();
                                                       b.putSerializable("usuario", usu);
-                                                      Intent data = new Intent(QuizBase.this, User.class);
+                                                      Intent data = new Intent(QuizBase.this, User.class); // pagina inicial do usuario
                                                       data.putExtras(b);
                                                       startActivity(data);
 
                                                   }
 
                                                   @Override
-                                                  public void onFailure(Call<Usuario> call, Throwable t) {
+                                                  public void onFailure(Call<Void> call, Throwable t) {
 
                                                   }
                                               });

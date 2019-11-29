@@ -118,10 +118,10 @@ public class Dicas extends AppCompatActivity {
                             .addConverterFactory(GsonConverterFactory.create())
                             .build();
                     JsonPlaceHolder j = r.create(JsonPlaceHolder.class);
-                    Call<Usuario> c = j.deletarUsuario(usu.id);
-                    c.enqueue(new Callback<Usuario>() {
+                    Call<Void> c = j.deletarUsuario(usu.id);
+                    c.enqueue(new Callback<Void>() {
                         @Override
-                        public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                        public void onResponse(Call<Void> call, Response<Void> response) {
 
                             Intent data = new Intent(Dicas.this, TelaLogin.class);
                             startActivity(data);
@@ -129,7 +129,7 @@ public class Dicas extends AppCompatActivity {
                         }
 
                         @Override
-                        public void onFailure(Call<Usuario> call, Throwable t) {
+                        public void onFailure(Call<Void> call, Throwable t) {
 
                         }
                     });

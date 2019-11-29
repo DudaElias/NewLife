@@ -16,7 +16,6 @@ import retrofit2.http.Path;
 public interface JsonPlaceHolder {
 
     String BASE_URL = "https://new-life-host.herokuapp.com/";
-
     @GET("questoes")
     Call<List<Questao>> getDados();
 
@@ -36,11 +35,11 @@ public interface JsonPlaceHolder {
     Call<Usuario>criarUsuario(@Body Usuario inserido);
 
 
-    @PUT("usuario/{id}")
-    Call<Usuario> atualizarUsuario(@Path("id") int id, @Body Usuario user);
+    @PATCH("usuario/{id}")
+    Call<Void> atualizarUsuario(@Path("id") int id, @Body Usuario user);
 
 
     @DELETE("usuario/{id}")
-    Call<Usuario> deletarUsuario(@Path("id") int id);
+    Call<Void> deletarUsuario(@Path("id") int id);
 
 }
